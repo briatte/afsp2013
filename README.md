@@ -1,17 +1,20 @@
 ![](figure.png)
 
-Replication files for some of the figures in the paper.
+Replication files for some of the figures in [the paper][paper]:
 
-* `google-trends.R` reproduces Figure 1 using data collected with [Google Trends][gt] in May 2013
-* `scrapers.R` reproduces Figure 2 using data collected with [scrapers][cs] for Numerama and ZDNet in May 2013
-* `voson.R` reproduces Figures 6 (shown above) and 7 using data collected with [VOSON][vs] in 2008 and 2011
+* `google-trends.R` reproduces Figure 1 using data collected with [Google Trends][gtrends] in May 2013
+* `scrapers.R` reproduces Figure 2 using data collected with [scrapers][scrapers] from Numerama.com and ZDNet.fr in May 2013
+* `voson.R` reproduces Figures 6 (shown above) and 7 using data collected with [VOSON][voson] in 2008 and 2011
 
-See also the [`flegscrap`][fs] and [`ggnet`][gg] repositories for related work.
+See also the [`flegscrap`][flegscrap] and [`ggnet`][ggnet] repositories for related work.
 
-[cs]: blob/master/data/build.corpus.R
-[gt]: https://www.google.com/trends/
-[vs]: http://voson.anu.edu.au/
-[fs]: https://github.com/briatte/flegscrap/
-[gg]: https://github.com/briatte/ggnet/
+[paper]: blob/master/paper.pdf
+[scrapers]: blob/master/data/scrape.all.R
+[gtrends]: https://www.google.com/trends/
+[voson]: http://voson.anu.edu.au/
+[flegscrap]: https://github.com/briatte/flegscrap/
+[ggnet]: https://github.com/briatte/ggnet/
 
-**Work in progress.**
+__Work in progress.__ Thanks to Bram and Stef for letting me know about XPath, and apologies for using R where Python would certainly do a better scraping job.
+
+> Last revised 2013-06-17

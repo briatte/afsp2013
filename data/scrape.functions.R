@@ -45,6 +45,12 @@ keywords <- function(d) {
   #
   # return keywords
   #
+  allk = as.vector(unlist(kw))
+  freq = as.data.frame(table(allk), stringAsFactors = FALSE)
+  sort_df(freq, vars = "Freq")
+  #
+  #
+  #
   return(kw)
 }
 

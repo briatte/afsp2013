@@ -1,7 +1,8 @@
 #
 # plot DADVSI and HADOPI networks
 #
-devtools::source_url("https://raw.github.com/briatte/ggnet/master/ggnet.R")
+downloader::source_url("https://raw.github.com/briatte/ggnet/master/ggnet.R",
+                       prompt = FALSE)
 
 #
 # plot function

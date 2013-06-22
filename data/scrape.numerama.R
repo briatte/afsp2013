@@ -4,6 +4,10 @@
 # ----------------
 
 file = "numerama.dadvsi.news.txt"
+folder = "numerama.dadvsi.corpus"
+
+dir.create(folder)
+setwd(folder)
 
 #
 # links
@@ -21,23 +25,20 @@ extract <- function(x) {
 if(!file.exists(file)) {
 	d = lapply(1:36, extract)
 	d = unlist(d)
-	write.table(d, , row.names = FALSE)
+	write.table(d, file, row.names = FALSE)
 }
+
+d = read.table(file, stringsAsFactors = FALSE, header = TRUE)
 
 #
 # scrape
 #
 
-d = read.table("numerama.dadvsi.news.txt", stringsAsFactors = FALSE, header = TRUE)
-
-folder = "numerama.dadvsi.corpus"
-dir.create(folder)
-setwd(folder)
-
-for(i in 1:nrow(d)) {
+n = nrow(d)
+for(i in 1:n) {
 	f = paste0(gsub("/magazine/|\\.html", "", d$x[i]), ".txt")
 	if(!file.exists(f)) {
-		message(i, "...")
+		message(i, "/", n, " -- scraping ...")
 		e = htmlParse(paste0("http://www.numerama.com", d$x[i]))
 		title = xpathApply(e, "//h1", xmlValue)[[1]]
 		date = xpathApply(e, "//h1/following::div[1]", xmlValue)

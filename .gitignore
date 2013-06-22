@@ -1,4 +1,10 @@
 .DS_Store
 .gitignore
+.RData
+.Rhistory
+
+*.pdf
+*.png
+!figure.png
 
 # done
