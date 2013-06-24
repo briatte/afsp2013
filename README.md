@@ -17,7 +17,7 @@ See also the [`flegscrap`][flegscrap] and [`ggnet`][ggnet] repositories for rela
 [flegscrap]: https://github.com/briatte/flegscrap/
 [ggnet]: https://github.com/briatte/ggnet/
 
-## Work in progress.
+## The code is work in progress. The scraping, especially, could work faster.
 
 Thanks to [Bram][bram] and [Stef][stef] for letting me know about XPath syntax, and apologies for using R where Python would certainly do a better scraping job.
 
