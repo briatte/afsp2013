@@ -4,6 +4,7 @@
 .Rhistory
 
 *.pdf
+!paper.pdf
 *.png
 !figure.png
 
