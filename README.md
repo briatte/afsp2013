@@ -1,12 +1,12 @@
 ![](figure.png)
 
-# This repository contains the replication files for a [conference paper][paper].
+## This repository contains the replication material for a [conference paper][paper].
 
-The figures that it replicates are located in Appendix A--B of the paper:
+The figures that it replicates are located in Appendix A and B of the paper:
 
-* `google-trends.R` reproduces Appendix A1, using data collected with [Google Trends][gtrends] in May 2013
-* `scrapers.R` reproduces Appendix A2, using data [scraped][scrapers] from Numerama.com and ZDNet.fr in May 2013
-* `voson.R` reproduces Appendix B1 (shown above) and B2, using data collected with [VOSON][voson] in 2008 and 2011
+* `google-trends.R` reproduces App. A1, using data collected with [Google Trends][gtrends] in May 2013
+* `scrapers.R` reproduces App. A2, using data [scraped][scrapers] from Numerama.com and ZDNet.fr in May 2013
+* `voson.R` reproduces App. B1 (shown above) and B2, using data collected with [VOSON][voson] in 2008 and 2011
 
 See also the [`flegscrap`][flegscrap] and [`ggnet`][ggnet] repositories for related code.
 
