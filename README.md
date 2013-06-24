@@ -15,6 +15,9 @@ See also the [`flegscrap`][flegscrap] and [`ggnet`][ggnet] repositories for rela
 [flegscrap]: https://github.com/briatte/flegscrap/
 [ggnet]: https://github.com/briatte/ggnet/
 
-__Work in progress.__ Thanks to [Bram](/Psycojoker) and [Stef](/stef) for letting me know about XPath syntax, and apologies for using R where Python would certainly do a better scraping job.
+__Work in progress.__ Thanks to [Bram][bram] and [Stef][stef] for letting me know about XPath syntax, and apologies for using R where Python would certainly do a better scraping job.
+
+[bram]: https://github.com/Psycojoker
+[stef]: https://github.com/stef
 
 > Last revised 2013-06-24
