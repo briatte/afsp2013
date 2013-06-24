@@ -8,7 +8,7 @@ Replication files for some of the figures in [the paper][paper]:
 
 See also the [`flegscrap`][flegscrap] and [`ggnet`][ggnet] repositories for related work.
 
-[paper]: /raw/master/paper.pdf
+[paper]: https://github.com/briatte/afsp2013/raw/master/paper.pdf
 [scrapers]: blob/master/data/scrape.all.R
 [gtrends]: https://www.google.com/trends/
 [voson]: http://voson.anu.edu.au/
