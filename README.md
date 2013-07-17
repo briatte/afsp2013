@@ -1,6 +1,4 @@
-This repository contains the replication material for a [conference paper][paper] presented at the [AFSP](http://www.afsp.msh-paris.fr/) Congress 2013 in Paris, France.
-
-The figures that it replicates are located in Appendix A and B of the paper:
+This repository contains the replication material for a [conference paper][paper] presented at the [AFSP](http://www.afsp.msh-paris.fr/) Congress 2013 in Paris, France. The figures that it replicates are located in Appendix A and B of the paper:
 
 * `google-trends.R` reproduces App. A1, using data collected with [Google Trends][gtrends] in May 2013
 * `scrapers.R` reproduces App. A2, using data [scraped][scrapers] from Numerama.com and ZDNet.fr in May 2013
