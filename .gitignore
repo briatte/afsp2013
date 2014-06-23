@@ -3,9 +3,13 @@
 .RData
 .Rhistory
 
-*.pdf
-!paper.pdf
-*.png
-!figure.png
+* copy.pdf
+* copy.png
+
+*.corpus
+*.txt
 
 # done
+.Rproj.user
+*.Rproj
+
