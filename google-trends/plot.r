@@ -48,7 +48,7 @@ g = qplot(data = news, x = Week, y = value, geom = "line") +
 		labels = date_format("%Y"),
 		limits = c(as.Date("2005-01-01"), max(news$Week))
 		) +
-  theme_linedraw(12) +
+  theme_linedraw(18) +
 	theme(panel.margin = unit(1, "cm"), panel.grid = element_blank()) # , strip.background = element_rect(fill = NA)
 g
 

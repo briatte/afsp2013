@@ -451,20 +451,47 @@ get_edges <- function(sample = FALSE, update = FALSE) {
   
 }
 
-get_network <- function(threshold = 0, start = NULL, end = NULL, plot = NULL) {
+get_ranking <- function(start = NULL, end = NULL) {
   
-  ini = read.csv("data/corpus.edges.csv")
+  ini = read.csv("data/corpus.freqs.csv")
+  ini$t = as.Date(as.character(ini$t))
+  net = ini
 
   if(!is.null(start))
-    net = subset(ini, as.Date(as.character(t)) >= as.Date(start))
+    net = subset(net, t >= as.Date(start))
   
   if(!is.null(end))
-    net = subset(ini, as.Date(as.character(t)) <= as.Date(end))
-  
-  if(!exists("net"))
-    net = ini
+    net = subset(net, t <= as.Date(end))
+    
+  cat(n_distinct(net$uid), "articles:\n")
+  print(aggregate(uid ~ source, n_distinct, data = net))
 
-  print(summary(as.Date(net$t)))
+  span = as.numeric(diff(range(net$t)))
+  cat(span, "days", round(span / 365, 2), "years:\n")
+  print(summary(net$t))
+  
+  n = get_network(0, start, end)
+  n = data.frame(k = network.vertex.names(n), degree = n %v% "degree")
+  n = n[ order(n$degree, decreasing = T), ]
+  rownames(n) = NULL
+  
+  counts = summarise(group_by(net, k), n = sum(n))
+  
+  return(join(n, counts, by = "k"))
+  
+}
+
+get_network <- function(threshold = 0, start = NULL, end = NULL) {
+  
+  ini = read.csv("data/corpus.edges.csv")
+  ini$t = as.Date(as.character(ini$t))
+  net = ini
+  
+  if(!is.null(start))
+    net = subset(net, t >= as.Date(start))
+  
+  if(!is.null(end))
+    net = subset(net, t <= as.Date(end))
 
   cat("Processing", nrow(net), "out of", nrow(ini), "edges...\n")
   
@@ -482,7 +509,6 @@ get_network <- function(threshold = 0, start = NULL, end = NULL, plot = NULL) {
   tnet = as.tnet(tnet, "weighted one-mode tnet")
 
   n %v% "degree" = degree_w(tnet, measure = "degree")[, 2]
-  n %v% "distance" = colSums(distance_w(tnet), na.rm = TRUE)
   n %v% "distance" = colSums(distance_w(tnet), na.rm = TRUE)
   n %v% "closeness" = closeness_w(tnet)[, 3] # normalized
   n %v% "betweenness" = betweenness_w(tnet)[, 2]

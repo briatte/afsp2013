@@ -37,6 +37,9 @@ get_corpus(threshold = .9, sample = FALSE, update = FALSE)
 # --------
 
 # Sequence 1, sep. 2005 - sep. 2006 (DADVSI promulgated 2006-08-01, 1 year)
+s = get_ranking(end = "2006-09-01")
+head(s, 15)
+
 n = get_network(threshold = 2/3, end = "2006-09-01")
 
 g = ggnet(n, size = 0, segment.alpha = n %e% "alpha") +
@@ -48,6 +51,9 @@ ggsave("plots/seq1.pdf", g, width = 9, height = 9)
 ggsave("plots/seq1.png", g, width = 9, height = 9)
 
 # Sequence 2, juil. 2007 - dec. 2009 (mission Olivennes - décrets Hadopi 2, 2.5 years)
+s = get_ranking(start = "2007-07-01", end = "2009-12-31")
+head(s, 15)
+
 n = get_network(threshold = 2/3, start = "2007-07-01", end = "2009-12-31") 
 
 g = ggnet(n, size = 0, segment.alpha = n %e% "alpha") +
@@ -59,6 +65,9 @@ ggsave("plots/seq2.pdf", g, width = 9, height = 9)
 ggsave("plots/seq2.png", g, width = 9, height = 9)
 
 # Sequence 3, juin 2012 - juin 2014 (mission Lescure - today, 2 years)
+s = get_ranking(start = "2012-05-22")
+head(s, 15)
+
 n = get_network(threshold = 2/3, start = "2012-05-22")
 
 g = ggnet(n, size = 0, segment.alpha = n %e% "alpha") +
@@ -70,6 +79,9 @@ ggsave("plots/seq3.pdf", g, width = 9, height = 9)
 ggsave("plots/seq3.png", g, width = 9, height = 9)
 
 # full sequence
+a = get_ranking()
+head(a, 15)
+
 n = get_network(threshold = 2/3)
 
 g = ggnet(n, size = 0, segment.alpha = n %e% "alpha") +
