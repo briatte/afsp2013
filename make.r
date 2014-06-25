@@ -58,8 +58,7 @@ head(get_ranking(end = "2006-09-01", file = "seq1"), 25)
 g = get_network(threshold = 2/3, end = "2006-09-01")
 g = ggnet(g, size = 0, segment.alpha = n %e% "alpha") +
   geom_text(aes(label = network.vertex.names(n), size = n %v% "degree")) + 
-  scale_size_continuous(range = c(2, 6)) +
-  guides(size = FALSE)
+  scale_size_continuous(range = c(2, 6)) + guides(size = FALSE)
 
 ggsave("plots/seq1.png", g, width = 9, height = 9)
 
@@ -70,25 +69,24 @@ head(get_ranking(start = "2007-07-01", end = "2009-12-31", file = "seq2"), 25)
 g = get_network(threshold = 2/3, start = "2007-07-01", end = "2009-12-31") 
 g = ggnet(g, size = 0, segment.alpha = n %e% "alpha") +
   geom_text(aes(label = network.vertex.names(n), size = n %v% "degree")) + 
-  scale_size_continuous(range = c(2, 6)) +
-  guides(size = FALSE)
+  scale_size_continuous(range = c(2, 6)) + guides(size = FALSE)
 
 ggsave("plots/seq2.png", g, width = 9, height = 9)
 
 # Sequence 3, juin 2012 - juin 2014 (mission Lescure - today)
 
-get_ranking(start = "2012-05-22", file = "seq3")
+head(get_ranking(start = "2012-05-22", file = "seq3"), 25)
 
 g = get_network(threshold = 2/3, start = "2012-05-22")
 g = ggnet(g, size = 0, segment.alpha = n %e% "alpha") +
   geom_text(aes(label = network.vertex.names(n), size = n %v% "degree")) + 
-  scale_size_continuous(range = c(2, 6)) +
-  guides(size = FALSE)
+  scale_size_continuous(range = c(2, 6)) + guides(size = FALSE)
 
 ggsave("plots/seq3.png", g, width = 9, height = 9)
 
-# full sequence
-get_ranking(file = "full")
+# Full sequence (2005-2014, 9 years)
+
+head(get_ranking(file = "full"), 25)
 
 g = get_network(threshold = 2/3)
 g = ggnet(g, size = 0, segment.alpha = n %e% "alpha") +

@@ -192,6 +192,23 @@ get_corpus <- function(threshold = .9, sample = FALSE, update = FALSE) {
   
   dir.create("plots", showWarnings = FALSE)
 
+  files = unique(read.csv("data/corpus.freqs.csv")[, 1:3 ])
+  files = summarise(group_by(files, source, t), n = n())
+  files = summarise(group_by(files, source, ym = substr(t, 1, 7)), n = sum(n))
+  
+  library(dplyr)
+  qplot(data = files, fill = source, y = n, x = ym, stat = "identity", geom = "bar") +
+    geom_text(data = subset(summarise(group_by(files, ym), n = sum(n) * 1.05),
+                            ym %in% c("2006-03", "2009-07", "2010-10", "2011-06", "2012-01")),
+              aes(fill = NULL, x = ym, y = n, label = ym)) +
+    scale_fill_brewer("", palette = "Set2") +
+    scale_x_discrete(breaks = paste0(2005:2014, "-01"), labels = 2005:2014) +
+    labs(y = NULL, x = NULL) +
+    theme_linedraw(18)
+  
+  ggsave("plots/counts.png", width = 12, height = 6)
+  ggsave("plots/counts.pdf", width = 12, height = 6)
+  
 }
 
 get_terms <- function(threshold = .9, update = FALSE) {
