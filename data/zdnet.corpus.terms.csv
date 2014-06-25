@@ -1,5 +1,5 @@
 "term","freq"
-"Hadopi",425
+"Hadopi",428
 "Internet",291
 "Culture",152
 "FAI",138
@@ -29,12 +29,12 @@
 "Net",39
 "Syndicat",39
 "CSA",37
+"Free",37
+"Aurélie Filippetti",36
 "Cour",36
 "CPD",36
-"Free",36
 "Microsoft",36
 "Renaud Donnedieu de Vabres",36
-"Aurélie Filippetti",35
 "Autorité",35
 "Société",33
 "Christine Albanel",31
@@ -42,7 +42,6 @@
 "CNIL",30
 "Français",28
 "PC Inpact",28
-"Voir",28
 "mission Lescure",27
 "République",27
 "AFP",26
@@ -59,25 +58,25 @@
 "SACD",24
 "TMG",24
 "François Hollande",23
+"Frédéric Mitterrand",23
 "SNEP",23
 "État",22
-"Frédéric Mitterrand",22
 "Monde",22
 "Patrick Bloche",22
 "SCPP",22
 "Communication",21
+"Eric Walter",21
 "Linux",21
+"Marie-Françoise Marais",21
 "Ndlr",21
 "Tunes",21
 "TVA",21
 "Twitter",21
 "Windows",21
-"Eric Walter",20
 "Quadrature du Net",20
 "YouTube",20
-"Marie-Françoise Marais",19
 "Numerama",19
-"Pascal Nègre",18
+"Pascal Nègre",19
 "Verts",18
 "Elysée",17
 "Mireille Imbert-Quaretta",17
@@ -87,6 +86,7 @@
 "Concrètement",16
 "Deezer",16
 "Fédération",16
+"Franck Riester",16
 "Journal Officiel",16
 "Loppsi",16
 "Sarkozy",16
@@ -94,7 +94,6 @@
 "SPPF",16
 "UFC-Que Choisir",16
 "Echos",15
-"Franck Riester",15
 "MTP",15
 "Parti",15
 "UDF",15
@@ -117,7 +116,6 @@
 "Midem",13
 "Pod",13
 "Point",13
-"Retrouvez",13
 "Spedidam",13
 "Arcep",12
 "Conseil d'État",12
@@ -137,6 +135,7 @@
 "Majors",11
 "Mission Lescure",11
 "Parquet",11
+"PCINpact",11
 "PUR",11
 "Sages",11
 "Tribune",11
@@ -149,10 +148,7 @@
 "Fleur Pellerin",10
 "France Télécom",10
 "Lionel Thoumyre",10
-"Lire",10
 "Objectif",10
-"Oui",10
-"PCINpact",10
 "Piratage",10
 "Président de la République",10
 "Royaume-Uni",10
@@ -163,6 +159,7 @@
 "Dernière",9
 "Figaro",9
 "Hollande",9
+"Lionel Tardy",9
 "Megaupload",9
 "Napster",9
 "NDLR",9
@@ -170,6 +167,7 @@
 "Pad",9
 "Page",9
 "Projet",9
+"Richard Stallman",9
 "Traduction",9
 "Trident Media Guard",9
 "USB",9
@@ -187,16 +185,16 @@
 "Labs Hadopi",8
 "LCEN",8
 "Libre",8
-"Lionel Tardy",8
 "Loi Dadvsi",8
 "MegaVideo",8
 "Nicolas Dupont-Aignan",8
+"Olivier Schrameck",8
 "OpenOffice",8
 "PDG",8
 "PME",8
 "Reuters",8
-"Richard Stallman",8
 "Russie",8
+"Sony Music",8
 "Suède",8
 "Tunes Music Store",8
 "Warner Music",8
@@ -228,13 +226,13 @@
 "Président",7
 "Protection",7
 "Samup",7
-"Sony Music",7
 "SOS-Hadopi",7
 "Spotify",7
 "Universal Music France",7
 "UPFI",7
 "Virginmega",7
 "Vivendi Universal",7
+"VLC",7
 "Wikipédia",7
 "Youtube",7
 "Alex Türk",6
@@ -260,13 +258,11 @@
 "Italie",6
 "Jérôme Bourreau-Guggenheim",6
 "Journal",6
-"Loin",6
 "Mac",6
 "Michèle Alliot-Marie",6
 "Motif",6
 "Noël",6
 "Numericable",6
-"Olivier Schrameck",6
 "Précédente  SuivanteImage",6
 "SEV",6
 "SOPA",6
@@ -274,7 +270,6 @@
 "SVOD",6
 "Toile",6
 "UFC Que Choisir",6
-"VLC",6
 "Warner",6
 "Wi-Fi",6
 "ACTA",5
@@ -307,7 +302,6 @@
 "Économie",5
 "Ecrans",5
 "Electronlibre",5
-"Espérons",5
 "Exemple",5
 "Forum",5
 "Framasoft",5
@@ -318,6 +312,7 @@
 "Japon",5
 "Jérémie Zimmermann",5
 "Kazaa",5
+"Laure de la Raudière",5
 "LTE",5
 "Michel Riguidel",5
 "Ministre de la Culture",5
@@ -330,9 +325,7 @@
 "Olivennes",5
 "OVH",5
 "P-DG",5
-"Parallèlement",5
 "Peer-to-peer",5
-"Pire",5
 "Quid",5
 "RapidShare",5
 "Rappel",5
@@ -383,7 +376,6 @@
 "Essonne",4
 "États",4
 "Exit",4
-"Faire",4
 "FBI",4
 "FBIUne",4
 "Fibre",4
@@ -407,7 +399,7 @@
 "Isoc France",4
 "Jean Dionis du Séjour",4
 "Jean-François Copé",4
-"Laure de la Raudière",4
+"Laure de La Raudière",4
 "Lescure",4
 "Libertés",4
 "Luxembourg",4
@@ -424,7 +416,6 @@
 "Nombre",4
 "Norvège",4
 "Nouveau Centre",4
-"Nouvelle",4
 "Numérama",4
 "Odebi",4
 "Office",4
@@ -438,7 +429,6 @@
 "rapport Zelnik",4
 "Rennes",4
 "Replay",4
-"Résultat",4
 "Richard Cazenave",4
 "Riposte",4
 "RMC",4
@@ -517,6 +507,7 @@
 "Etude",3
 "Evolution",3
 "Express",3
+"Fabien Sauleman",3
 "Faites",3
 "Favoriser",3
 "Filippetti",3
@@ -531,6 +522,7 @@
 "Geste",3
 "Gfk",3
 "GfK",3
+"Gilles Babinet",3
 "GPL",3
 "GSM",3
 "Guillaume Main",3
@@ -544,13 +536,13 @@
 "Interrogés",3
 "Jack Lang",3
 "Jacques Toubon",3
+"Jean Musitelli",3
 "Jean Yves Mirski",3
 "Jean-Michel Planche",3
 "Jérôme Roger",3
 "Julien Dourgnon",3
 "Juriscom",3
 "Kim Dotcom",3
-"Laure de La Raudière",3
 "Lettre",3
 "Libre Accès",3
 "Logiquement",3
@@ -560,6 +552,7 @@
 "Major",3
 "Manifestation",3
 "Marc Guez",3
+"Marc Tessier",3
 "Marseille",3
 "Mbit",3
 "Mega",3
@@ -590,15 +583,14 @@
 "Playlouder",3
 "PlayStation",3
 "Politiques",3
-"Pour Hadopi",3
 "PowerPoint",3
 "Précisément",3
 "Prochaine",3
 "PS Alain Vidalies",3
 "Quadrature",3
 "Reflets",3
-"Retour",3
 "Revivez",3
+"RMS",3
 "Rueducommerce",3
 "Sabam",3
 "Samsung",3
@@ -621,6 +613,7 @@
 "Texel",3
 "TGI",3
 "TGI de Paris",3
+"Tim Berners-Lee",3
 "TorrentFreak",3
 "Troie",3
 "UFC",3
@@ -670,7 +663,6 @@
 "ASS",2
 "Assemblées",2
 "Association de Lutte",2
-"Attention",2
 "Au Japon",2
 "Augmentation",2
 "Aurélie Filipetti",2
@@ -740,6 +732,7 @@
 "Contactés",2
 "Contribution",2
 "CopieFrance",2
+"Corinne Denis",2
 "Corinne Lepage",2
 "Coup",2
 "Coupe",2
@@ -748,6 +741,7 @@
 "CPPAP",2
 "Creative",2
 "CRPC",2
+"Cruz Villal",2
 "CSP",2
 "Curiosphere",2
 "CVthèques",2
@@ -793,10 +787,8 @@
 "Eure-et-Loir",2
 "Evoquant",2
 "Explosion",2
-"Fabien Sauleman",2
 "Fabrice Epelboin",2
 "Fairplay",2
-"Faute",2
 "FCC",2
 "Fédération Française des Télécoms",2
 "Fédération France Wireless",2
@@ -824,10 +816,10 @@
 "GDR",2
 "Géolocalisation",2
 "George Hotz",2
-"Gilles Babinet",2
 "Gmark",2
 "Google Bombing",2
 "Grand",2
+"GreenSI",2
 "Groupe M",2
 "Guardian",2
 "Guerre",2
@@ -853,7 +845,6 @@
 "IAB",2
 "Idate",2
 "IDATE",2
-"Idem",2
 "Imposer",2
 "INA",2
 "Inde",2
@@ -866,10 +857,11 @@
 "IPTV",2
 "Isabelle Falque-Pierrotin",2
 "Isère",2
+"ISF",2
 "Jacques Remiller",2
-"Jean Musitelli",2
 "Jean-Baptiste Kempf",2
 "Jean-Jacques Goldman",2
+"Jean-Ludovic Silicani",2
 "Jean-Michel Counillon",2
 "Jean-Noël Tronc",2
 "Jean-Pierre Bel",2
@@ -910,11 +902,9 @@
 "MAC",2
 "Mac OS",2
 "Maginot",2
-"Maintenant",2
 "Manche",2
 "Mandriva",2
 "Marc Mossé",2
-"Marc Tessier",2
 "Marc Zaffagni",2
 "Marché",2
 "Marigny",2
@@ -924,6 +914,7 @@
 "Mathus",2
 "Mauvaise",2
 "Mediametrie",2
+"Michael Dahan",2
 "Michael Jackson",2
 "Michel Charasse",2
 "Michel Gomez",2
@@ -988,14 +979,11 @@
 "Peer Media Technologies",2
 "Pellerin",2
 "Peter Gabriel",2
-"Petit",2
 "Philippe Courroye",2
 "Pierre Col",2
 "Pirate Bay",2
 "PirateBay",2
 "Piraterie Audiovisuelle",2
-"Pour Marie-Françoise Marais",2
-"Pour Olivier Schrameck",2
 "Pouvoirs Publics",2
 "Précisions",2
 "Premiers",2
@@ -1036,7 +1024,6 @@
 "RGI",2
 "RIAA",2
 "Richard Yung",2
-"RMS",2
 "Robert Thollot",2
 "Robert Tollot",2
 "Roger Karoutchi",2
@@ -1076,12 +1063,13 @@
 "Sotheby",2
 "Soutien",2
 "Spiil",2
+"Stallman",2
 "Steve Ballmer",2
 "Stockholm",2
 "Stop DRM",2
 "Suisse",2
 "Suit",2
-"Suivez",2
+"Sundar Pichai",2
 "Super Hadopi",2
 "Symantec",2
 "Syntec Numérique",2
@@ -1089,7 +1077,6 @@
 "Taxer",2
 "The Register",2
 "Thomson",2
-"Tim Berners-Lee",2
 "Tir",2
 "Tiscali",2
 "Torrent",2
@@ -1120,9 +1107,11 @@
 "Wikileaks",2
 "WikiLeaks",2
 "Wimp",2
+"Winston Maxwell",2
 "Word",2
 "Wordpress",2
 "WSJ",2
+"Xavier Filliol",2
 "Xbox",2
 "Yahoo Music",2
 "Yochai Benkler",2
@@ -1370,6 +1359,7 @@
 "Avis",1
 "Avril",1
 "Axel Dauchez",1
+"Aziz Ridouan",1
 "Azure",1
 "Azureus",1
 "Babaorum",1
@@ -1414,6 +1404,7 @@
 "Benjamin Sonntag",1
 "Benoit Tabaka",1
 "Benoît Tabaka",1
+"Benoît Tersiguel",1
 "BerlinLa Fondation",1
 "Bermudes",1
 "Bernard Lang",1
@@ -1449,7 +1440,6 @@
 "BMG",1
 "BOAMP",1
 "Bob O",1
-"Bon",1
 "Bond",1
 "Bonjour",1
 "Bonjour Jean-Michel",1
@@ -1504,6 +1494,7 @@
 "Calimaq",1
 "Calogero",1
 "Calysto",1
+"Camille Bedin",1
 "Camouflet",1
 "Campagne Anti-Verrous de l'Alliance Public",1
 "Canadian Recording Industry Association",1
@@ -1752,7 +1743,6 @@
 "Coquille",1
 "Cordialement",1
 "Corée du Sud",1
-"Corinne Denis",1
 "Corinne Erhel",1
 "Corrélation",1
 "Correspondant",1
@@ -1791,7 +1781,6 @@
 "Croisette",1
 "Croix-rouge",1
 "CRT",1
-"Cruz Villal",1
 "CSA Il",1
 "CSA Syndicat",1
 "CSPF",1
@@ -2360,7 +2349,6 @@
 "Grandes Gueules",1
 "Grands",1
 "Gratuité",1
-"GreenSI",1
 "Greg Smith",1
 "Grégoire",1
 "Grégory Gutierez",1
@@ -2568,7 +2556,6 @@
 "Irlande la",1
 "Iron Man",1
 "Ironie",1
-"ISF",1
 "ISO",1
 "Isoc",1
 "ISOC",1
@@ -2617,7 +2604,6 @@
 "Jean-Louis Debré",1
 "Jean-Luc Delarue",1
 "Jean-Luc Forêt",1
-"Jean-Ludovic Silicani",1
 "Jean-Marc Manach",1
 "Jean-Marc Merriaux",1
 "Jean-Marc Merrieux",1
@@ -2915,7 +2901,6 @@
 "MHz",1
 "Mi-",1
 "Mi-janvier",1
-"Michael Dahan",1
 "Michael Goldman",1
 "Michael Merhej",1
 "Michael Trabbia",1
@@ -2972,7 +2957,6 @@
 "Moment",1
 "Monde de Michel Riguidel",1
 "Mono Extension",1
-"Monsieur",1
 "Monsieur Nègre",1
 "Montée",1
 "Montréal",1
@@ -3016,6 +3000,7 @@
 "Naïve Records",1
 "NanaMouskouri",1
 "Nantes Métropole",1
+"Napolitano",1
 "NAS",1
 "Nasa",1
 "NAT",1
@@ -3359,39 +3344,6 @@
 "Post",1
 "Poste",1
 "Poste Sa",1
-"Pour Aurélie Filippetti",1
-"Pour Aziz Ridouan",1
-"Pour Benoît Tersiguel",1
-"Pour Camille Bedin",1
-"Pour Corinne Denis",1
-"Pour Cruz Villal",1
-"Pour Eric Walter",1
-"Pour Fabien Sauleman",1
-"Pour Franck Riester",1
-"Pour Frédéric Mitterrand",1
-"Pour Free",1
-"Pour Gilles Babinet",1
-"Pour GreenSI",1
-"Pour ISF",1
-"Pour Jean Musitelli",1
-"Pour Jean-Ludovic Silicani",1
-"Pour Laure de la Raudière",1
-"Pour Laure de La Raudière",1
-"Pour Lionel Tardy",1
-"Pour Marc Tessier",1
-"Pour Michael Dahan",1
-"Pour Napolitano",1
-"Pour Pascal Nègre",1
-"Pour PCINpact",1
-"Pour Richard Stallman",1
-"Pour RMS",1
-"Pour Sony Music",1
-"Pour Stallman",1
-"Pour Sundar Pichai",1
-"Pour Tim Berners-Lee",1
-"Pour VLC",1
-"Pour Winston Maxwell",1
-"Pour Xavier Filliol",1
 "Pourriez-vous",1
 "Poursuite",1
 "Poursuites",1
@@ -3841,7 +3793,6 @@
 "St-Lazare",1
 "Stach",1
 "Stadium Arcadium",1
-"Stallman",1
 "Standing Committee",1
 "Stanford",1
 "Star",1
@@ -3884,9 +3835,7 @@
 "SuivanteNeutralité du Net",1
 "SuivanteQuelques",1
 "Suivent Persepolis de Marjane Satrapi",1
-"Sujet",1
 "Sun",1
-"Sundar Pichai",1
 "Super Crapule",1
 "Super Nanas",1
 "Support",1
@@ -4192,7 +4141,6 @@
 "Windows On ARM",1
 "Windows Vista",1
 "Windows XP",1
-"Winston Maxwell",1
 "WIPO",1
 "Wippit",1
 "Wired",1
@@ -4208,7 +4156,6 @@
 "X-Media Limited",1
 "Xavier Bertrand",1
 "Xavier Darcos",1
-"Xavier Filliol",1
 "XenSource",1
 "XIII",1
 "Xirrus",1

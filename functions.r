@@ -45,12 +45,18 @@ get_articles <- function(source, keyword, pages, step = 10, sw = sw) {
       html = str_replace(html, "(.*)(.php|.htm)(.*)", "\\1\\2")
       html = html[ str_length(html) > 1 ]
       
+    } else if(source == "lefigaro") {
+    
+      html = htmlParse(paste0("http://recherche.lefigaro.fr/recherche/recherche.php?ecrivez=", keyword, "&page=articles&next=", 1 + 20 * (x - 1)))
+      html = xpathSApply(html, "//h3[@class='entry-title']/a/@href")
+      html = str_replace(html, "^/", "http://recherche.lefigaro.fr/")
+    
     }
     
     html = unique(html)
     
   }
-  
+    
   if(!file.exists(file)) {
     
     cat("Scraping index", pages, "pages")
@@ -60,7 +66,7 @@ get_articles <- function(source, keyword, pages, step = 10, sw = sw) {
     write(unlist(d), file)
     
   }
-  
+    
   # --------
   # articles
   # --------
@@ -100,6 +106,10 @@ get_articles <- function(source, keyword, pages, step = 10, sw = sw) {
       
       f = gsub("/", "-", gsub("(.*)(\\d{2})/(\\d{2})/(\\d{4})/(.*)(.htm|.php)", "\\2-\\3-\\4-\\5", d[i]))
       
+    } else if(source == "lefigaro") {
+    
+      f = gsub("/", "-", gsub("http://", "", d[i]))
+    
     }
     
     f = paste0("data/", folder, "/", f, ".txt")
@@ -163,6 +173,30 @@ get_articles <- function(source, keyword, pages, step = 10, sw = sw) {
           txt = c(xpathApply(e, "//meta[@name='news_keywords']/@value"), txt)
           
         }
+         
+      } else if(source == "lefigaro") {
+
+        e = htmlParse(d[i], encoding = "UTF-8")
+      
+        if(grepl("recherche.lefigaro.fr", d[i])) {
+          
+          title = xpathApply(e, "//div[@id='article']/h1", xmlValue)
+          date = xpathApply(e, "//div[@id='article']/span[@class='sign']", xmlValue)
+          date = gsub("(.*)([0-9]{2})/([0-9]{2})/([0-9]{4})(.*)", "\\4-\\3-\\2", date)
+          txt = xpathApply(e, "//div[@id='article']/div[@class='texte']", xmlValue)
+          txt = c(xpathApply(e, "//div[@id='article']/h2", xmlValue), txt)
+          txt = txt[ !grepl("pointer: 0x", txt) ]
+          
+        } else if(grepl("www.lefigaro.fr", d[i])) {
+         
+          title = xpathApply(e, "//title", xmlValue)
+          date = xpathApply(e, "//time[@itemprop='datePublished']/@datetime")
+          date = substr(date, 1, 10)
+          txt = xpathApply(e, "//div[@itemprop='articleBody']", xmlValue)
+          txt = c(xpathApply(e, "//meta[@name='description']/@content"), txt)
+          txt = unlist(txt[ str_length(unlist(txt)) > 1 ])
+
+        }
         
       }
       
@@ -178,40 +212,40 @@ get_articles <- function(source, keyword, pages, step = 10, sw = sw) {
     
 }
 
-get_corpus <- function(threshold = .9, sample = FALSE, update = FALSE) {
+get_corpus <- function(threshold = 10, sample = FALSE, update = FALSE) {
 
-  counts = sapply(c("echos", "ecrans", "numerama", "zdnet"), function(x)
+  counts = sapply(c("echos", "ecrans", "numerama", "zdnet", "lefigaro"), function(x)
     length(dir(paste0("data/", x, ".corpus"))))
   
   cat("Corpus contains", sum(counts), "articles:\n")
   print(counts)
   
   get_terms(threshold, update) # corpus.terms.csv
-  get_freqs(sample, update)  # corpus.freqs.csv
-  get_edges(sample, update)  # corpus.edges.csv
+  get_freqs(sample, update)    # corpus.match.csv
+  get_edges(sample, update)    # corpus.edges.csv
   
+  # plot raw counts
   dir.create("plots", showWarnings = FALSE)
 
-  files = unique(read.csv("data/corpus.freqs.csv")[, 1:3 ])
+  files = unique(read.csv("data/corpus.match.csv")[, 1:3 ])
   files = summarise(group_by(files, source, t), n = n())
   files = summarise(group_by(files, source, ym = substr(t, 1, 7)), n = sum(n))
   
-  library(dplyr)
-  qplot(data = files, fill = source, y = n, x = ym, stat = "identity", geom = "bar") +
+  qplot(data = files, fill = source, y = n, x = ym, alpha = I(2/3),
+        stat = "identity", geom = "bar") +
     geom_text(data = subset(summarise(group_by(files, ym), n = sum(n) * 1.05),
                             ym %in% c("2006-03", "2009-07", "2010-10", "2011-06", "2012-01")),
-              aes(fill = NULL, x = ym, y = n, label = ym)) +
-    scale_fill_brewer("", palette = "Set2") +
+              aes(fill = NULL, x = ym, y = n, label = ym), color = "grey50") +
+    scale_fill_brewer("", palette = "Set1") +
     scale_x_discrete(breaks = paste0(2005:2014, "-01"), labels = 2005:2014) +
     labs(y = NULL, x = NULL) +
     theme_linedraw(18)
   
   ggsave("plots/counts.png", width = 12, height = 6)
-  ggsave("plots/counts.pdf", width = 12, height = 6)
-  
+    
 }
 
-get_terms <- function(threshold = .9, update = FALSE) {
+get_terms <- function(threshold = 10, update = FALSE) {
   
   if(!file.exists("data/corpus.terms.csv") | update) {
     
@@ -240,7 +274,7 @@ get_terms <- function(threshold = .9, update = FALSE) {
       })
       
       # prefixes and suffixes
-      r = "^Culture |^UMP |^Mme |^Madame |^Me |^La |^Le |^Les |^Dans |^En |^Ce |^Lors de |^Lors de l'|^Lors de la|^Lors du |^Lors des |^Selon |^Selon le |^Selon la |^Selon les |^Un |^Comment |^Peut-être |^Mais |^Malgré |^Même |^Merci |^Rendez-nous |^Sur |^du |^Or | à$| de$| de la$| d'$| de l'$| du$| des$| à des$| -$"
+      r = "^Culture |^UMP |^Mme |^Madame |^Me |^La |^Le |^Les |^Pour |^Dans |^En |^Ce |^Lors de |^Lors de l'|^Lors de la|^Lors du |^Lors des |^Selon |^Selon le |^Selon la |^Selon les |^Un |^Comment |^Peut-être |^Mais |^Malgré |^Même |^Merci |^Rendez-nous |^Sur |^du |^Or | à$| de$| de la$| d'$| de l'$| du$| des$| à des$| -$"
       kw = lapply(kw, function(x) gsub(r, "", x))
       
       # list
@@ -251,210 +285,135 @@ get_terms <- function(threshold = .9, update = FALSE) {
       kwds = kwds[ -which(grepl("-être$|-on$|-nous$|-il[s]*$|-elle[s]*$", kwds)) ]
       
       # final manual fixes
-      s = which(tolower(kwds) %in% tolower(c(sw, "Puis", "Pourtant", "Contrairement", "Visiblement", "Malheureusement", "Aujourd'", "Est-ce", "Alors", "Interrogé", "Interrogée", "Toutefois", "Ca", "de la","France", "Reste", "Or", "Mise", "Enfin", "Déjà", "Face", "Lorsqu", "Ensuite", "Finalement", "Contacté", "Contactée", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche", "Mieux", "Parce", "Autant", "Grâce", "Preuve", "Fin", "Hier", "Souvent", "Toujours", "Jamais", "Seul", "Seuls", "Seule", "Suite", "Actuellement", "Début", "MAJ", "MàJ", "Officiellement", "Difficile", "Au-delà", "Histoire", "Puisqu", "Généralement", "Heureusement", "Notons", "Rappelons", "Problème", "Signe", "ElementsByTagName", "ElementById", "Element", "PDF", "Probablement", "Mise", "Vient", "Ici", "Vraiment", "Bref", "Impossible")))
+      s = which(tolower(kwds) %in% tolower(c(sw, "Puis", "Pourtant", "Contrairement", "Visiblement", "Malheureusement", "Aujourd'", "Est-ce", "Alors", "Interrogé", "Interrogée", "Toutefois", "Ca", "de la","France", "Reste", "Or", "Mise", "Enfin", "Déjà", "Face", "Lorsqu", "Ensuite", "Finalement", "Contacté", "Contactée", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche", "Mieux", "Parce", "Autant", "Grâce", "Preuve", "Fin", "Hier", "Souvent", "Toujours", "Jamais", "Seul", "Seuls", "Seule", "Suite", "Actuellement", "Début", "MAJ", "MàJ", "Officiellement", "Difficile", "Au-delà", "Histoire", "Puisqu", "Généralement", "Heureusement", "Notons", "Rappelons", "Problème", "Signe", "ElementsByTagName", "ElementById", "Element", "PDF", "Probablement", "Mise", "Vient", "Ici", "Vraiment", "Bref", "Impossible", "Oui", "Maintenant", "Retrouvez", "Faire", "Voir", "Loin", "Résultat", "Bon", "Pire", "Abonnements", "Attention", "Faute", "Lire", "Sujet", "Suivez", "Parallèlement", "Retour", "Idem", "Petit", "Nouvelle", "Espérons", "Monsieur")))
       kwds = kwds[ -s ]
       kwds = kwds[ nchar(kwds) > 2 ] # short terms: PC, TV, CD
       
       # frequency table
       freq = as.data.frame(table(kwds), stringAsFactors = FALSE)
-      freq = freq[order(-freq$Freq), ]
+      freq = freq[ order(-freq$Freq), ]
       names(freq) = c("term", "freq")
       rownames(freq) = NULL
       
       # save
       write.csv(freq, paste0("data/", i, ".terms.csv"), row.names = FALSE)
       
-      #
-      #
-      #
-      
-      #     matches = rbind(
-      #       c("Opposants : EUCD/LQDN", 
-      #         grepl("EUCD|Quadrature|Quadrature du [N|n]et|Christophe Espern|Jérémie Zimmermann|Philippe Aigrain", kw)),
-      #       c("HADOPI/DADVSI/LOPPSI", 
-      #         grepl("DADVSI|Dadvsi|DADVSi|DAVDSI|LOPPSI|Lopsi|Hadopi|HADOPI|Hadop|Hadoi|Haute Autorité|Haute|CPD|Eric Walter|Mireille Imbert-Quaretta|Imbert-Quaretta|Marie-Françoise Marais", kw)),
-      #       c("Conseils/Rapports", 
-      #         grepl("CSPLA|Conseil Supérieur de la Propriété Littéraire|Pierre Sirinelli|CNN|CNNum|Conseil National du Numérique|Benoît Tabaka|FDI|Forum des [D|d]roits sur Internet|Falque-Pierrotin|Zelnik|Denis Olivennes|rapport Olivennes|Olivennes|Lescure|mission Lescure", kw)),
-      #       c("Industrie : Culture", 
-      #         grepl("ALPA|Piraterie Audiovisuelle|Alpa|SDRM|Sony|Warner|UPFI|Union [P|p]roducteurs [P|p]honographiques [F|f]rançais [I|i]ndépendants|Union [P|p]roducteurs [P|p]honographiques [I|i]ndépendants|SACEM|Sacem|Sacem|SACD|Société [A|a]uteurs|[C|c]ompositeurs [D|d]ramatiques|Société des [A|a]uteurs|SPPF|Phonogrammes|SCPP|Société [C|c]ivile [P|p]roducteurs|Société [C|c]ivile des [P|p]roducteurs [P|p]honographiques|SPRD|Marc Guez|SNEP|Syndicat [N|n]ational de l'[É|E|é]dition [P|p]honographique|David El Sayegh|Vivendi|Universal|EMI|Pascal Nègre|Pascal Rogard|Bernard Miyet|RIAA|MPAA|Motion Picture Association|Fédération [I|i]nternationale de l'[I|i]ndustrie [P|p]honographique|IFPI|British Phonographic Industry|BPI|Lagardère|EMI|Fnac|FNAC|International Intellectual Property Alliance|IIPA|Midem|ForumAvignon|Miyet", kw)),
-      #       c("Industrie : Info/Web", 
-      #         grepl("Apple|Microsoft|Spotify|Dailymotion|Google|Facebook|Amazon|Software Alliance|BSA", kw)),
-      #       c("ACTA/SOPA/PIPA", 
-      #         grepl("Acta|ACTA|Sopa|SOPA|Pipa|PIPA", kw)),
-      #       c("DRM", 
-      #         grepl("DRM|MTP|ARMT|Régulation des [M|m]esures [T|t]echniques|Musitelli", kw)),
-      #       c("CNIL/CSA", 
-      #         grepl("CSA|CNIL|Cnil|Türk|Conseil [S|s]upérieur de l'[A|a]udiovisuel|Commission [N|n]ationale de l'[I|i]nformatique", kw)),
-      #       c("P2P/DDL", 
-      #         grepl("[P]eer [T|t]o [P|p]eer|[P]eer-[T|t]o-[P|p]eer|p2p|P2P|[T|t]orrent|The Pirate Bay|TPB|DDL|Mega[u|U]pload|Mule|Emule|Donkey|Lime[W|w]ire|Ka[Z|z]a[A|a]", kw)),
-      #       c("Opposants : Autres", 
-      #         grepl("April|APRIL|Alix Cazenave|Couchet|Bayart|FDN|French Data Network|FSF|FSFE|Free Software Foundation|Stallman|UFC|Union Consommateurs|Dourgnon|CLCV|Parti [P|p]irate|Maxime Rouquet|ODEBI|Obedi|[S|s]topDRM|[S|s]top [drm|DRM]|EFF|Electronic Frontier Fo[u]*ndation|ISOC|Geist|Spedidam|Audionautes|Public-Artistes|Isoc|ISOC|Framasoft", kw)),
-      #       c("Industrie : Télécom", 
-      #         grepl("Numericable|Free|Niel|Orange|Stéphane Richard|ARCEP|Arcep|France [Télécom|Telecom]|Bouygues|SFR", kw)),
-      #       c("UE/IPRED", grepl("CJCE|[J|j]ustice [E|e]uropéenne|Justice de l'Union|CEDH|[E|e]uropéenne [D|d]roits|CJUE|Parlement [E|e]uropéen|Bruxelles|Paquet Télécom|IPRED|Commission [E|e]uropéenne|Reding|Gallo|Bono|Trautmann|Cohn-Bendit|Lipietz|Boumedie[n|nn]e-Thiery", kw)),
-      #       c("Exécutif : PR/PM/GOUV", 
-      #         grepl("Président|[É|E|é]lysée|Chirac|Sarkozy|Hollande|Matignon|Villepin|Fillon|Ayrault|Hortefeux|Alliot-Marie|Eric Besson|NKM|Nathalie Kosciusko-Morizet|Pellerin|Chatel", kw)),
-      #       c("Exécutif : Ministère", 
-      #         grepl("Donnedieu|RDDV|Albanel|Mitterrand|Filipetti|Valois|Eric Walter|Tardieu", kw)),
-      #       c("Parlement", 
-      #         grepl("Parlement|Assemblée|Assemblée [N|n]ationale|Sénat|CMP|Commission Mixte Paritaire|Commission [des A|des a|A|a]ffaires [C|c]ulturelles", kw)),
-      #       c("Classe politique : Droite", 
-      #         grepl("UMP", kw) | grepl("Vanneste|Lefebvre|Lefèbvre|Lefebre|Riester|Marland-Militello|Copé|Tardy|Dionis|Toubon|Lancar|Poisson|Morano|Gosselin|Raudière|Bayrou|Marland-Militello|Dupont-Aignan|Panafieu|Retailleau|Boutin|Suguenot|Mariton|Lepage|Carayon|Gaino|Guaino|Karoutchi", kw, ignore.case = TRUE)),
-      #       c("Classe politique : Gauche", 
-      #         grepl("PS|Parti [S|s]ocialiste|Socialistes|Groupe [C|c]ommuniste|Verts|cologie|PCF|Parti de [G|g]auche|Front de [G|g]auche", kw) | grepl("Bloche|Christian Paul|Ségolène Royal|Aubry|Mathus|Lang|Brard|Thiollière|Billard|Blandin|Pinel|Lamberts|Poursinoff|Joly|Rebsamen|Tasca|Montebourg|Lagauche|Badinter|Hidalgo", kw, ignore.case = TRUE))
-      #     )
-      #     
-      #     # -----
-      #     # dates
-      #     # -----
-      #     
-      #     dates = sapply(files, function(x) {
-      # 
-      #       j = gsub("(.)+ publié le \\w+\\s| à (.*)", "", readLines(x)[2])
-      #       
-      #       if(grepl("/|-", j))
-      #         date = parse_date_time(j, "%Y %m %d", locale = "fr_FR")
-      #       else
-      #         date = parse_date_time(j, "%d %m %Y", locale = "fr_FR")
-      #       
-      #       return(as.character(date))
-      #       
-      #     })
-      #     
-      #     # ---------
-      #     # aggregate
-      #     # ---------
-      #     
-      #     # collate
-      #     m = as.data.frame(matches)
-      #     names(m)[1] = "id"
-      #     names(m)[-1] = dates
-      #     
-      #     # parse
-      #     m = melt(m, id = "id", variable = "date")
-      #     m$date = tolower(as.character(m$date))
-      #     m$value = as.numeric(as.logical(m$value))
-      #     print(str(m))
-      # #     m$date = parse_date_time(m$date, "%Y %m %d", locale = "fr_FR")
-      #     print(table(substr(m$date, 0, 4)))
-      # 
-      #     write.csv(m[ !is.na(m$date), ], file = paste0(i, ".entities.csv"), row.names = FALSE)
-      
     }
     
-    corpus = lapply(dir("data", ".terms.csv$", full.names = TRUE), read.csv)
+    corpus = lapply(dir("data", "\\w.corpus.terms.csv$", full.names = TRUE), read.csv)
     corpus = rbind.fill(corpus)
     corpus = aggregate(freq ~ term, sum, data = corpus)
-    
-    corpus = corpus[ corpus$freq > quantile(corpus$freq, threshold), ]
+
+    corpus = corpus[ corpus$freq >= threshold, ]
     corpus = corpus[ order(corpus$freq, decreasing = TRUE), ]
-    
-    cat("Saved", nrow(corpus), "terms\n")
+
+    cat("Found", nrow(corpus), "terms occurring at least", threshold, "times\n")
     write.csv(corpus, file = "data/corpus.terms.csv", row.names = FALSE)
-    
+
   }
 
 }
 
 get_freqs <- function(sample = FALSE, update = FALSE) {
   
-  if(!file.exists("data/corpus.freqs.csv") | update) {
-    
-    kw = as.character(read.csv("data/corpus.terms.csv")$term)
-    kw = kw[ kw %in% c(# list of ~ 400 unambiguous unique terms, from first 1,036 keywords
-                       # excluded: "Hadopi", "HADOPI", "DADVSI", "Dadvsi", "Loi Dadvsi", "Projet Dadvsi",
-                       # "Loi Hadopi", "DAVDSI", "Loi Création", "Pour Hadopi"
-                       # also excluded: "Parlement", "Elysée", "Sénat", "Assemblée Nationale", "Assemblée", 
-                       #  "Président de la République", "Élysée", "Culture", "Ministre de la Culture", 
-                       # - media, journalists (e.g. "Korben", "Bluetouff"), other generic terms ("FAI", "SPRD");
-                       # - small stories: "Renaud Veeckman", 
-                       # included: politicians, industries and
-                       # nominal ISPs from France, Europe, N. America (e.g. "Verizon"), civil servants,
-                       # representatives, trade unions, parties, activists, academics, prominent legislation
-                       # and legal cases (e.g. "Jamendo", "Megaupload", "The Pirate Bay", "Mulholland Drive"),
-                       # plus a few more organizations and people (e.g. "Dailymotion")
-                       "Nicolas Sarkozy", "Christine Albanel", "UMP", "CSA", "Aurélie Filippetti",
-                       "Frédéric Mitterrand", "Quadrature du Net", "CNIL", "Cnil", "Sacem", "Free", "Orange",
-                       "François Hollande", "Apple", "Twitter", "Pierre Lescure", "Facebook", "Patrick Bloche",
-                       "Renaud Donnedieu de Vabres", "Conseil d'Etat", "mission Lescure", "Christian Paul",
-                       "SNEP", "Conseil Constitutionnel", "Vivendi", "Microsoft", "SFR", "CPD",
-                       "Dailymotion", "TMG", "Parti Socialiste", "Franck Riester", "rapport Lescure",
-                       "Gouvernement", "Justice", "Eric Walter", "MegaUpload",
-                       "Mireille Imbert-Quaretta", "SACD", "SCPP", "Albanel", "Lionel Tardy",
-                       "Spotify", "Frédéric Lefebvre", "Hollande", "Marie-Françoise Marais",
-                       "The Pirate Bay", "Verts", "Denis Olivennes", "Arcep",
-                       "ACTA", "Universal", "Amazon", "Parti Pirate", "RIAA", "Fleur Pellerin",
-                       "Pascal Nègre", "Frank Riester", "Fnac", "Universal Music", "France Télévisions",
-                       "Michèle Alliot-Marie", "Paquet Télécom", "CNC", "François Bayrou", "Jack Lang",
-                       "Martine Aubry", "Jean-Marc Ayrault", "Olivennes", "SACEM", "Sony", "SPPF", "Mitterrand",
-                       "Bono", "Bouygues", "UDF", "FDN", "Jean-Pierre Brard", "Michel Thiollière", "EMI", "LCEN",
-                       "EUCD", "Jean-François Copé", "MPAA", "Alain Suguenot", "Megaupload", "Ségolène Royal",
-                       "Trident Media Guard", "UFC-Que Choisir", "Yahoo", "Eric Besson", "Didier Mathus",
-                       "Jérémie Zimmermann", "Anonymous", "Christian Vanneste", "Commission Européenne",
-                       "Union Européenne", "CMP", "Napster", "Xavier Niel", "Christine Boutin",
-                       "Martine Billard", "Lescure", "ARMT", "Warner", "IFPI", "France Télécom", "DMCA",
-                       "Jacques Toubon", "Matignon", "Snep", "François Fillon", "Quadrature", "rapport Zelnik",
-                       "ALPA", "Guy Bono", "Jean Dionis du Séjour", "Filippetti", "Jérôme Bourreau-Guggenheim",
-                       "Nathalie Kosciusko-Morizet", "Olivier Schrameck", "Patrick Zelnik", "RDDV", "Benjamin Bayart",
-                       "Adami", "Arnaud Montebourg", "Conseil Supérieur de l'Audiovisuel", "Numericable",
-                       "Philippe Aigrain", "Virgin" , "Commission Mixte Paritaire", "Mission Lescure",
-                       "mission Zelnik", "Netflix", "Spedidam", "Commission de Protection des Droits",
-                       "CSPLA", "Nicolas Dupont-Aignan", "Françoise de Panafieu", "Muriel Marland-Militello",
-                       "Pascal Rogard", "Autorité de Régulation des Mesures Techniques", "Dominique de Villepin",
-                       "Intérieur", "UPFI", "French Data Network", "Midem", "OMPI", "RapidShare", "Wikileaks",
-                       "FNAC", "mission Olivennes", "Nouveau Centre", "David El Sayegh", "NKM", "Rapidshare",
-                       "Alpa", "Acta", "Bernard Miyet", "Iliad", "Jacques Chirac", "SOPA",
-                       "Bouygues Telecom", "Hadopi Eric Walter", "Jacques Attali", "Luc Besson", "Manuel Valls",
-                       "Société des Auteurs", "Brice Hortefeux", "Ministère de la Culture",
-                       "Syndicat National de l'Edition Phonographique", "Bernard Accoyer", "Donnedieu de Vabres",
-                       "Michel Riguidel", "Alex Türk", "Allostreaming", "SPRD", "Association de Lutte",
-                       "Piraterie Audiovisuelle", "Daniel Cohn-Bendit", "Fillon", "INA", "Jamendo", "LOPPSI",
-                       "Loppsi", "Olivier Henrard", "Riester", "Ayrault", "David Assouline",
-                       "OVH", "BPI", "Catherine Trautmann", "Compositeurs Dramatiques", "Lagardère", "Naïve",
-                       "Richard Stallman", "Universal Music France", "Alliance Public-Artistes", "ARJEL",
-                       "Catherine Tasca", "Catherine Tasca", "Conseil National du Numérique", 
-                       "Digital Millennium Copyright Act", "Eva Joly", "Laure de la Raudière", "Odebi",
-                       "Maître Eolas", "Marine Le Pen", "Maxime Rouquet", "Mega", "Nadine Morano",
-                       "Neelie Kroes", "RSF", "Suguenot", "VirginMega", "WikiLeaks", "Anne Hidalgo", 
-                       "Christophe Tardieu", "IPRED", "Barack Obama", "Marc Guez", "MoDem", "Riguidel",
-                       "Société Civile des Producteurs Phonographiques", "Sony Music", "commission Zelnik",
-                       "Electronic Frontier Foundation", "Fédération Française des Télécoms", "Framasoft",
-                       "Front National", "Gaumont", "Philippe Gosselin", "rapport Olivennes", "Laurent Petitgirard",
-                       "Marland-Militello", "Bouygues Télécom",
-                       "British Phonographic Industry", "Carla Bruni", "Jean-Michel Planche", "Lionel Jospin",
-                       "Martin Bouygues", "Mireille Imbert Quaretta", "Thierry Lhermitte", "Arjel", "Aubry",
-                       "Copé", "Eric Woerth", "Jérôme Roger", "Nicolas Seydoux", "Stéphane Richard", "Steve Jobs",
-                       "Bayrou", "Commission Nationale de l'Informatique", "Défense", "Finances", "Jean Musitelli",
-                       "Jean-Louis Debré", "Kim Dotcom", "Motion Picture Association", "ONU", "PIPA", "Rachida Dati",
-                       "Sony BMG", "StopDRM", "Verts Martine Billard", "Viviane Reding", "Forum d'Avignon", "Jospin",
-                       "Lionel Thoumyre", "rapport Gallo", "Reporters", "Zelnik", "APRIL", "Google France", 
-                       "Ligue Odebi", "Maison Blanche", "Marc Le Fur", "Modem", "Roger Karoutchi", "Sopa",
-                       "Collège de l'Hadopi", "Jean-Frédéric Poisson", "Laurent Fabius", "Michel Barnier",
-                       "Ofcom", "UFC", "UFC Que Choisir", "Vivendi Universal", "Chirac", "Christine Lagarde",
-                       "Commerce", "Digital Economy Act", "Disney", "Hervé Rony", "PCF", "Royal", "Travail",
-                       "ADAMI", "Benjamin Lancar", "Conseil Supérieur de la Propriété Littéraire",
-                       "Luc Chatel", "Michel Sardou", "ASIC", "Aurélie Filipetti", "Axel Dauchez", "Bernard Carayon",
-                       "Bloche", "Christophe Lameignère", "Frédéric Couchet", "Jean-Noël Tronc", "Labs Hadopi",
-                       "Niel", "Pipa", "Richard Cazenave", "UFC-Que", "Vanneste", "AFA", "Corinne Erhel",
-                       "COSIP", "David Guetta", "EELV", "Éric Walter", "ISF", "Laurent Wauquiez", "Lefebvre",
-                       "Ligue", "Marie-Christine Blandin", "Mulholland Drive", "Bernard Kouchner", "Calimaq",
-                       "CLCV", "Denis Ladegaillerie", "Dionis du Séjour", "Françoise Castex",
-                       "Isabelle Falque-Pierrotin", "MIQ", "OCDE", 
-                       "Organisation Mondiale de la Propriété Intellectuelle", "Patrice Martin-Lalande",
-                       "Rapport Lescure", "rapport MIQ", "Recording Industry Association", "SOS Hadopi",
-                       "Verizon", "DailyMotion", "EFF", "Mark Zuckerberg", "Mathus", "Michel Boyon", 
-                       "PS Christian Paul", "SCAM", "Bibliothèque Nationale de France", "BSA", "CGTI",
-                       "Commission des Affaires Culturelles", "Création Public Internet", "Csa",
-                       "IBM", "Jacques Legendre", "Jean-Luc Godard", "Lady Gaga", "Laure de La Raudière",
-                       "Laurent Chemla", "Renaud Donnedieu de Vabre", "SAMUP", "SELL", "Serge Lagauche",
-                       "Simavelec", "SOS-Hadopi", "Vincent Peillon", "Virgin Media", "Benoît Hamon", "British Telecom",
-                       "Centre National de la Musique", "Imbert-Quaretta", "Mouvement Démocrate", "NPA",
-                       "Pirate Bay", "Prince", "Radiohead", "Société Civile des Producteurs de Phonogrammes",
-                       "UFC-Que-Choisir", "Alain Lipietz", "Bruno Retailleau", "Calogero",
-                       "Centre National de la Cinématographie", "Digital Economy Bill", "Ecologie",
-                       "Fédération Internationale de l'Industrie Phonographique", "Francis Lalanne",
-                       "Giuseppe de Martino", "Guillaume Cerutti") ]
+  if(!file.exists("data/corpus.match.csv") | update) {
 
+    # ~ 340 unambiguous unique terms, extracted from first 1,000 keywords   
+    entities = c("(Alain )?Suguenot", "(Aurélie )?Filip(p)?etti", "(Barack )?Obama", 
+      "(Christian )?Vanneste", "(Christine )?Albanel", "(Didier )?Mathus", 
+      "(Franck |Frank )?Riester", "(François )?Bayrou", "(François )?Fillon", 
+      "(François )?Hollande", "(Frédéric )?Lefebvre", "(Frédéric )?Mitterrand", 
+      "(Guy )?Bono", "(Jacques )?Chirac", "(Jean )?Dionis du Séjour", 
+      "(Jean-François )?Copé", "(Jean-Marc )?Ayrault", "(Ligue )?Odebi", 
+      "(Lionel )?Jospin", "Martin Bouygues", "Bouygues( Telecom| Télécom)?", 
+      "(Martine )?Aubry", "(Martine )?Billard", "(Michel )?Riguidel", 
+      "(Mireille )?Imbert-Quaretta|(rapport )?MIQ", "(Muriel )?Marland-Militello", 
+      "(Nicolas )?Sarkozy", "(Patrick )?Bloche", "(Pierre |mission |Mission |rapport | Rapport)?Lescure", 
+      "(rapport |Patrick |mission |commission )?Zelnik", "(Renaud )?Donnedieu de Vabre(s)?|RDDV", 
+      "(Renaud )?Veeckman", "(Riposte )?graduée", "(Ségolène )?Royal", 
+      "(The )?Pirate Bay", "(Xavier )?Niel", "Acta", "ACTA", "Adami", 
+      "ADAMI", "Adobe", "AFA", "Alain Lipietz", "Alex Türk", 
+      "Alice", "Alicebox TV", "Alliance Public-Artistes", "Allostreaming", 
+      "Alpa", "ALPA", "Amazon", "Anne Hidalgo", "Anonymous", "Apple", 
+      "APRIL", "Arcep", "Arjel", "ARJEL", "ARMT", "Arnaud Montebourg", 
+      "ASIC", "Association de Lutte|Piraterie Audiovisuelle", "Aurélie Filipetti", 
+      "Autorité de Régulation des Mesures Techniques", "Axel Dauchez", 
+      "Benjamin Bayart", "Benjamin Lancar", "Benoît Hamon", "Benoît Tabaka", 
+      "Bernard Accoyer", "Bernard Carayon", "Bernard Kouchner", "Bernard Miyet", 
+      "Bibliothèque Nationale de France", "BPI", "Brice Hortefeux", 
+      "British Phonographic Industry", "British Telecom", "Bruno Retailleau", 
+      "BSA", "Calimaq", "Calogero", "Carla Bruni", "Carte Musique Jeune", 
+      "Catherine Tasca", "Catherine Trautmann", "Deep Packet Inspection",
+      "Centre National de la Cinématographie", "Centre National de la Musique", 
+      "CGTI", "Christian Paul", "Christine Boutin", "Christine Lagarde", 
+      "Christophe Lameignère", "Christophe Tardieu", "CJUE", "CLCV", 
+      "CMP", "CNC", "Cnil", "CNIL", "CNM", "Collège de l'Hadopi", 
+      "Commerce", "Commission de Protection des Droits", "Commission des Affaires Culturelles", 
+      "Commission Européenne", "Commission Mixte Paritaire", "Commission Nationale de l'Informatique", 
+      "Conseil Constitutionnel", "Conseil d'Etat", "Conseil de l'Union( Européenne)?", 
+      "Conseil National du Numérique", "Conseil Supérieur de l'Audiovisuel", 
+      "Conseil Supérieur de la Propriété Littéraire", "Corinne Erhel", 
+      "COSIP", "Cour de Justice de l'Union Européenne", "CPD", "Création Public Internet", 
+      "Csa", "CSA", "CSPLA", "Dailymotion", "DailyMotion", "Daniel Cohn-Bendit", 
+      "David Assouline", "David El Sayegh", "David Guetta", "Deezer", 
+      "Défense", "Denis Ladegaillerie", "(Denis |rapport |mission |Mission)?Olivennes", "Digital Economy Act", 
+      "Digital Economy Bill", "Digital Millennium Copyright Act", "Digital Rights Management", 
+      "Disney", "DMCA", "Dominique de Villepin",
+      "DRM", "Ecologie", "EELV", "EFF", "Electronic Frontier Foundation", 
+      "EMI", "Eric Besson", "Eric Walter", "Éric Walter", "Eric Woerth", 
+      "EUCD", "Eva Joly", "Facebook", "FDN", "Fédération Française des Télécoms", 
+      "Fédération Internationale de l'Industrie Phonographique", 
+      "Finances", "Fleur Pellerin", "Fnac", "FNAC", "Forum d'Avignon", 
+      "Framasoft", "France Télécom", "France Télévisions", "Francis Lalanne", 
+      "Françoise Castex", "Françoise de Panafieu", "Frédéric Couchet", 
+      "Free|Iliad", "French Data Network", "Front National", "Gaumont", 
+      "Gilles Babinet", "Giuseppe de Martino", "Google France", "Guillaume Cerutti", 
+      "Hadopi Eric Walter", "Hervé Rony", "IBM", "IFPI", "INA", "Intérieur", 
+      "IPRED", "Isabelle Falque-Pierrotin", "ISF", "Jack Lang", "Jacques Attali", 
+      "Jacques Bille", "Jacques Legendre", "Jacques Toubon", "Jamendo", 
+      "Jean Musitelli", "Jean-Bernard Lévy", "Jean-Frédéric Poisson", 
+      "Jean-Louis Debré", "Jean-Luc Godard", "Jean-Michel Planche", 
+      "Jean-Noël Tronc", "Jean-Pierre Brard", "Jérémie Zimmermann", 
+      "Jérôme Bourreau-Guggenheim", "Jérôme Roger", "Justice", 
+      "Kim Dotcom", "Labs Hadopi", "Lady Gaga", "Lagardère", "Laure de la Raudière", 
+      "Laure de La Raudière", "Laurent Chemla", "Laurent Fabius", 
+      "Laurent Petitgirard", "Laurent Wauquiez", "LCEN", "Lionel Tardy", 
+      "Lionel Thoumyre", "Loppsi", "LOPPSI", "Luc Besson", "Luc Chatel", 
+      "Maison Blanche", "Maître Eolas", "Manuel Valls", "Marc Guez", 
+      "Marc Le Fur", "Marie-Christine Blandin", "Marie-Françoise Marais", 
+      "Marine Le Pen", "Mark Zuckerberg", "Matignon", "Maxime Rouquet", 
+      "Megaupload", "MegaUpload", "Michel Barnier", "Michel Boyon", 
+      "Michel Sardou", "Michel Thiollière", "Michèle Alliot-Marie", 
+      "Microsoft", "Midem", "Modem", "MoDem", "Motion Picture Association", "Mouvement Démocrate", 
+      "MPAA", "Mulholland Drive", "Nadine Morano", "Naïve", "Napster", 
+      "Nathalie Kosciusko-Morizet|NKM", "Neelie Kroes", "Netflix", 
+      "Nicolas Dupont-Aignan", "Nicolas Seydoux", "Nouveau Centre", 
+      "NPA", "Numericable", "OCDE", "Ofcom", "Olivier Henrard", 
+      "Olivier Schrameck", "OMPI", "ONU", "Orange", "Organisation Mondiale de la Propriété Intellectuelle", 
+      "OVH", "Paquet Télécom", "Parlement Européen", "Parti Pirate", 
+      "Parti Socialiste", "Pascal Nègre", "Pascal Rogard", "Patrice Martin-Lalande", 
+      "PCF", "Philippe Aigrain", "Philippe Gosselin", "Pierre Arditi", 
+      "Pierre Sirinelli", "Pipa", "PIPA", "Prince", "PUR|Promotion Usages Responsables", 
+      "Quadrature( du Net)?", "Rachida Dati", "Radiohead", "rapport Gallo", 
+      "Recording Industry Association", "Reporters", "RIAA", "Richard Cazenave",
+      "Richard Stallman", "Roger Karoutchi", "RSF", "Sabam", "SACD", "Sacem", "SACEM", 
+      "SAMUP", "SCAM", "SCPP", "SELL", "Serge Lagauche", "SFR", "Simavelec", 
+      "Snep", "SNEP", "Société Civile des Producteurs de Phonogrammes", 
+      "Société Civile des Producteurs Phonographiques", "Société des Auteurs|Compositeurs Dramatiques", 
+      "Sony( Music| BMG)", "Sopa", "SOPA", "SOS Hadopi", "SOS-Hadopi", 
+      "Spedidam", "Spotify", "SPPF", "SPRD", "Stéphane Richard", "Steve Jobs", 
+      "StopDRM", "Syndicat National de l'Edition Phonographique", "Thierry Lhermitte", 
+      "TMG", "Travail", "Trident Media Guard", "TVA", "Twitter", "UDF", 
+      "UFC(-Que Choisir| Que Choisir|-Que-Choisir|-Que)?", "UMP", "Union Européenne", 
+      "UPFI", "Verizon", "Verts", "Vincent Peillon", "Virgin(Mega| Media)?", 
+      "Vivendi|Universal( Music)?( France)?", "Viviane Reding", "Warner", 
+      "Wikileaks", "WikiLeaks", "Yahoo")
+
+    # check against empirical corpus
+    kw = as.character(read.csv("data/corpus.terms.csv")$term)
+    kw = sum(str_detect(kw, paste0(entities, collapse = "|")))
+    
+    cat("Matched", kw, "entities in empirical corpus\n")
 
     files = dir("data", ".txt", recursive = TRUE, full.names = TRUE)
     files = files[ !grepl(".index.txt$", files) ]
@@ -462,116 +421,99 @@ get_freqs <- function(sample = FALSE, update = FALSE) {
     if(sample)
       files = sample(files, sample)
     
-    cat("Processing terms in", length(files), "articles...\n")
+    cat("Finding", length(entities), "entities in", length(files), "articles...\n")
 
     files = lapply(files, function(x) {
       
-      j = readLines(x)
-      term = str_detect(paste0(j[ -2 ], collapse = " "), kw)
+      j = readLines(x, encoding = "UTF-8")
+      t = str_detect(paste0(j[ -2 ], collapse = " "), entities)
       
       date = gsub("(.)+ publié le \\w+\\s| à (.*)", "", j[ 2 ])
       
-      if(grepl("/|-", date))
+      if(is.null(date) | nchar(date) < 10)
+        date = NA
+      else if(grepl("/|-", date))
         date = parse_date_time(date, "%Y %m %d", locale = "fr_FR")
       else
         date = parse_date_time(date, "%d %m %Y", locale = "fr_FR")
       
-      if(sum(term)) {
+      if(sum(t)) {
         
-        k = kw[ term ]
+        k = unique(entities[ t ])
         
-        # named entities
-        # k[ grepl("hadopi", k, ignore.case = TRUE) ] = "HADOPI"
-        # k[ grepl("dadvsi", k, ignore.case = TRUE) ] = "DADVSI"
-        # k[ grepl("^Assemblée", k) ] = "Assemblée Nationale"
-        k[ grepl("Albanel", k) ] = "Christine Albanel"
-        k[ grepl("Ayrault", k) ] = "Jean-Marc Ayrault"
-        k[ grepl("Aubry", k) ] = "Martine Aubry"
-        k[ grepl("Bayrou", k) ] = "François Bayrou"
-        k[ grepl("Bloche", k) ] = "Patrick Bloche"
-        k[ grepl("Billard", k) ] = "Martine Billard"
-        k[ grepl("Christian Paul", k) ] = "Christian Paul"
-        k[ grepl("Chirac", k) ] = "Jacques Chirac"
-        k[ grepl("Copé", k) ] = "Jean-François Copé"
-        k[ grepl("Dionis du Séjour", k) ] = "Jean Dionis du Séjour"
-        k[ grepl("^RDDV$|Donnedieu de V", k) ] = "Renaud Donnedieu de Vabres"
-        k[ grepl("Eric Walter", k) ] = "Éric Walter"
-        k[ grepl("Filip(p)?etti", k) ] = "Aurélie Filippetti"
-        k[ grepl("Fillon", k) ] = "François Fillon"
-        k[ grepl("Hollande", k) ] = "François Hollande"
-        k[ grepl("Jospin", k) ] = "Lionel Jospin"
-        k[ grepl("Lefebvre", k) ] = "Frédéric Lefebvre"
+        # rapport/mission/person
         k[ grepl("Lescure", k) ] = "Mission Lescure"
-        k[ grepl("Mathus", k) ] = "Didier Mathus"
-        k[ grepl("Mitterrand", k) ] = "Frédéric Mitterrand"
-        k[ grepl("MIQ$|Quaretta", k) ] = "Mireille Imbert-Quaretta" # also rapport
-        k[ grepl("Niel", k) ] = "Xavier Niel"
+        k[ grepl("NKM$|Kosciusko", k) ] = "Nathalie Kosciusko-Morizet"
+        k[ grepl("MIQ$|Quaretta", k) ] = "Mireille Imbert-Quaretta"
         k[ grepl("Olivennes", k) ] = "Mission Olivennes"
-        k[ grepl("Raudière", k) ] = "Laure de La Raudière"
-        k[ grepl("Riester", k) ] = "Franck Riester"
-        k[ grepl("Riguidel", k) ] = "Michel Riguidel" # ENST
-        k[ grepl("Royal", k) ] = "Ségolène Royal"
-        k[ grepl("Sarkozy", k) ] = "Nicolas Sarkozy"
-        k[ grepl("Suguenot", k) ] = "Alain Suguenot"
-        k[ grepl("Vanneste", k) ] = "Christian Vanneste"
-        k[ grepl("Zelnik", k) ] = "Mission Zelnik"
+        k[ grepl("Zelnik", k) ] = "Patrick Zelnik"
+        # name fixes
+        k[ grepl("Filip(.*)etti", k) ] = "Aurélie Filippetti" # spelling
+        k[ grepl("RDDV$|Donnedieu", k) ] = "Renaud Donnedieu de Vabres"
+        k[ grepl("Eric Walter", k) ] = "Éric Walter" # accent        
+        k[ grepl("Raudière", k) ] = "Laure de La Raudière" # de la / de La
+        k[ grepl("Riester", k) ] = "Franck Riester" # Frank/Franck
+        # companies/organizations
+        k[ grepl("^Bouygues", k) ] = "Bouygues" # Bouygues (Telecom)
+        k[ grepl("^Alice", k) ] = "Alice" # Alice, Alice Box TV
+        k[ k == "Free|Iliad" ] = "Free"
+        k[ grepl("^Sony", k) ] = "Sony" # Sony, Sony BMG, Sony Music
+        k[ grepl("^UFC", k) ] = "UFC-QC"
+        k[ grepl("^Virgin", k) ] = "Virgin" # Virgin, VirginMega, Virgin Media
         k[ k %in% c("ARMT", "Autorité de Régulation des Mesures Techniques") ] = "ARMT"
         k[ k %in% c("ACTA", "Acta") ] = "ALPA"
         k[ k %in% c("ADAMI", "Adami") ] = "ADAMI"
-        k[ k %in% c("ALPA", "Alpa", "Association de Lutte", "Piraterie Audiovisuelle") ] = "ALPA"
+        k[ k %in% c("ALPA", "Alpa", "Association de Lutte|Piraterie Audiovisuelle") ] = "ALPA"
         k[ k %in% c("ARJEL", "Arjel") ] = "ARJEL"
-        # k[ k %in% c("Barack Obama", "Maison Blanche") ] = "Barack Obama"
+        k[ k %in% c("Barack Obama", "Maison Blanche") ] = "Maison Blanche"
         # "Besson" might be Eric or Luc
-        k[ k %in% c("Bono", "Guy Bono") ] = "Guy Bono"
-        k[ k %in% c("Bouygues", "Bouygues Telecom", "Bouygues Télécom", "Martin Bouygues") ] = "Bouygues"
         k[ k %in% c("BPI", "British Phonographic Industry") ] = "BPI"
         k[ k %in% c("CMP", "Commission Mixte Paritaire") ] = "CMP"
         k[ k %in% c("CNC", "Centre National de la Cinématographie") ] = "CNC"
+        k[ k %in% c("CNM", "Centre National de la Musique") ] = "CNM"
         k[ k %in% c("CNIL", "Cnil", "Commission Nationale de l'Informatique") ] = "CNIL"
         k[ k %in% c("CPD", "Commission de Protection des Droits") ] = "Hadopi-CPD"
         k[ k %in% c("Collège de l'Hadopi") ] = "Hadopi-Collège"
         k[ k %in% c("CSA", "Conseil Supérieur de l'Audiovisuel", "Csa") ] = "CSA"
         k[ k %in% c("Conseil Supérieur de la Propriété Littéraire", "CSPLA") ] = "CSPLA"
-        # k[ k %in% c("Culture", "Ministre de la Culture") ] = "Ministre Culture"
         k[ k %in% c("Dailymotion", "DailyMotion") ] = "Dailymotion"
         k[ k %in% c("Digital Economy Act", "Digital Economy Bill") ] = "DEA"
         k[ k %in% c("DMCA", "Digital Millennium Copyright Act") ] = "DMCA"
-        # k[ k %in% c("Élysée", "Elysée", "Président de la République") ] = "Présidence"
+        k[ k %in% c("DRM", "Digital Rights Management") ] = "DRM"
         k[ k %in% c("EFF", "Electronic Frontier Foundation") ] = "EFF"
         k[ k %in% c("FDN", "French Data Network") ] = "FDN"
         k[ k %in% c("FNAC", "Fnac") ] = "FNAC"
         k[ k %in% c("Free", "Iliad") ] = "Free"
+        k[ k %in% c("IFPI", "Fédération Internationale de l'Industrie Phonographique") ] = "IFPI"
         k[ k %in% c("LOPPSI", "Loppsi") ] = "LOPPSI"
-        k[ k %in% c("Megaupload", "MegaUpload", "Mega", "Kim Dotcom") ] = "Megaupload"
-        k[ k %in% c("Marland-Militello", "Muriel Marland-Militello") ] = "Muriel Marland-Militello"
+        k[ k %in% c("Megaupload", "MegaUpload", "Kim Dotcom") ] = "Megaupload" # excluding "Mega"
         k[ k %in% c("MoDem", "Modem", "Mouvement Démocrate") ] = "MoDem"
         k[ k %in% c("MPAA", "Motion Picture Association") ] = "MPAA"
-        k[ k %in% c("NKM", "Nathalie Kosciusko-Morizet") ] = "Nathalie Kosciusko-Morizet"
-        k[ k %in% c("Odebi", "Ligue Odebi", "Ligue") ] = "Ligue Odebi"
         k[ k %in% c("OMPI", "Organisation Mondiale de la Propriété Intellectuelle") ] = "OMPI"
         k[ k %in% c("PIPA", "Pipa") ] = "PIPA"
-        k[ k %in% c("Quadrature", "Quadrature du Net", "Jérémie Zimmermann") ] = "LQDN"
-        k[ k %in% c("Rapidshare", "RapidShare") ] = "Rapidshare"
+        # k[ k %in% c("Rapidshare", "RapidShare") ] = "Rapidshare"
         k[ k %in% c("RIAA", "Recording Industry Association") ] = "RIAA"
         k[ k %in% c("Reporters", "RSF") ] = "RSF"
-        k[ k %in% c("SACD", "Société des Auteurs", "Compositeurs Dramatiques") ] = "SACD"
+        k[ k %in% c("SACD", "Société des Auteurs|Compositeurs Dramatiques") ] = "SACD"
         k[ k %in% c("SACEM", "Sacem") ] = "SACEM"
         k[ k %in% c("SCPP", "Société Civile des Producteurs Phonographiques", "Société Civile des Producteurs de Phonogrammes") ] = "SCPP"
         k[ k %in% c("SNEP", "Snep", "Syndicat National de l'Edition Phonographique") ] = "SNEP"
         k[ k %in% c("SOS Hadopi", "SOS-Hadopi") ] = "SOS-Hadopi" # "Jérôme Bourreau-Guggenheim"
-        k[ k %in% c("Sony", "Sony BMG", "Sony Music") ] = "Sony"
         k[ k %in% c("SOPA", "Sopa") ] = "SOPA"
         k[ k %in% c("TMG", "Trident Media Guard") ] = "TMG"
-        k[ k %in% c("Pirate Bay", "The Pirate Bay") ] = "TPB"
-        k[ k %in% c("UFC", "UFC-Que Choisir", "UFC Que Choisir", "UFC-Que", "UFC-Que-Choisir") ] = "UFC-QC"
-        k[ k %in% c("Virgin", "VirginMega", "Virgin Media") ] = "Virgin"
-        k[ k %in% c("Vivendi", "Universal", "Vivendi Universal", "Universal Music", "Universal Music France") ] = "V/U"
         k[ k %in% c("WikiLeaks", "Wikileaks") ] = "Wikileaks"
         # k[ k %in% c("Wikipedia", "Wikipédia") ] = "Wikipedia"
+        k = str_trim(gsub("\\s+", " ", gsub("\\(|\\||\\?|\\)", " ", k)))
         
+        # ministries (excl. Budget and Affaires étrangères/européennes)
+        m = k %in% c("Culture", "Justice", "Industrie", "Intérieur", "Défense", "Finances", "Commerce", "Travail", "Agriculture")
+        k[ m ] = paste("Min.", k[ m ])
+
+        # drop frequencies (sensitive to acronyms)
         return(data.frame(gsub("data/(.*).corpus/(.*)" , "\\1", x),
+                          as.character(date),
                           gsub("data/(.*).corpus/(.*).txt" , "\\2", x),
-                          as.character(date), k))
+                          paste0(unique(k), collapse = ";")))
         
       } else {
         
@@ -582,18 +524,13 @@ get_freqs <- function(sample = FALSE, update = FALSE) {
     })
     
     files = rbind.fill(files)
-    names(files) = c("source", "uid", "t", "k")
-    files = summarise(group_by(files, source, t, uid, k), n = n()) # total occurrences per article
-    files = mutate(group_by(files, k), w = n / sum(n)) # weight
-    files = arrange(files, t, source, uid, k)
-    
-    cat("Term occurrences:\n")
-    print(table(files$n))
-    
-    cat("Normalized weights:\n")
-    print(summary(files$w))
-    
-    write.csv(files, file = "data/corpus.freqs.csv", row.names = FALSE)
+    names(files) = c("source", "t", "uid", "k")
+
+    if(sum(is.na(files$date)))
+      cat("Missing", sum(is.na(files$date)), "dates\n")
+
+    files = arrange(subset(files, !is.na(date)), t, source, uid, k)
+    write.csv(files, file = "data/corpus.match.csv", row.names = FALSE)
     
   }
     
@@ -603,7 +540,7 @@ get_edges <- function(sample = FALSE, update = FALSE) {
   
   if(!file.exists("data/corpus.edges.csv") | update) {
     
-    files = read.csv("data/corpus.freqs.csv")
+    files = read.csv("data/corpus.match.csv", stringsAsFactors = FALSE)
     
     # qplot(year(as.Date(files$t)), geom = "histogram") +
     #   scale_x_continuous(breaks = 2005:2014)
@@ -617,29 +554,27 @@ get_edges <- function(sample = FALSE, update = FALSE) {
     
     files = lapply(sort(sample), function(x) {
             
-      y = files$k[ files$uid == x ]
-      w = files$w[ files$uid == x ]
-      names(w) = y
-      
+      y = unlist(strsplit(files$k[ files$uid == x ], ";"))
       y = expand.grid(y, y)
       y = subset(y, Var1 != Var2)
+
       if(!nrow(y)) {
-        
+    
         return(data.frame())
-        
+    
       } else {
-        
-        y$w = w[ as.character(y$Var1) ] * w[ as.character(y$Var2) ] # joint prob
-        y$uid = apply(y[, 1:2 ], 1, function(x) paste0(sort(x), collapse = "_"))
-        y = aggregate(w ~ uid, sum, data = y)
-        
-        return(data.frame(t = unique(files$t[ files$uid == x ]),
-                          i = gsub("(.*)_(.*)", "\\1", y$uid),
-                          j = gsub("(.*)_(.*)", "\\2", y$uid),
-                          w = y$w))
-        
+    
+        # unique (undirected) ties
+        y = y[ apply(y, 1, function(x) x[1] == sort(x)[1]), ]
+        names(y) = c("i", "j")
+
+        # inverse frequency weight
+        y$w = 1 / nrow(y)
+    
+        return(data.frame(t = files$t[ files$uid == x ], y))
+    
       }
-      
+        
     })
     
     write.csv(rbind.fill(files), file = "data/corpus.edges.csv", row.names = FALSE)
@@ -653,7 +588,7 @@ get_ranking <- function(start = NULL, end = NULL,
   
   dir.create("tables", showWarnings = FALSE)
 
-  ini = read.csv("data/corpus.freqs.csv")
+  ini = read.csv("data/corpus.match.csv")
   ini$t = as.Date(as.character(ini$t))
   net = ini
 
@@ -679,19 +614,18 @@ get_ranking <- function(start = NULL, end = NULL,
   n = n[ order(n$degree, decreasing = TRUE), ]
   rownames(n) = NULL
   
-  counts = summarise(group_by(net, k), n = sum(n))
-  counts = join(n, counts, by = "k")
+  n$n = sapply(n$k, function(x) sum(grepl(x, net$k)))
   
   if(!is.null(file)) {
     
     file = paste0("tables/", file, ".md")
-    write(kable(head(counts, rows), output = FALSE), file)
+    write(kable(head(n, rows), output = FALSE), file)
 
     cat("First", rows, "most central nodes exported to", file, "\n")
 
   }
 
-  return(counts)
+  return(n)
   
 }
 
@@ -709,13 +643,18 @@ get_network <- function(threshold = 0, start = NULL, end = NULL, verbose = TRUE)
 
   if(verbose)
     cat("Processing", nrow(net), "out of", nrow(ini), "edges...\n")
-  
+
+  # sum tie weights over time period
   net$uid = apply(net[, 2:3 ], 1, function(x) paste0(sort(x), collapse = "_"))
-  
   net = aggregate(w ~ uid, sum, data = net)
   net = data.frame(i = gsub("(.*)_(.*)", "\\1", net$uid),
                    j = gsub("(.*)_(.*)", "\\2", net$uid),
                    w = net$w, stringsAsFactors = FALSE)
+                   
+#   # normalize by frequency of sender
+#   # similar to WPC in Gross, Kirkland and Shalizi 2012
+#   t = table(i)
+#   net$w = net$w / t[ net$i ]
   
   n = network(net[, 1:2 ], directed = FALSE)
   n %e% "w" = net[, 3]

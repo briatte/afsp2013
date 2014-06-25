@@ -1,5 +1,5 @@
 "term","freq"
-"Hadopi",1021
+"Hadopi",1025
 "Internet",731
 "Culture",260
 "Conseil",257
@@ -7,12 +7,12 @@
 "Création",207
 "Assemblée",198
 "Etat",185
-"Nicolas Sarkozy",184
+"Nicolas Sarkozy",185
 "Ecrans",154
 "Net",139
 "Google",137
 "Frédéric Mitterrand",127
-"Sarkozy",122
+"Sarkozy",125
 "Haute",121
 "Commission",120
 "Facebook",120
@@ -21,14 +21,13 @@
 "FAI",118
 "Loi",113
 "Haute Autorité",107
-"François Hollande",103
+"François Hollande",104
 "Christine Albanel",102
 "Orange",101
 "Erwan Cario",100
 "CSA",99
 "Europe",99
 "Sénat",98
-"Oui",97
 "Parlement",97
 "Aurélie Filippetti",96
 "Twitter",93
@@ -51,40 +50,39 @@
 "Quadrature du Net",71
 "Alexandre Hervaud",70
 "Conseil Constitutionnel",70
+"Pierre Lescure",68
 "Sacem",68
-"Pierre Lescure",67
-"Franck Riester",66
+"Franck Riester",67
 "Paru",66
 "Parti",64
 "Trailer",63
 "Président",60
 "Hollande",59
+"Patrick Bloche",58
+"SFR",58
 "Nolife",57
-"SFR",57
 "mission Lescure",56
-"Patrick Bloche",56
 "VOD",56
 "DVD",55
-"Lionel Tardy",51
-"Spotify",50
+"Lionel Tardy",52
+"Spotify",51
 "AFP",48
 "Communication",45
 "HADOPI",45
 "MegaUpload",45
+"Canal",43
 "Christian Paul",43
 "Cour",43
 "Toile",43
-"Canal",42
 "Monde",41
 "Cnil",40
 "Dadvsi",40
+"Martine Aubry",40
 "Mitterrand",39
 "RSS",39
-"Abonnements",38
 "CPD",38
 "Liens",38
 "Loppsi",38
-"Martine Aubry",38
 "Bouygues",37
 "Sages",37
 "Union",37
@@ -100,7 +98,6 @@
 "Bruxelles",34
 "Centre",34
 "Fnac",34
-"Retrouvez",34
 "État",33
 "CNIL",32
 "Dailymotion",32
@@ -116,7 +113,6 @@
 "PUR",30
 "rapport Lescure",30
 "Alice",29
-"Bon",29
 "Constitution",29
 "Marie-Françoise Marais",29
 "Albanel",28
@@ -128,7 +124,6 @@
 "BBox",26
 "France Télévisions",26
 "Freebox TV",26
-"Maintenant",26
 "Michèle Alliot-Marie",26
 "Mireille Imbert-Quaretta",26
 "Orange TV",26
@@ -143,7 +138,6 @@
 "Jean-Pierre Brard",24
 "Neufbox TV",24
 "Point",24
-"Suivez",24
 "Acta",23
 "Chine",23
 "Conseil d'Etat",23
@@ -159,6 +153,7 @@
 "Affaires",22
 "CNC",22
 "Frédéric Lefebvre",22
+"Lescure",22
 "Mission Lescure",22
 "Numerama",22
 "Pascal Nègre",22
@@ -168,13 +163,11 @@
 "Autrement",21
 "Droit",21
 "États-Unis",21
-"Lescure",21
 "Windows",21
 "Andréa Fradin",20
 "Chronophages",20
 "Côté",20
 "Echos",20
-"Faire",20
 "Filippetti",20
 "Libélabo",20
 "PC INpact",20
@@ -195,10 +188,8 @@
 "PC Inpact",18
 "PDG",18
 "Pod",18
-"Résultat",18
 "Texel",18
 "Youtube",18
-"Attention",17
 "Didier Mathus",17
 "FBI",17
 "Figaro",17
@@ -208,17 +199,18 @@
 "Hadopi Le",17
 "Jack Lang",17
 "Jérémie Zimmermann",17
-"Lire",17
+"Jérôme Bourreau-Guggenheim",17
 "Quadrature",17
 "Skype",17
 "Virgin",17
+"Benjamin Bayart",16
 "Eric Besson",16
-"Jérôme Bourreau-Guggenheim",16
 "Journal",16
 "Martine Billard",16
 "Michel Thiollière",16
 "Nathalie Kosciusko-Morizet",16
 "Obama",16
+"Patrick Zelnik",16
 "SACD",16
 "Bercy",15
 "CNN",15
@@ -241,36 +233,33 @@
 "Arnaud Montebourg",14
 "Arte",14
 "Aubry",14
-"Benjamin Bayart",14
 "Carte",14
 "Concrètement",14
 "DAVDSI",14
 "Denis Olivennes",14
 "Élysée",14
 "Etats",14
+"Eva Joly",14
 "France Inter",14
 "François Mitterrand",14
 "Hollywood",14
+"Maître Eolas",14
 "Manuel Valls",14
+"Matignon",14
+"NKM",14
+"Noël",14
 "Olivennes",14
 "Rennes",14
-"Retour",14
 "April",13
 "Atlantique",13
 "BitTorrent",13
 "CNM",13
 "Droits",13
 "Education",13
-"Eva Joly",13
 "FDN",13
 "Jacques Toubon",13
-"Maître Eolas",13
-"Matignon",13
 "Midem",13
 "Mule",13
-"NKM",13
-"Noël",13
-"Patrick Zelnik",13
 "Podcast",13
 "Sceaux",13
 "Téléchargement",13
@@ -300,13 +289,13 @@
 "Marseille",12
 "mission Zelnik",12
 "Napster",12
-"Nouvelle",12
 "Olivier Schrameck",12
 "Reporters",12
 "UPFI",12
 "Abonnement",11
 "Abracadabra",11
 "Avez-vous",11
+"Bernard Miyet",11
 "Bibliothèque",11
 "Bluetouff",11
 "Canada",11
@@ -326,7 +315,6 @@
 "ONG",11
 "Owni",11
 "Parti Pirate",11
-"Petit",11
 "PIB",11
 "Politique",11
 "Quartier",11
@@ -339,7 +327,6 @@
 "XXIe",11
 "Zelnik",11
 "Ayrault",10
-"Bernard Miyet",10
 "Bonne",10
 "Congrès",10
 "Demain",10
@@ -355,7 +342,6 @@
 "Lagardère",10
 "Modem",10
 "Olivier Henrard",10
-"Pire",10
 "Pirouette",10
 "Potager",10
 "rapport Zelnik",10
@@ -396,6 +382,7 @@
 "Jérôme Roger",9
 "Justement",9
 "Klaire",9
+"Laure de la Raudière",9
 "LCEN",9
 "Luxembourg",9
 "Mark Zuckerberg",9
@@ -437,12 +424,12 @@
 "Eric Woerth",8
 "Faut",8
 "Fouquet",8
+"Google France",8
 "Guadeloupe",8
 "ISF",8
 "Japon",8
 "Jean Dionis du Séjour",8
 "Lang",8
-"Laure de la Raudière",8
 "Libre",8
 "Logement",8
 "Manière",8
@@ -451,13 +438,12 @@
 "Médias",8
 "Mega",8
 "Ministère de la Culture",8
-"Monsieur",8
 "Nadine Morano",8
 "Niel",8
 "Nouvel Obs",8
 "Numérama",8
 "Offre",8
-"Parallèlement",8
+"Panafieu",8
 "PCInpact",8
 "Pipa",8
 "Pourriez-vous",8
@@ -516,7 +502,9 @@
 "Inde",7
 "Ipred",7
 "Jean-Louis Borloo",7
+"Jérôme",7
 "Jeux",7
+"Juan Branco",7
 "Juin",7
 "Lancé",7
 "Laurent Chemla",7
@@ -535,7 +523,6 @@
 "Nord",7
 "Organisation",7
 "Palais Bourbon",7
-"Panafieu",7
 "Parlement Européen",7
 "PDG de Canal",7
 "Philippe Gosselin",7
@@ -549,6 +536,7 @@
 "SMS",7
 "Steve Jobs",7
 "Streaming",7
+"UFC",7
 "Accord",6
 "Adopté",6
 "Agence",6
@@ -582,12 +570,9 @@
 "Evry",6
 "Extrait",6
 "FAI Hadopi",6
-"Faute",6
 "France Culture",6
 "Gaëtan Gorce",6
-"Google France",6
 "Grand",6
-"Idem",6
 "Invité",6
 "Ipod",6
 "Iran",6
@@ -595,9 +580,7 @@
 "JDD",6
 "Jean-François Lamour",6
 "Jean-Marc Manach",6
-"Jérôme",6
 "Jeunesse",6
-"Juan Branco",6
 "Kazaa",6
 "Keyboard Cat",6
 "Kindle",6
@@ -605,7 +588,6 @@
 "Laurent Fabius",6
 "Laurent Wauquiez",6
 "Licence",6
-"Loin",6
 "LOL",6
 "Louvre",6
 "Lucie Morillon",6
@@ -630,6 +612,7 @@
 "Prenons",6
 "Présenté",6
 "Public",6
+"ReadWriteWeb",6
 "Regardez",6
 "Révolution",6
 "RTL",6
@@ -647,7 +630,6 @@
 "Tokyo",6
 "Tristan Nitot",6
 "UDF",6
-"UFC",6
 "VHS",6
 "Wired",6
 "ZDNet",6
@@ -727,6 +709,7 @@
 "Italie",5
 "Jean Berbineau",5
 "Jean-Luc Godard",5
+"Jean-Luc Mélenchon",5
 "Jean-Michel Baylet",5
 "Jean-Michel Planche",5
 "Jérôme Cahuzac",5
@@ -746,6 +729,7 @@
 "Maison Blanche",5
 "Marc Guez",5
 "Marie-Christine Blandin",5
+"Marisol Touraine",5
 "Maroc",5
 "Mélenchon",5
 "Ministre de la Culture",5
@@ -782,8 +766,8 @@
 "Question",5
 "Quid",5
 "Quitte",5
+"Raphaël Suire",5
 "RapidShare",5
-"ReadWriteWeb",5
 "Repérer",5
 "Réponse",5
 "Reuters",5
@@ -815,7 +799,7 @@
 "Ve République",5
 "Vite",5
 "VoD",5
-"Voir",5
+"Vodkaster",5
 "VRP",5
 "Vuze",5
 "Washington",5
@@ -858,6 +842,7 @@
 "Bruno Patino",4
 "Bureau",4
 "Canal Play",4
+"Casablanca",4
 "CDI",4
 "Centre National de la Musique",4
 "Chambre",4
@@ -892,6 +877,7 @@
 "Discours de Fran Nevrkla",4
 "DNS",4
 "Dominique de Villepin",4
+"Dominique Rousseau",4
 "Dommage",4
 "Edouard Balladur",4
 "Edouard Barreiro",4
@@ -951,7 +937,6 @@
 "Jean Mallot",4
 "Jean-Jacques Milteau",4
 "Jean-Jacques Urvoas",4
-"Jean-Luc Mélenchon",4
 "Jean-Noël Tronc",4
 "Jean-Pierre Bel",4
 "Jean-Pierre Raffarin",4
@@ -972,7 +957,6 @@
 "Louis",4
 "Marcel Rogemont",4
 "Marin Karmitz",4
-"Marisol Touraine",4
 "Martin",4
 "Mauvaise",4
 "Maxime Rouquet",4
@@ -1019,9 +1003,9 @@
 "Peter Sunde",4
 "Philippe Val",4
 "Photo",4
+"Pierre Joxe",4
 "Plan",4
 "Pologne",4
-"Pour Hadopi",4
 "Précisons",4
 "Prenez",4
 "Présidentielle",4
@@ -1032,7 +1016,6 @@
 "Publicis",4
 "Questions",4
 "Racing Comrade",4
-"Raphaël Suire",4
 "Rappelant",4
 "Recherche",4
 "Réconcilier",4
@@ -1046,7 +1029,9 @@
 "Rome",4
 "Sanction",4
 "Sanctions",4
+"Sandrine Mazetier",4
 "Sarko",4
+"Saussez",4
 "Sciences-Po",4
 "Sécurité",4
 "Seules",4
@@ -1086,6 +1071,7 @@
 "VIDEO",4
 "Vietnam",4
 "Vimeo",4
+"VirginMega",4
 "Vivendi-Universal",4
 "Voire",4
 "Voirunfilm",4
@@ -1172,6 +1158,7 @@
 "Benjamin Thierry",3
 "Bermudes",3
 "Bernard Arnault",3
+"Bertrand Delanoë",3
 "Bertrand Tavernier",3
 "BFM",3
 "BFM TV",3
@@ -1289,7 +1276,6 @@
 "Disney",3
 "Disons",3
 "Dominique Perben",3
-"Dominique Rousseau",3
 "Double Rainbow",3
 "Double Rainbow Guy",3
 "Dr House",3
@@ -1305,6 +1291,7 @@
 "Egalement",3
 "Egypte",3
 "Emilie Massemin",3
+"Emmanuel de Buretel",3
 "Emmanuel Hoog",3
 "Enfants",3
 "ENGOUEMENT DE FOU",3
@@ -1320,6 +1307,7 @@
 "Exemple",3
 "Experts",3
 "Extraits",3
+"Fabrice Epelboin",3
 "Facebook CNIL Hadopi Le",3
 "Facebook Star Wars",3
 "Faux",3
@@ -1440,6 +1428,7 @@
 "Kosciusko-Morizet",3
 "Laboratoire",3
 "Lake Placid",3
+"Lancar",3
 "Lancée",3
 "Laurence Ferrari",3
 "Leeeeerooy Jenkins",3
@@ -1481,6 +1470,7 @@
 "Miam",3
 "Miaowgli",3
 "Michel",3
+"Michel Boyon",3
 "Michel Rocard",3
 "Michèle Delaunay",3
 "Michu",3
@@ -1557,7 +1547,6 @@
 "Photo Sébastien Calvet",3
 "Pierre",3
 "Pierre Collin",3
-"Pierre Joxe",3
 "Pierrot",3
 "Ping",3
 "Pirater",3
@@ -1569,8 +1558,6 @@
 "Pôle",3
 "Police",3
 "Pottermore",3
-"Pour Patrick Zelnik",3
-"Pour Sarkozy",3
 "Pouvez-vous",3
 "Pouvoir",3
 "Premiers",3
@@ -1594,6 +1581,7 @@
 "Rapture",3
 "Refus",3
 "Rémy Pflimlin",3
+"Renaud Weeckman",3
 "Rencontre",3
 "Répondant",3
 "République à Paris",3
@@ -1609,7 +1597,6 @@
 "Salut",3
 "Samsung",3
 "Samuel Autheuil",3
-"Sandrine Mazetier",3
 "Satisfaction",3
 "Scam",3
 "Schrameck",3
@@ -1699,11 +1686,9 @@
 "Vincent Bolloré",3
 "VIP",3
 "Virgin Media",3
-"VirginMega",3
 "Visa",3
 "VLC",3
 "VOD Hadopi",3
-"Vodkaster",3
 "Vote",3
 "War Logs",3
 "Warner Bros",3
@@ -1793,6 +1778,7 @@
 "Anonymous-Espagne",2
 "Antenne",2
 "Antoine Guiral",2
+"Anubis",2
 "AOC",2
 "Appelée",2
 "Apple Hadopi",2
@@ -1830,6 +1816,7 @@
 "Au PS",2
 "Aubervilliers",2
 "Audionautes",2
+"Aurélien Boch",2
 "Aussitôt",2
 "Authueil",2
 "Autres Gens",2
@@ -1872,7 +1859,6 @@
 "Bernard Murat",2
 "Berry",2
 "Bertrand",2
-"Bertrand Delanoë",2
 "Best",2
 "Bible",2
 "Bienfé",2
@@ -1935,8 +1921,8 @@
 "Carlos Bardem",2
 "Carolis",2
 "Cartes",2
+"Cary Sherman",2
 "Cas",2
-"Casablanca",2
 "Cat Game",2
 "Catherine Trautmann",2
 "CBS",2
@@ -2174,8 +2160,8 @@
 "Elton John",2
 "Embauché",2
 "Emi",2
+"Emile Josselin",2
 "Emma",2
-"Emmanuel de Buretel",2
 "Emmanuelle Mignon",2
 "Empire",2
 "Encadrement",2
@@ -2199,7 +2185,6 @@
 "Erwan",2
 "ESML",2
 "Esper",2
-"Espérons",2
 "Est à Paris",2
 "Estimant",2
 "Et Christine Albanel",2
@@ -2232,7 +2217,6 @@
 "Extensions",2
 "Fabien Fournier",2
 "Fabius",2
-"Fabrice Epelboin",2
 "Facebook Hadopi Le",2
 "Facebook We Do Photoshop",2
 "Faciliter",2
@@ -2286,6 +2270,7 @@
 "France Telecom",2
 "Francis",2
 "Francis Beck",2
+"Francis Donnat",2
 "François Bon",2
 "François Busnel à Jean",2
 "François Goulard",2
@@ -2541,7 +2526,6 @@
 "Lab",2
 "Lagardère Active",2
 "Lambert",2
-"Lancar",2
 "Lancement de Napster",2
 "Laporte",2
 "Laserdisc",2
@@ -2646,7 +2630,6 @@
 "Michael Curtiz",2
 "Michael Mann",2
 "Michel Blanc",2
-"Michel Boyon",2
 "Michel Fize",2
 "Michel Mercier",2
 "Michèle-Alliot Marie",2
@@ -2760,6 +2743,8 @@
 "Old England",2
 "Olivier Ertzscheid",2
 "Olivier Esper",2
+"Olivier Faure",2
+"Olivier Lacourt",2
 "Olivier Lacroix",2
 "Olivier Py",2
 "Olympia",2
@@ -2843,6 +2828,7 @@
 "Philippe Poutou",2
 "Philippe Starck",2
 "Philippe Tourtelier",2
+"Philippe Vilamitjana",2
 "Photo AFP",2
 "Photo Roberto Frankenberg",2
 "Photoshop",2
@@ -2854,8 +2840,10 @@
 "Pierre Antoine Granjon de Vente-privee",2
 "Pierre Bérégovoy",2
 "Pierre Bergé",2
+"Pierre Haski",2
 "Pierre Longheretti",2
 "Pierre Mauroy",2
+"Pierre Mounier",2
 "Pierre-Philipp",2
 "Pierre-Philipp Braun",2
 "Piranha",2
@@ -2883,13 +2871,6 @@
 "Portugal",2
 "Poser",2
 "Post",2
-"Pour Benjamin Bayart",2
-"Pour Casablanca",2
-"Pour Google France",2
-"Pour Martine Aubry",2
-"Pour Patrick Bloche",2
-"Pour Saussez",2
-"Pour Vodkaster",2
 "Pourvoi",2
 "Pouvez",2
 "Powerpoint",2
@@ -2975,7 +2956,6 @@
 "Remaniement",2
 "Remonté",2
 "Renaud Veeckman",2
-"Renaud Weeckman",2
 "Rendre",2
 "Rentrée",2
 "Repères",2
@@ -3027,7 +3007,6 @@
 "Sandrine Bonnaire",2
 "Sangaris",2
 "Sarkozie",2
-"Saussez",2
 "Sciences Po",2
 "SDF",2
 "SDJ",2
@@ -3139,6 +3118,7 @@
 "Tarn-et-Garonne",2
 "Tavernost",2
 "Techcrunch",2
+"Téchiné",2
 "Technicolor",2
 "Technologie de Namur",2
 "Télé Z",2
@@ -3284,6 +3264,7 @@
 "Warcraft",2
 "Warner Music Group",2
 "Wat",2
+"Wax Tailor",2
 "Wayback Machine",2
 "Web de la BNF",2
 "Webcollecte",2
@@ -3610,7 +3591,6 @@
 "Antoni Tàpies",1
 "Antonio Vivaldi",1
 "Ants",1
-"Anubis",1
 "Anus",1
 "Août",1
 "APCNM",1
@@ -3763,7 +3743,6 @@
 "Aulnay-sous-Bois",1
 "Aurélie Fillippetti",1
 "Aurélien",1
-"Aurélien Boch",1
 "Auriez-vous",1
 "Austin",1
 "Australiens",1
@@ -4199,7 +4178,6 @@
 "Cartographie",1
 "Cartographie des Controverses Scientifiques",1
 "Cartoon Motion",1
-"Cary Sherman",1
 "Casanova",1
 "Casier Judiciaire",1
 "Cassandre",1
@@ -5225,7 +5203,6 @@
 "Emeraude",1
 "EMI Europe",1
 "Émile Blessig",1
-"Emile Josselin",1
 "Emilia Kabakov",1
 "Emilie Brouze",1
 "Emilio Gomariz",1
@@ -5710,7 +5687,6 @@
 "Francfort",1
 "Franche-Comté",1
 "Francis Cabrel",1
-"Francis Donnat",1
 "Francis Lacloche",1
 "Francis Lalanne",1
 "Francis Muguet",1
@@ -6428,6 +6404,7 @@
 "Jacques Julliard",1
 "Jacques Lamblin",1
 "Jacques Le Guen",1
+"Jacques Mézard",1
 "Jacques Pinoteau",1
 "Jacques Rancière",1
 "Jacques Remiller",1
@@ -6488,6 +6465,7 @@
 "Jean-Baptiste Thoret",1
 "Jean-Bernard Cadier",1
 "Jean-Bierre Brard --",1
+"Jean-Christophe Alquier",1
 "Jean-Christophe Fromantin",1
 "Jean-Christophe Lagarde",1
 "Jean-Christophe Le Saoût",1
@@ -6596,6 +6574,7 @@
 "Joan Baez",1
 "Job",1
 "Jobjob",1
+"Jobs",1
 "Jobs Steve Apple",1
 "Jocelyne Clerc",1
 "Joconde",1
@@ -7178,6 +7157,8 @@
 "Me Bigot",1
 "ME BONNET",1
 "Me Christophe Bigot",1
+"Me Emmanuel Noirot",1
+"Me Saïd Larifou",1
 "Mécénat Global",1
 "Mectoob",1
 "Médecin",1
@@ -7704,10 +7685,8 @@
 "Olivier Bomsel Gallimard",1
 "Olivier Donnat",1
 "Olivier DUTHEILLET de LAMOTHE",1
-"Olivier Faure",1
 "Olivier Ferrand",1
 "Olivier Jay",1
-"Olivier Lacourt",1
 "Olivier Laurelli --",1
 "Olivier Messiaen",1
 "Olivier Poivre",1
@@ -8051,7 +8030,6 @@
 "Philippe Sarre",1
 "Philippe Soupault",1
 "Philippe Varin",1
-"Philippe Vilamitjana",1
 "Philippe Watrelot",1
 "Philips",1
 "Philosophie",1
@@ -8114,7 +8092,6 @@
 "Pierre Geslot",1
 "Pierre Grise Productions",1
 "Pierre Hanotaux",1
-"Pierre Haski",1
 "Pierre Haski de Rue",1
 "Pierre Jolivet",1
 "Pierre JOXE",1
@@ -8127,7 +8104,6 @@
 "Pierre Louette",1
 "Pierre Mendès France",1
 "Pierre Moscovi",1
-"Pierre Mounier",1
 "Pierre President",1
 "Pierre Radanne",1
 "Pierre Rosanvallon",1
@@ -8231,63 +8207,6 @@
 "Posture",1
 "Poulidor",1
 "Poupée",1
-"Pour Anubis",1
-"Pour Aurélien Boch",1
-"Pour Bernard Miyet",1
-"Pour Bertrand Delanoë",1
-"Pour Canal",1
-"Pour Cary Sherman",1
-"Pour Dominique Rousseau",1
-"Pour Emile Josselin",1
-"Pour Emmanuel de Buretel",1
-"Pour Eva Joly",1
-"Pour Fabrice Epelboin",1
-"Pour Francis Donnat",1
-"Pour Franck Riester",1
-"Pour François Hollande",1
-"Pour J",1
-"Pour Jacques Mézard",1
-"Pour Jean-Christophe Alquier",1
-"Pour Jean-Luc Mélenchon",1
-"Pour Jérôme",1
-"Pour Jérôme Bourreau-Guggenheim",1
-"Pour Jobs",1
-"Pour Juan Branco",1
-"Pour Lancar",1
-"Pour Laure de la Raudière",1
-"Pour Lescure",1
-"Pour Lionel Tardy",1
-"Pour Maître Eolas",1
-"Pour Marisol Touraine",1
-"Pour Matignon",1
-"Pour Me Emmanuel Noirot",1
-"Pour Me Saïd Larifou",1
-"Pour Michel Boyon",1
-"Pour Nicolas Sarkozy",1
-"Pour NKM",1
-"Pour Noël",1
-"Pour Olivier Faure",1
-"Pour Olivier Lacourt",1
-"Pour Panafieu",1
-"Pour Philippe Vilamitjana",1
-"Pour Pierre Haski",1
-"Pour Pierre Joxe",1
-"Pour Pierre Lescure",1
-"Pour Pierre Mounier",1
-"Pour Raphaël Suire",1
-"Pour ReadWriteWeb",1
-"Pour Renaud Weeckman",1
-"Pour Sandrine Mazetier",1
-"Pour SFR",1
-"Pour Spotify",1
-"Pour Stéphane Le Tavernier",1
-"Pour Téchiné",1
-"Pour Thierry",1
-"Pour UFC",1
-"Pour Virginie Valton",1
-"Pour VirginMega",1
-"Pour Walker",1
-"Pour Wax Tailor",1
 "Pourfendeur",1
 "PourLoïc Damilaville",1
 "Pourquoi Fincher",1
@@ -8660,7 +8579,6 @@
 "Rétromania",1
 "Rétrospective",1
 "Retrouver",1
-"RETROUVEZ",1
 "ReTweet",1
 "Retwitte",1
 "Réunionnais",1
@@ -9198,6 +9116,7 @@
 "Stéphane Cossé",1
 "Stéphane Courbit",1
 "Stéphane Fouks",1
+"Stéphane Le Tavernier",1
 "Stéphane Marcovitch",1
 "Stephen Conroy",1
 "Stephen Elop",1
@@ -9345,7 +9264,6 @@
 "Tchat Villepin",1
 "TCP",1
 "Team Fortress",1
-"Téchiné",1
 "Techniques",1
 "TECHNOLOGIES",1
 "Technopol",1
@@ -9437,6 +9355,7 @@
 "Thermopyles",1
 "They Are",1
 "Thiéfaine",1
+"Thierry",1
 "Thierry Costes",1
 "Thierry Dahan",1
 "Thierry Desurmont",1
@@ -9775,6 +9694,7 @@
 "Virgin Méga",1
 "Virginie Borgeaud",1
 "Virginie Hocq",1
+"Virginie Valton",1
 "Virtual Private Network",1
 "Virtuel",1
 "Virus Conficker",1
@@ -9823,6 +9743,7 @@
 "Wagram Music",1
 "Wajdi Mouawad",1
 "Wal-Mart",1
+"Walker",1
 "Walking Dead",1
 "Walt Disney",1
 "Walt Disney Pictures",1
@@ -9844,7 +9765,6 @@
 "Wauquiez",1
 "Wauquiez Laurent",1
 "Wave",1
-"Wax Tailor",1
 "Wayne Forrester",1
 "We Never Sleep",1
 "Web de Papa",1

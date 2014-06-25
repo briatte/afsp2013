@@ -37,15 +37,17 @@ source("functions.r")
 
 get_articles("echos",    "dadvsi", pages = 1 )  # 3    articles
 get_articles("ecrans",   "dadvsi", pages = 13)  # 123  articles
+get_articles("lefigaro",    "dadvsi", pages = 2)  # 39  articles
 get_articles("numerama", "dadvsi", pages = 36)  # 717  articles
 get_articles("zdnet",    "dadvsi", pages = 23)  # 227  articles
 
 get_articles("echos",    "hadopi", pages = 22 ) # 192  articles
 get_articles("ecrans",   "hadopi", pages = 100) # 997  articles
+get_articles("lefigaro",    "hadopi", pages = 23) # 441 articles
 get_articles("zdnet",    "hadopi", pages = 48 ) # 464  articles
 get_articles("numerama", "hadopi", pages = 137) # 2729 articles
 
-get_corpus(threshold = .9, sample = FALSE, update = FALSE)
+get_corpus(sample = FALSE, update = FALSE)
 
 # --------
 # networks
@@ -55,8 +57,8 @@ get_corpus(threshold = .9, sample = FALSE, update = FALSE)
 
 head(get_ranking(end = "2006-09-01", file = "seq1"), 25)
 
-g = get_network(threshold = 2/3, end = "2006-09-01")
-g = ggnet(g, size = 0, segment.alpha = n %e% "alpha") +
+n = get_network(threshold = 2/3, end = "2006-09-01")
+g = ggnet(n, size = 0, segment.alpha = n %e% "alpha") +
   geom_text(aes(label = network.vertex.names(n), size = n %v% "degree")) + 
   scale_size_continuous(range = c(2, 6)) + guides(size = FALSE)
 
@@ -66,8 +68,8 @@ ggsave("plots/seq1.png", g, width = 9, height = 9)
 
 head(get_ranking(start = "2007-07-01", end = "2009-12-31", file = "seq2"), 25)
 
-g = get_network(threshold = 2/3, start = "2007-07-01", end = "2009-12-31") 
-g = ggnet(g, size = 0, segment.alpha = n %e% "alpha") +
+n = get_network(threshold = 2/3, start = "2007-07-01", end = "2009-12-31") 
+g = ggnet(n, size = 0, segment.alpha = n %e% "alpha") +
   geom_text(aes(label = network.vertex.names(n), size = n %v% "degree")) + 
   scale_size_continuous(range = c(2, 6)) + guides(size = FALSE)
 
@@ -77,8 +79,8 @@ ggsave("plots/seq2.png", g, width = 9, height = 9)
 
 head(get_ranking(start = "2012-05-22", file = "seq3"), 25)
 
-g = get_network(threshold = 2/3, start = "2012-05-22")
-g = ggnet(g, size = 0, segment.alpha = n %e% "alpha") +
+n = get_network(threshold = 2/3, start = "2012-05-22")
+g = ggnet(n, size = 0, segment.alpha = n %e% "alpha") +
   geom_text(aes(label = network.vertex.names(n), size = n %v% "degree")) + 
   scale_size_continuous(range = c(2, 6)) + guides(size = FALSE)
 
@@ -88,8 +90,8 @@ ggsave("plots/seq3.png", g, width = 9, height = 9)
 
 head(get_ranking(file = "full"), 25)
 
-g = get_network(threshold = 2/3)
-g = ggnet(g, size = 0, segment.alpha = n %e% "alpha") +
+n = get_network(threshold = 2/3)
+g = ggnet(n, size = 0, segment.alpha = n %e% "alpha") +
   geom_text(aes(label = network.vertex.names(n), size = n %v% "degree")) + 
   scale_size_continuous(range = c(2, 6)) +
   guides(size = FALSE)

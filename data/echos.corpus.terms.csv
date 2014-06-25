@@ -32,13 +32,13 @@
 "Bruxelles",14
 "France Télévisions",14
 "Mireille Imbert-Quaretta",14
+"Olivier Schrameck",14
 "République",14
 "Autorité",13
 "Centre",13
 "Hollande",13
 "Marie-Françoise Marais",13
 "Megaupload",13
-"Olivier Schrameck",13
 "Paris",12
 "Amazon",11
 "Arcep",11
@@ -59,12 +59,12 @@
 "UMP",10
 "Etats",9
 "Haute",9
+"Martine Aubry",9
 "Acte II",8
 "CNC",8
 "DVD",8
 "Frédéric Mitterrand",8
 "High",8
-"Martine Aubry",8
 "SNEP",8
 "Syndicat",8
 "TNT",8
@@ -72,6 +72,7 @@
 "Conseil d'Etat",7
 "FAI",7
 "INTERNET",7
+"Jacques Toubon",7
 "Journal",7
 "Justice",7
 "Luxembourg",7
@@ -86,7 +87,6 @@
 "CNIL",6
 "Free",6
 "Hexagone",6
-"Jacques Toubon",6
 "Jean-Marc Ayrault",6
 "NRJ",6
 "Numericable",6
@@ -104,6 +104,7 @@
 "Education",5
 "Espagne",5
 "Finances",5
+"Franck Riester",5
 "Grande-Bretagne",5
 "HADOPI",5
 "Informatique",5
@@ -113,7 +114,6 @@
 "Lors",5
 "Matignon",5
 "Monde",5
-"Oui",5
 "Piratage",5
 "Politique",5
 "Quadrature du Net",5
@@ -137,6 +137,7 @@
 "Elections",4
 "FBI",4
 "Fiscalité",4
+"France Télécom",4
 "Iliad",4
 "Irlande",4
 "Italie",4
@@ -187,8 +188,6 @@
 "Fédération",3
 "Filippetti",3
 "Forum d'Avignon",3
-"France Télécom",3
-"Franck Riester",3
 "François Fillon",3
 "François Mitterrand",3
 "GfK",3
@@ -213,12 +212,10 @@
 "Napster",3
 "Naturellement",3
 "Objectif",3
-"Parallèlement",3
 "Pascal Rogard",3
 "Patentes",3
 "Patrick Zelnik",3
 "PC INpact",3
-"Petit",3
 "Philippe Marini",3
 "Présentant",3
 "Protect IP Act",3
@@ -337,8 +334,6 @@
 "Equipe",2
 "Etudié",2
 "Exprimée",2
-"Faire",2
-"Faute",2
 "Féru",2
 "Festival de Cannes",2
 "Fiable",2
@@ -409,6 +404,7 @@
 "Maastricht",2
 "Mali",2
 "Martine Jodeau",2
+"Maryam Salehi",2
 "Mathieu Quétel",2
 "Maulévrier",2
 "Mauroy",2
@@ -461,8 +457,6 @@
 "Pointant",2
 "Poperen",2
 "Poste",2
-"Pour Franck Riester",2
-"Pour Maryam Salehi",2
 "Préconisée",2
 "Président",2
 "Présidentielle",2
@@ -482,7 +476,6 @@
 "Regardez",2
 "Renaud",2
 "Respecté",2
-"Résultat",2
 "RETRAITES",2
 "Rihanna",2
 "RMC",2
@@ -1085,7 +1078,6 @@
 "Libor",1
 "Licence",1
 "LimeWire",1
-"Lire",1
 "LIRE AUSSI",1
 "Lisbonne",1
 "Littérature",1
@@ -1196,7 +1188,6 @@
 "NOT",1
 "Nouveau",1
 "Nouveaux",1
-"Nouvelle",1
 "Nouvelle-Zélande",1
 "Novembre",1
 "NPA Conseil",1
@@ -1297,10 +1288,6 @@
 "Poor",1
 "Portugal",1
 "Posner",1
-"Pour France Télécom",1
-"Pour Jacques Toubon",1
-"Pour Martine Aubry",1
-"Pour Olivier Schrameck",1
 "Pourriez-vous",1
 "Poursuivi",1
 "Poursuivre",1
@@ -1443,7 +1430,6 @@
 "Stop Online Piracy Act",1
 "Strasbourg",1
 "Suédois",1
-"Suivez",1
 "Super Croix",1
 "Suppression",1
 "SUPPRESSION DE LA CIRCULAIRE GUÉANT",1

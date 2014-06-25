@@ -1,1995 +1,1175 @@
 "term","freq"
-"Hadopi",28479
-"Internet",22602
-"Conseil",6902
-"FAI",6436
-"Haute Autorité",6394
-"Culture",6037
-"DADVSI",5691
-"Création",4534
-"Commission",4416
-"Nicolas Sarkozy",4411
-"Etat",4088
-"Assemblée",4001
-"UMP",3931
-"Christine Albanel",3684
-"Parlement",3520
-"DRM",3322
-"CSA",3058
-"Sénat",2999
-"Google",2910
-"Europe",2732
-"Assemblée Nationale",2479
-"Numerama",2365
-"CNIL",2355
-"Frédéric Mitterrand",2316
-"Etats-Unis",2248
-"République",2204
-"Haute",2089
-"Aurélie Filippetti",2058
-"Paris",2057
-"Quadrature du Net",2027
-"Sacem",2022
-"Libération",1971
-"François Hollande",1959
-"Free",1946
-"Net",1915
-"DVD",1841
-"Orange",1833
-"Français",1821
-"Twitter",1802
-"Apple",1756
-"Facebook",1692
-"YouTube",1610
-"Elysée",1607
-"Tunes",1576
-"HADOPI",1569
-"Deezer",1537
-"Pierre Lescure",1533
-"VOD",1507
-"Sarkozy",1463
-"Cour",1398
-"Conseil d'Etat",1352
-"Patrick Bloche",1350
-"BitTorrent",1329
-"TMG",1326
-"Renaud Donnedieu de Vabres",1281
-"Web",1271
-"PC Inpact",1238
-"Loppsi",1192
-"Parti",1182
-"CPD",1171
-"mission Lescure",1169
-"Ecrans",1165
-"Bruxelles",1152
-"Canal",1144
-"Christian Paul",1119
-"Autorité",1100
-"AFP",1067
-"MegaUpload",1067
-"Dadvsi",1064
-"SNEP",1061
-"Union",1061
-"Monde",1055
-"Vivendi",1045
-"Microsoft",1034
-"Dailymotion",1030
-"SFR",1012
-"Parti Socialiste",997
-"Conseil Constitutionnel",995
-"Oui",994
-"Franck Riester",983
-"Président",952
-"TVA",951
-"Lors",905
-"Eric Walter",902
-"Loi",896
-"Communication",893
-"Parlement Européen",891
-"Gouvernement",882
-"Justice",881
-"Mireille Imbert-Quaretta",880
-"ZDNet",878
-"rapport Lescure",861
-"PUR",852
-"Allemagne",820
-"SCPP",818
-"Grande-Bretagne",810
-"SACD",807
-"Spotify",806
-"Société",805
-"The Pirate Bay",792
-"Lionel Tardy",771
-"Frédéric Lefebvre",769
-"État",753
-"Etats",753
-"Marie-Françoise Marais",752
-"Mule",748
-"Suède",732
-"Arcep",727
-"Valois",723
-"ACTA",722
-"Association",722
-"Albanel",721
-"Hollande",717
-"Erwan Cario",707
-"Syndicat",707
-"Universal",707
-"Président de la République",706
-"Royaume-Uni",697
-"Verts",685
-"Constitution",672
-"Parti Pirate",659
-"Denis Olivennes",654
-"ADSL",652
-"Amazon",642
-"Figaro",640
-"États-Unis",639
-"Internet Bullshit",637
-"Article",633
-"Concrètement",632
-"LibéLabo",630
-"Echos",629
-"Point",621
-"Pascal Nègre",617
-"Frank Riester",608
-"Linux",605
-"Universal Music",604
-"Droit",594
-"Journal Officiel",587
-"Tribune",585
-"Martine Aubry",581
-"RIAA",579
-"CNC",570
-"Fleur Pellerin",567
-"Chine",564
-"Centre",559
-"Cnil",559
-"WiFi",551
-"Phone",549
-"Camille Gévaudan",539
-"Chronophage",539
-"LCEN",538
-"Fnac",531
-"Creative Commons",518
-"Trident Media Guard",515
-"SACEM",514
-"François Bayrou",513
-"France Télévisions",512
-"Olivennes",511
-"Jack Lang",508
-"Electron Libre",507
-"Michèle Alliot-Marie",507
-"Paquet Télécom",507
-"SPPF",505
-"Espagne",503
-"Toile",503
-"Pod",498
-"Alexandre Hervaud",495
-"Mitterrand",492
-"Sony",489
-"Pistes",486
-"Code",481
-"Windows",480
-"Jean-Marc Ayrault",479
-"Eric Besson",473
-"Anonymous",469
-"Paru",469
-"FDN",465
-"Michel Thiollière",460
-"Bono",458
-"PME",457
-"Bouygues",454
-"Jean-François Copé",446
-"MPAA",441
-"Trailer",441
-"Sages",437
-"Yahoo",435
-"EMI",433
-"Didier Mathus",431
-"Jean-Pierre Brard",430
-"Ratiatum",427
-"UDF",427
-"Nouvel Observateur",421
-"Nolife",420
-"UFC-Que Choisir",420
-"Autrement",418
-"ALPA",413
-"EUCD",406
-"Megaupload",404
-"Jérémie Zimmermann",401
-"Ségolène Royal",400
-"Torrentfreak",400
-"Alain Suguenot",399
-"Christian Vanneste",399
-"Commission Européenne",399
-"VPN",397
-"États",395
-"ARCEP",394
-"Canada",391
-"Napster",387
-"Noël",385
-"Jacques Toubon",384
-"Union Européenne",384
-"Médias",381
-"France Télécom",379
-"Wikipédia",377
-"Industrie",376
-"Xavier Niel",372
-"Fédération",369
-"Australie",366
-"IFPI",364
-"Peer-to-Peer",363
-"Muriel Marland-Militello",362
-"ARMT",361
-"Bercy",360
-"CMP",357
-"Christine Boutin",355
-"Economie",353
-"Maintenant",351
-"Martine Billard",350
-"DMCA",349
-"Vidéo",345
-"Journal",344
-"Japon",343
-"Lescure",343
-"RapidShare",341
-"Retrouvez",341
-"RSS",341
-"DPI",340
-"François Fillon",340
-"Quadrature",340
-"Express",337
-"Riposte",337
-"USA",336
-"Warner",336
-"Hollywood",335
-"Faire",334
-"Matignon",334
-"Mac",333
-"Wi-Fi",333
-"Pire",332
-"Homme",329
-"Snep",329
-"Jean Dionis du Séjour",326
-"rapport Zelnik",325
-"Carte Musique Jeune",321
-"Diffusion des Oeuvres",321
-"Blu-Ray",320
-"April",319
-"Acte II",315
-"Voir",311
-"Musique",309
-"Conseil Supérieur de l'Audiovisuel",308
-"Atlantique",307
-"Guy Bono",306
-"Nantes",306
-"Hexagone",304
-"CNN",303
-"Numericable",303
-"Virgin",303
-"Benjamin Bayart",300
-"Commission de Protection des Droits",299
-"Italie",295
-"Filippetti",294
-"Jérôme Bourreau-Guggenheim",294
-"Luxembourg",292
-"Nathalie Kosciusko-Morizet",292
-"Patrick Zelnik",292
-"CSPLA",289
-"Adami",288
-"Arnaud Montebourg",288
-"Olivier Schrameck",287
-"RDDV",287
-"Labs",286
-"URL",286
-"Pad",285
-"Loin",282
-"TNT",281
-"Philippe Aigrain",278
-"Wikileaks",276
-"PDG",274
-"Pays-Bas",273
-"PCInpact",273
-"French Data Network",271
-"mission Zelnik",271
-"Netflix",271
-"Spedidam",271
-"FBI",269
-"FNAC",269
-"Nicolas Dupont-Aignan",269
-"Piratage",269
-"UPFI",268
-"Pascal Rogard",267
-"Abonnements",266
-"Commission Mixte Paritaire",266
-"DDOS",266
-"Liens",266
-"Mission Lescure",266
-"Suisse",263
-"ARP",261
-"Protection",261
-"Autorité de Régulation des Mesures Techniques",260
-"France Inter",260
-"PC INpact",260
-"USB",260
-"Cannes",258
-"Youtube",257
-"Bon",255
-"Américains",254
-"Affaires",252
-"Françoise de Panafieu",252
-"Libertés",252
-"Rediffusions",252
-"Belgique",251
-"Laure de la Raudière",250
-"Freebox",249
-"Donkey",248
-"Résultat",248
-"OMPI",246
-"Rennes",246
-"Dominique de Villepin",245
-"SOPA",244
-"Aux Etats-Unis",243
-"Élysée",243
-"Promotion des Usages Responsables",243
-"Irlande",242
-"Midem",241
-"Nouveau Centre",239
-"Alice",238
-"Intérieur",238
-"Russie",233
-"Rapidshare",232
-"Téléchargement",231
-"Déclaration",230
-"Jiwa",229
-"Côté",227
-"David El Sayegh",227
-"Wifi",226
-"Angleterre",225
-"Education",225
-"mission Olivennes",224
-"Corée du Sud",220
-"Nouvelle-Zélande",220
-"MTP",217
-"NKM",217
-"Obama",217
-"Observatoire",217
-"Blu-ray",216
-"Congrès",216
-"Attention",215
-"Conseil National du Numérique",215
-"Finlande",215
-"Institut",215
-"Faute",214
-"Kazaa",213
-"Android",212
-"Universal Music France",212
-"Allostreaming",211
-"Bernard Miyet",211
-"Iliad",211
-"Nouvel Obs",211
-"Wikipedia",211
-"Libé",210
-"MegaVideo",210
-"Minute",210
-"Texel",209
-"Alpa",208
-"Lire",208
-"Michel Riguidel",208
-"Skype",208
-"Jamendo",206
-"Hadopi Eric Walter",202
-"Manuel Valls",202
-"Alex Türk",201
-"Écrans",201
-"ONG",201
-"Droits",199
-"Firefox",199
-"Sujet",199
-"Société des Auteurs",197
-"Acta",196
-"Suivez",196
-"Bluetouff",194
-"Budget",194
-"Jacques Chirac",194
-"CNM",193
-"TorrentFreak",193
-"Bouygues Telecom",192
-"Jacques Attali",192
-"LCI",192
-"RMC",192
-"WPA",191
-"Syndicat National de l'Edition Phonographique",190
-"America",189
-"Freebox TV",189
-"Rue",189
-"Avignon",188
-"SPRD",188
-"BBox",187
-"Cinéma",187
-"Association de Lutte",186
-"INA",186
-"Piraterie Audiovisuelle",186
-"FFT",183
-"Manche",183
-"Parallèlement",183
-"Alicebox TV",182
-"Bonne",182
-"Luc Besson",182
-"OMG",182
-"Orange TV",182
-"Charte",181
-"LOPPSI",181
-"Riester",181
-"Eva Joly",180
-"Liberté",180
-"Ministère de la Culture",180
-"Carte",179
-"Collège",178
-"Marine Le Pen",178
-"SDRM",177
-"Londres",176
-"Retour",176
-"ARJEL",175
-"Brice Hortefeux",175
-"Eureka Presse",175
-"Brésil",173
-"DNS",173
-"Invité",173
-"Parquet",173
-"BPI",172
-"Idem",172
-"SMS",172
-"Nouvelle",171
-"Olivier Henrard",171
-"Petit",171
-"Troie",171
-"WEP",171
-"Mediapart",169
-"Bay",168
-"Bernard Accoyer",168
-"Diffusion",168
-"Donnedieu de Vabres",168
-"Neufbox TV",168
-"Richard Stallman",167
-"RTL",167
-"Conseil d'État",166
-"AOL",164
-"David Assouline",164
-"Marseille",164
-"Reporters Sans Frontières",164
-"Médiamétrie",163
-"Poste",163
-"Compositeurs Dramatiques",162
-"Espérons",162
-"CJUE",161
-"Daniel Cohn-Bendit",161
-"Fillon",161
-"Projet",161
-"Sophian Fanen",161
-"Virgule WTF",161
-"Marais",160
-"Minutes",160
-"Yvelines",160
-"Ayrault",159
-"Monsieur",159
-"OVH",159
-"Tandis",159
-"Danemark",158
-"Inde",158
-"Mega",158
-"Neelie Kroes",158
-"PayPal",158
-"RSF",158
-"Catherine Trautmann",157
-"PIB",157
-"Convention",156
-"Protection des Droits",156
-"Britanniques",155
-"DDL",155
-"Front",154
-"Radio France",154
-"Maxime Rouquet",153
-"SEVN",153
-"Jaimelesartistes",152
-"Naïve",152
-"Assises",150
-"Digital Millennium Copyright Act",150
-"Nièvre",150
-"Owni",150
-"BBC",148
-"Maître Eolas",148
-"Nadine Morano",148
-"Agence",147
-"BNF",147
-"Lagardère",147
-"Ndlr",147
-"Socialistes",147
-"France Info",146
-"Rihanna",146
-"Dernière",145
-"François Mitterrand",145
-"Libre",145
-"Palais Bourbon",145
-"Emma Leprince",144
-"Rue de Valois",144
-"Demain",143
-"Riguidel",143
-"WikiLeaks",143
-"Carte Musique",141
-"Festival de Cannes",141
-"Alliance Public-Artistes",140
-"Andréa Fradin",140
-"Catherine Tasca",140
-"Chronophages",140
-"Hadopi Le",140
-"Libélabo",140
-"Marc Guez",140
-"Odebi",140
-"VLC",140
-"Compte",139
-"CPI",139
-"Nord",139
-"Fouquet",138
-"Front National",138
-"Objectif",138
-"Lancé",137
-"Barack Obama",136
-"Johnny Hallyday",136
-"Lang",136
-"ONU",136
-"Reuters",136
-"Télé",136
-"Warner Bros",136
-"Warner Music",136
-"Washington",136
-"Gaumont",135
-"Informatique",135
-"Bouygues Télécom",134
-"Hasard",134
-"PlayStation",134
-"Seine-Saint-Denis",134
-"Sony Music",134
-"DREV",133
-"Grenelle",133
-"Intel",133
-"Marland-Militello",133
-"Ministre",133
-"NDLR",133
-"Nouveau",133
-"PDG de Canal",133
-"Suguenot",133
-"VirginMega",133
-"Fédération Française des Télécoms",132
-"Lille",132
-"Philippe Gosselin",132
-"Anne Hidalgo",131
-"Arte",131
-"Avez-vous",131
-"Christophe Tardieu",131
-"François Rebsamen",131
-"IPRED",131
-"LimeWire",131
-"MoDem",131
-"Norvège",131
-"Paul",131
-"Société Civile des Producteurs Phonographiques",131
-"Versailles",131
-"Wired",131
-"FTP",130
-"Asie",129
-"Framasoft",129
-"Imaginez",129
-"Quid",129
-"rapport Olivennes",129
-"Filtrage",128
-"Forum d'Avignon",128
-"Qobuz",128
-"Arjel",126
-"Camille Gévaudan --",126
-"commission Zelnik",126
-"Conclusion",126
-"DAVDSI",126
-"Electronic Frontier Foundation",126
-"Lost",126
-"Pandore",126
-"Politique",126
-"Copie",125
-"Amérique du Nord",124
-"Globalement",124
-"Hulu",124
-"Laurent Petitgirard",124
-"Lyon",124
-"Ministre de la Culture",124
-"Seules",124
-"Recherche",123
-"British Phonographic Industry",122
-"Dernier",122
-"Jean-Michel Planche",122
-"Licence",122
-"Organisation",122
-"Sachant",122
-"Thierry Lhermitte",122
-"Beezik",121
-"Commissaire",121
-"PIPA",121
-"Streaming",121
-"Jérôme Roger",120
-"Nicolas Seydoux",120
-"Nokia",120
-"Stéphane Richard",120
-"Allez",119
-"Canal Plus",119
-"Carla Bruni",119
-"Lionel Jospin",119
-"Martin Bouygues",119
-"Michu",119
-"Minitel",119
-"Mireille Imbert Quaretta",119
-"Projet Dadvsi",119
-"Sceaux",119
-"Shareaza",119
-"Collège de l'Hadopi",118
-"Jean Musitelli",118
-"Jeux",118
-"Kim Dotcom",118
-"Quitte",118
-"Aubry",117
-"Bibliothèque",117
-"Copé",117
-"Eric Woerth",117
-"Offre",117
-"Rendez-vous",117
-"Steve Jobs",117
-"TGI",117
-"Digital Economy Act",116
-"Iran",116
-"Ambiance",115
-"Bataille Hadopi",115
-"Dit",115
-"Motion Picture Association",115
-"Viviane Reding",115
-"Secrétaire",114
-"Artistique",113
-"New York",113
-"Art",112
-"Bayrou",112
-"Beatles",112
-"Commission Nationale de l'Informatique",112
-"Défense",112
-"Finances",112
-"Guillaume Champeau",112
-"Ile-de-France",112
-"Jean-Louis Debré",112
-"Numérique",112
-"Pensez-vous",112
-"Rachida Dati",112
-"Sécurité",112
-"Seulement",112
-"Sony BMG",112
-"StopDRM",112
-"Tunes Music Store",112
-"Verts Martine Billard",112
-"VideoLAN",112
-"VoD",112
-"XXIe",112
-"Cupertino",111
-"Google France",111
-"Jean-Marc Manach",111
-"Parisien",111
-"Présenté",111
-"Afghanistan",110
-"Deep Packet Inspection",110
-"Dijon",110
-"ElectronLibre",110
-"Flash",110
-"Jospin",110
-"Lionel Thoumyre",110
-"Livre",110
-"Numérama",110
-"rapport Gallo",110
-"Reporters",110
-"Tunes Store",110
-"Zelnik",110
-"Ofcom",109
-"Torrent",109
-"Benjamin Lancar",108
-"Ligue Odebi",108
-"Mexique",108
-"MGMT",108
-"Nombre",108
-"Neutralité",107
-"Etrange",106
-"Forum",106
-"Michel Barnier",106
-"SpiralFrog",106
-"APRIL",105
-"Arts",105
-"BFM TV",105
-"Créée",105
-"Edition Multimédi",105
-"Fidèle",105
-"Klaire",105
-"Loi Hadopi",105
-"Madame",105
-"Maison Blanche",105
-"Majors",105
-"Marc Le Fur",105
-"Modem",105
-"Réponse",105
-"Roger Karoutchi",105
-"Sopa",105
-"Tokyo",105
-"Corinne Erhel",104
-"Direction",104
-"Droits de l'Homme",104
-"Guardian",104
-"Mountain View",104
-"Allemands",103
-"Ensemble",103
-"Expansion",103
-"IRC",103
-"Jean-Frédéric Poisson",103
-"Kindle",103
-"Laurent Fabius",103
-"Presque",103
-"UFC",103
-"UFC Que Choisir",103
-"Vivendi Universal",103
-"Luc Chatel",102
-"Bbox",101
-"Christine Lagarde",101
-"Commerce",101
-"David Guetta",101
-"Disney",101
-"Effectivement",101
-"Egalement",101
-"Fort",101
-"Travail",101
-"Tumblr",101
-"VHS",101
-"Labs Hadopi",100
-"Conseil Supérieur de la Propriété Littéraire",99
-"Michel Sardou",99
-"Rappelant",99
-"Accord",98
-"Big Brother",98
-"Chirac",98
-"COSIP",98
-"CPE",98
-"Éric Walter",98
-"Essonne",98
-"Exit",98
-"Hervé Rony",98
-"Loi Création",98
-"Maginot",98
-"Manière",98
-"New York Times",98
-"OpenOffice",98
-"PCF",98
-"Podcast",98
-"Royal",98
-"RSA",98
-"SVM",98
-"Trombinoscope",98
-"Aurélie Filipetti",97
-"Flickr",97
-"ADAMI",96
-"Californie",96
-"Hauts-de-Seine",96
-"InLibroVeritas",96
-"Mars",96
-"Mis",96
-"ReadWriteWeb",96
-"Rencontres",96
-"Vuze",96
-"Considérant",95
-"Corrèze",95
-"Réseaux",95
-"Silicon Valley",95
-"ASIC",94
-"Fotolia",94
-"Frédéric Couchet",94
-"Politiquement",94
-"Techland",94
-"Tunisie",94
-"Vanneste",94
-"Bernard Kouchner",93
-"HTTP",93
-"SOS Hadopi",93
-"Bientôt",92
-"Chambre",92
-"Ligue",92
-"Slate",92
-"Axel Dauchez",91
-"Azureus",91
-"Beaune",91
-"Bernard Carayon",91
-"Besson",91
-"Bloche",91
-"Bourse",91
-"Christophe Lameignère",91
-"Digital Rights Management",91
-"GNU",91
-"Grokster",91
-"Jean-Noël Tronc",91
-"Niel",91
-"NSA",91
-"Pipa",91
-"Richard Cazenave",91
-"SNE",91
-"Suédois",91
-"The",91
-"UFC-Que",91
-"WTF",91
-"Édition Multimédi",90
-"Korben",90
-"OCDE",90
-"Top",90
-"AFA",89
-"Canard Enchaîné",89
-"Économie",89
-"EELV",89
-"Images",89
-"ISF",89
-"Jean-Bernard Lévy",89
-"Justement",89
-"Laurent Wauquiez",89
-"Lefebvre",89
-"MAC",89
-"Marché",89
-"Marie-Christine Blandin",89
-"Mulholland Drive",89
-"Music",89
-"Prenons",89
-"Xbox",89
-"Amérique",87
-"Calimaq",87
-"Françoise Castex",87
-"HTML",87
-"Imaginons",87
-"Ironie",87
-"Isabelle Falque-Pierrotin",87
-"Michael Jackson",87
-"Nouvelle Zélande",87
-"Organisation Mondiale de la Propriété Intellectuelle",87
-"Révolution",87
-"TTC",87
-"Verizon",87
-"Clubic",85
-"Consommation",85
-"EFF",85
-"Libre Accès",85
-"Mark Zuckerberg",85
-"Michel Boyon",85
-"Notez",85
-"Télécharger",85
-"Visa",85
-"Belfort",84
-"Bloquer",84
-"British Telecom",84
-"CLCV",84
-"Denis Ladegaillerie",84
-"Dionis du Séjour",84
-"Festival",84
-"Force",84
-"Internet Explorer",84
-"Interview",84
-"Kast",84
-"Lettres",84
-"Ligne",84
-"Mac OS",84
-"MIQ",84
-"Nielsen",84
-"NRJ",84
-"Numéricable",84
-"Patrice Martin-Lalande",84
-"PCINpact",84
-"Rapport Lescure",84
-"rapport MIQ",84
-"Recording Industry Association",84
-"Source",84
-"Veille",84
-"Villa Médicis",84
-"BSA",83
-"MusicMe",83
-"Afrique",82
-"CanalPlay",82
-"Chrome",82
-"Comité",82
-"DailyMotion",82
-"Dommage",82
-"Européens",82
-"Faites",82
-"Harvard",82
-"IsoHunt",82
-"Juridiquement",82
-"Mathus",82
-"Moselle",82
-"Post",82
-"Pour Hadopi",82
-"PS Christian Paul",82
-"Public",82
-"Renaud Veeckman",82
-"Sabam",82
-"SCAM",82
-"Thaïlande",82
-"The Register",82
-"Vite",82
-"Cloud",81
-"Deauville",81
-"Imbert-Quaretta",81
-"Lab",81
-"Comcast",80
-"Coup",80
-"Gfk",80
-"Jacques Legendre",80
-"JDD",80
-"Laure de La Raudière",80
-"Office",80
-"Public Sénat",80
-"Réunion",80
-"SELL",80
-"Techniquement",80
-"APC",78
-"App Store",78
-"Centre National de la Musique",78
-"Dernièrement",78
-"Gmail",78
-"Mouvement Démocrate",78
-"NPA",78
-"Société Civile des Producteurs de Phonogrammes",78
-"Véritable",78
-"Victor Hugo",78
-"Abonnement",77
-"Abracadabra",77
-"Albis",77
-"Arrêt",77
-"Belle",77
-"Berlin",77
-"Bibliothèque Nationale de France",77
-"Bourreau",77
-"CGTI",77
-"Commission des Affaires Culturelles",77
-"Création Public Internet",77
-"Csa",77
-"Département Recherche",77
-"Edvige",77
-"Eglise",77
-"Emmanuel Torregano",77
-"Faut",77
-"Gnutella",77
-"Google Play",77
-"IBM",77
-"Inutile",77
-"Jean-Luc Godard",77
-"Lady Gaga",77
-"Laurent Chemla",77
-"Montpellier",77
-"Motif",77
-"Nation",77
-"Pirate",77
-"Piste",77
-"Pourriez-vous",77
-"Quartier",77
-"Renaud Donnedieu de Vabre",77
-"Réseau",77
-"SAMUP",77
-"Serge Lagauche",77
-"Simavelec",77
-"Simple",77
-"SOS-Hadopi",77
-"Source AFP",77
-"Traduction",77
-"Usenet",77
-"Vincent Peillon",77
-"Virgin Media",77
-"Ars Technica",76
-"Francis Lalanne",76
-"Pierre Kosciusko-Morizet",76
-"Benoît Hamon",75
-"CanalSat",75
-"CNRS",75
-"Conscient",75
-"Coué",75
-"Décision",75
-"Devenu",75
-"Estimant",75
-"Favorable",75
-"Fonds",75
-"France Culture",75
-"Grand",75
-"Marianne",75
-"Mouvement",75
-"Pirate Bay",75
-"Prince",75
-"Question",75
-"Radiohead",75
-"Rhin",75
-"Service",75
-"SMTP",75
-"UFC-Que-Choisir",75
-"Starzik",74
-"Adobe",73
-"Autriche",73
-"Centre National de la Cinématographie",73
-"Certainement",73
-"Cité",73
-"Coïncidence",73
-"Fédération Internationale de l'Industrie Phonographique",73
-"Havas",73
-"Juste",73
-"Parfois",73
-"Paypal",73
-"Pierre Sirinelli",73
-"Pologne",73
-"Président de la République Nicolas Sarkozy",73
-"Services",73
-"SVOD",73
-"TGI de Paris",73
-"TPE",73
-"Voire",73
-"Benoît Tabaka",72
-"Hadopi Marie-Françoise Marais",72
-"Libye",72
-"PriceMinister",72
-"Reflets",72
-"AAC",71
-"Constatant",71
-"Créer",71
-"Gilles Babinet",71
-"Jean Berbinau",71
-"Propriété",71
-"Ubuntu",71
-"Agriculture",70
-"Alain Lipietz",70
-"Allez-vous",70
-"Alliance",70
-"Audiovisuel",70
-"Bordeaux",70
-"Bruno Retailleau",70
-"Calogero",70
-"Center",70
-"Communications",70
-"Communistes",70
-"Conséquence",70
-"Développement",70
-"Digital Economy Bill",70
-"Ecologie",70
-"Envoyer",70
-"François",70
-"Giuseppe de Martino",70
-"Guillaume Cerutti",70
-"Harry Potter",70
-"HD DVD",70
-"Jean Sarkozy",70
-"Jean-François Lamour",70
-"Jean-Luc Warsmann",70
-"Journal du Dimanche",70
-"Madonna",70
-"Mali",70
-"Michel Rocard",70
-"Nanterre",70
-"Objet",70
-"Paquet",70
-"PDG de la Fnac",70
-"Pirouette",70
-"Potager",70
-"RealNetworks",70
-"Samup",70
-"Strasbourg",70
-"Thiollière",70
-"Windows Media",70
-"Xavier Darcos",70
-"Chancellerie",69
-"Citons",69
-"Manifestement",69
-"Turquie",69
-"Aux États-Unis",68
-"Ben",68
-"Bittorrent",68
-"Cliquez",68
-"Collège de la Hadopi",68
-"Cour Suprême",68
-"Décembre",68
-"Dieu",68
-"DivX",68
-"Emmanuel Hoog",68
-"Emploi",68
-"Eolas",68
-"Etudes",68
-"France Telecom",68
-"Free Mobile",68
-"Game",68
-"IFOP",68
-"Interrogés",68
-"Isère",68
-"Jean Berbineau",68
-"Logistep",68
-"Los Angeles",68
-"Ministère",68
-"Mission",68
-"Pirater",68
-"Prenez",68
-"rapport Lambrinidis",68
-"Rome",68
-"Claude Guéant",67
-"Sommet",67
-"BitCoin",66
-"CDP",66
-"Chantal Jannet",66
-"Chargée",66
-"Chinois",66
-"Contactés",66
-"Cosip",66
-"Darty",66
-"Emmanuel Berretta",66
-"FNDF",66
-"Free Software Foundation",66
-"GPL",66
-"INPI",66
-"Inrocks",66
-"Olivier Laurelli",66
-"Paramount",66
-"TCP",66
-"UPP",66
-"Vimeo",66
-"Jacques Bille",65
-"Offre Légale",65
-"Big Brother Awards",64
-"Eure-et-Loir",64
-"Jean-Pierre Bel",64
-"OMC",64
-"Richard Yung",64
-"Syrie",64
-"Adopté",63
-"Assises de la Création",63
-"Astrid Girardeau",63
-"Boing Boing",63
-"Boutin",63
-"Cacahuète",63
-"Cahuzac",63
-"Canadiens",63
-"CCI",63
-"CEDH",63
-"Choristes",63
-"Christophe Espern",63
-"Conformément",63
-"Créé",63
-"DDoS",63
-"Dixit",63
-"Ecole",63
-"ENA",63
-"Europe Ecologie",63
-"Extrait",63
-"FAQ",63
-"Forcément",63
-"Fournisseurs",63
-"Garde des Sceaux",63
-"Gauche",63
-"GfK",63
-"GFK",63
-"Godwin",63
-"Grèce",63
-"Grenoble",63
-"Gutenberg",63
-"Hadopi Dixit Création",63
-"Immédiatement",63
-"Innovation",63
-"INRIA",63
-"ISOC",63
-"Jack Ralite",63
-"Japan Expo",63
-"Jean-Baptiste Gourdin",63
-"Jean-Luc Hees",63
-"Jérôme",63
-"Jérôme Bourreau",63
-"Juan Branco",63
-"Juin",63
-"Laurent Joffrin",63
-"Lettre",63
-"Marc Rees",63
-"Marielle Gallo",63
-"Michael Geist",63
-"Morpheus",63
-"NBC Universal",63
-"Nintendo",63
-"Nonce Paolini",63
-"Page",63
-"Pierre Arditi",63
-"Pierre Moscovici",63
-"Pirates",63
-"Piratpartiet",63
-"Premium",63
-"Présentée",63
-"Prospective",63
-"Redressement",63
-"Regardez",63
-"Reprenant",63
-"Santé",63
-"Sélection",63
-"Simplement",63
-"Super Crapule",63
-"Télévision",63
-"Trautmann",63
-"Tribunal",63
-"Universal Music Group",63
-"Valls",63
-"Vie",63
-"Wawa-Mania",63
-"WMA",63
-"Alpes-Maritimes",62
-"Eric Schmidt",62
-"OCLCTIC",62
-"Agoravox",61
-"Art Libre",61
-"Chambres",61
-"Christian Engström",61
-"CNNum",61
-"FCC",61
-"Gaëtan Gorce",61
-"Gordon Brown",61
-"Haute-Savoie",61
-"Information",61
-"Janvier",61
-"Jean-Ludovic Silicani",61
-"Jean-Pierre Raffarin",61
-"Louvre",61
-"Marc Tessier",61
-"Marin Karmitz",61
-"Midem à Cannes",61
-"Mininova",61
-"MySpace",61
-"Ouest-France",61
-"Parler",61
-"Peer",61
-"Plan",61
-"Prenant",61
-"Rappel",61
-"Sanctions",61
-"Saône-et-Loire",61
-"Site",61
-"SNCF",61
-"Sous-entendu",61
-"Tardy",61
-"Tôt",61
-"VàD",61
-"Wikimédia",61
-"Alexa",60
-"Before",60
-"Node",60
-"Advestigo",59
-"Affaire",59
-"Alain Juppé",59
-"Archos",59
-"Artistes",59
-"Attali",59
-"Autour",59
-"Bourget",59
-"Code de la Propriété Intellectuelle",59
-"Curieusement",59
-"Emule",59
-"Franchement",59
-"FSF",59
-"Jean-Marie Le Pen",59
-"Lancée",59
-"Lawrence Lessig",59
-"Maroc",59
-"Membre",59
-"Plan Numérique",59
-"Présidente",59
-"Répondant",59
-"Système",59
-"Time Warner Cable",59
-"Venezuela",59
-"Veuillez",59
-"Vieux Continent",59
-"VRP",59
-"Aquitaine",57
-"Biennales",57
-"Échos",57
-"Forum des Droits",57
-"Fox",57
-"IDATE",57
-"Jeunes",57
-"Née",57
-"Patrick Bouquet",57
-"Sinde",57
-"Usages",57
-"Accès",56
-"Admettons",56
-"Assouline",56
-"Autorité de Régulation des Jeux",56
-"Bakchich",56
-"Banque",56
-"Bastille",56
-"BFM",56
-"BFM Business",56
-"Bienvenue",56
-"Bitcoin",56
-"BMG",56
-"Cécile Duflot",56
-"Chargé",56
-"Chef de l'Etat",56
-"Chiffre",56
-"Citoyen",56
-"Confessions",56
-"Contribution",56
-"Copyright Information",56
-"Création d'Aurélie Filippetti",56
-"David Kessler",56
-"Défendre",56
-"Dropbox",56
-"Evry",56
-"Exclusif",56
-"Exemple",56
-"Finkielkraut",56
-"Godard",56
-"Guadeloupe",56
-"Hervé Mariton",56
-"Hervé Morin",56
-"High",56
-"INTERNET",56
-"Ipsos",56
-"Japonais",56
-"Jean-Louis Borloo",56
-"Jean-Michel Counillon",56
-"Julien Dourgnon",56
-"Kudelski",56
-"Logement",56
-"Logiciel Libre",56
-"Loi Dadvsi",56
-"Lois",56
-"Lumières",56
-"Mathieu Pasquini",56
-"Mauvaise",56
-"Megavideo",56
-"Michel Charasse",56
-"Montebourg",56
-"MSN",56
-"Neuf Cegetel",56
-"Neutralité du Net",56
-"Ouest",56
-"Panafieu",56
-"Paradoxalement",56
-"Paris Première",56
-"Partisan",56
-"Partout",56
-"Patrick Zelnick",56
-"Petite",56
-"Photo",56
-"Précisons",56
-"Présidentielle",56
-"Promis",56
-"Razorback",56
-"Retailleau",56
-"RIPoste",56
-"Sanction",56
-"SFR Neufbox",56
-"Théâtre Marigny",56
-"Tim Berners-Lee",56
-"Toulouse",56
-"Vista",56
-"Xavier Bertrand",56
-"Éric Besson",55
-"MediaFire",55
-"TalkTalk",55
-"ADN",54
-"Alliot-Marie",54
-"Allociné",54
-"Believe",54
-"Bertrand Tavernier",54
-"Bonjour",54
-"CADA",54
-"Challenges",54
-"Christian Kert",54
-"Corinne Lepage",54
-"Drôle",54
-"Etrangement",54
-"François Baroin",54
-"HBO",54
-"Hémicycle",54
-"Jean-Louis Gagnaire",54
-"Journée",54
-"Kim Schmitz",54
-"Le Monde",54
-"McAfee",54
-"Nouveaux",54
-"PDG d'Universal Music France",54
-"Raté",54
-"Replay",54
-"RFI",54
-"Seine-et-Marne",54
-"Star Academy",54
-"Thrones",54
-"TOR",54
-"Tristan Nitot",54
-"Twilight",54
-"Vodafone",54
-"Vouloir",54
-"Wii",54
-"Asic",52
-"Bilan",52
-"Cisco",52
-"Collège de la Haute Autorité",52
-"Columbia",52
-"Fabrice Epelboin",52
-"Fred",52
-"Guéant",52
-"Hachette",52
-"Law",52
-"Louis Bertignac",52
-"Opposé",52
-"Pastebin",52
-"Philippe Marini",52
-"Publicis",52
-"Revenant",52
-"SMIC",52
-"Souvenez-vous",52
-"Spécialiste",52
-"Toubon",52
-"Turblog",52
-"Votée",52
-"Haute Cour",50
-"Iron Man",50
-"Robert Thollot",50
-"Accusé",49
-"Acte",49
-"AES",49
-"Aful",49
-"Alloshare",49
-"Alloshowtv",49
-"Atari",49
-"Banque de France",49
-"Batman",49
-"BBS",49
-"Beaumarchais",49
-"Bono-Cohn-Bendit",49
-"Boulogne-Billancourt",49
-"Bourreau-Guggenheim",49
-"Bureau",49
-"Carayon",49
-"Catherine Deneuve",49
-"CDI",49
-"CEJ",49
-"Christiane Taubira",49
-"Claire Chazal",49
-"Clearstream",49
-"Club",49
-"Comprendre",49
-"Condamné",49
-"Content ID",49
-"Contrôle",49
-"Coupe",49
-"Damocles",49
-"Dan Gillmor",49
-"David",49
-"Direct",49
-"Donner",49
-"Double",49
-"Duflot",49
-"Ecran Total",49
-"Eddy Mitchell",49
-"Éducation",49
-"Enseignement",49
-"Etes-vous",49
-"Européennes",49
-"Extelia",49
-"Fête de la Musique",49
-"Films",49
-"Fnacmusic",49
-"François Sauvadet",49
-"Freenet",49
-"Gallo",49
-"Gandi",49
-"GDR",49
-"GeoHot",49
-"Gros",49
-"Hadopi --",49
-"Haute Assemblée",49
-"Henri Guaino",49
-"Historiquement",49
-"Initialement",49
-"Inria",49
-"Ipred",49
-"James Climent",49
-"La Tribune",49
-"Laurence Ferrari",49
-"Leclerc",49
-"Limewire",49
-"Lionel Maurel",49
-"LOL",49
-"Mai",49
-"Maison",49
-"Mal",49
-"Metz",49
-"Michel Sapin",49
-"mission Zelnick",49
-"Mobile",49
-"Mystère",49
-"Nicolas",49
-"Nicolas Colin",49
-"Note",49
-"OGM",49
-"Olivier Bomsel",49
-"Orelsan",49
-"Palais du Luxembourg",49
-"Pauline Blassel",49
-"Paulo Branco",49
-"Peter Sunde",49
-"Pratiquez-vous",49
-"Précisément",49
-"Pris",49
-"Prochaine",49
-"Promusicae",49
-"RadioBlogClub",49
-"Refus",49
-"Rémy Pflimlin",49
-"Rencontres Cinématographiques",49
-"Rouen",49
-"Samsung",49
-"Schrameck",49
-"SEV",49
-"Sony Pictures",49
-"Sourceforge",49
-"SSL",49
-"Stallman",49
-"Star Wars",49
-"Stéphane Bourdoiseau",49
-"Technicolor",49
-"Texte",49
-"Thierry Chassagne",49
-"Thomson",49
-"Times",49
-"Totalement",49
-"Tours",49
-"Villepin",49
-"Virginmega",49
-"Walter",49
-"Warner Music France",49
-"Word",49
-"Zénith",49
-"Associated Press",47
-"Au Sénat",47
-"Aussitôt",47
-"Avec Hadopi",47
-"Benoist Apparu",47
-"BVA",47
-"Chose",47
-"Christian Estrosi",47
-"Conférence",47
-"Confirmant",47
-"Corée du Nord",47
-"CSG",47
-"CSS",47
-"DSK",47
-"Dupont-Aignan",47
-"Encourager",47
-"Evoquant",47
-"Gageons",47
-"Internautes",47
-"Invitée",47
-"Jacques Myard",47
-"Le Point",47
-"Loïc Le Meur",47
-"Lucie Morillon",47
-"Lutter",47
-"Martin Rogard",47
-"Mastercard",47
-"Moyen-Orient",47
-"Mozilla",47
-"Mozilla Europe",47
-"Mulve",47
-"MyMajorCompany",47
-"Nations",47
-"Normalement",47
-"Officieusement",47
-"Outre-Atlantique",47
-"Pas-de-Calais",47
-"Pierre",47
-"PiratPartiet",47
-"Printemps de Bourges",47
-"Profitant",47
-"Publié",47
-"Quoiqu",47
-"Réalisée",47
-"Reding",47
-"Redmond",47
-"Révolution Française",47
-"Roselyne Bachelot",47
-"Soutenu",47
-"Soyez",47
-"Sports",47
-"Stephan Bourdoiseau",47
-"Succès",47
-"VOST",47
-"Wat",47
-"Actualitté",45
-"Allomusic",45
-"Bruno Bourg-Broc",45
-"CopWatch",45
-"Couper",45
-"Cour de Justice de l'Union Européenne",45
-"DGCCRF",45
-"Jean-Luc Mélenchon",45
-"Quai d'Orsay",45
-"Scarlet",45
-"Taxer",45
-"The Artist",45
-"Administration",42
-"ADPIC",42
-"Adresse IP",42
-"Ajoutons",42
-"Alain Finkielkraut",42
-"Alima Boumediene-Thiery",42
-"Aller",42
-"Allomovies",42
-"Anny Poursinoff",42
-"Appelée",42
-"Audio",42
-"Auteurs",42
-"BCE",42
-"Beemotion",42
-"Bermudes",42
-"Bertrand Delanoë",42
-"Bill Gates",42
-"Billboard",42
-"Bingo",42
-"Blackberry",42
-"Blocage",42
-"Bourbon",42
-"Britney Spears",42
-"Canal Play",42
-"Cantine",42
-"Cazenave",42
-"Cercle",42
-"Christophe Honoré",42
-"Ciné Lycée",42
-"Cinémathèque",42
-"Cohn-Bendit",42
-"Conçu",42
-"Conseil de l'Union Européenne",42
-"Conseiller",42
-"Coreper",42
-"Crédit",42
-"CSA-Arcep",42
-"Curiosphère",42
-"Dassault",42
-"Davenport Lyons",42
-"Debré",42
-"Didier Migaud",42
-"Donnedieu de Vabres Renaud",42
-"Doté",42
-"DPStream",42
-"Drev",42
-"DRMisé",42
-"Durée",42
-"EDF",42
-"Editeurs de Musique",42
-"Edition Multimedi",42
-"Edwy Plenel",42
-"Emmanuel Gabla",42
-"Episode",42
-"Eric Mettout",42
-"Erreur",42
-"Et Hadopi",42
-"Etude",42
-"Europeana",42
-"Exactement",42
-"Extraits",42
-"FAI Hadopi",42
-"Far West",42
-"Février",42
-"Flammarion",42
-"FnacMusic",42
-"Frédéric Delacroix",42
-"Freezer",42
-"Gaulle",42
-"George Hotz",42
-"Gérard Collomb",42
-"Geste",42
-"Google TV",42
-"Gratuit",42
-"GSM",42
-"Guerre",42
-"Guillaume Cerruti",42
-"Guyane",42
-"Habeas Corpus",42
-"Hadopi S",42
-"Halde",42
-"Hortefeux",42
-"Ifop",42
-"Indochine",42
-"International Federation",42
-"Ipod",42
-"IPv",42
-"Jérôme Cahuzac",42
-"Jeunesse",42
-"Katy Perry",42
-"Keyboard Cat",42
-"Lily Allen",42
-"Martin",42
-"Michel Zumkeller",42
-"Mission Zelnik",42
-"Musique Libre",42
-"Najat Vallaud-Belkacem",42
-"Netvibes",42
-"Nicolas Demorand",42
-"Noël Mamère",42
-"Nommé",42
-"Nordnet",42
-"NPD Group",42
-"Nulle",42
-"Odéon",42
-"Open Office",42
-"OSS",42
-"Otan",42
-"Outre-mer",42
-"Pâques",42
-"Passons",42
-"Patrick Bruel",42
-"Peer-to-peer",42
-"Phonographic Industry",42
-"Pis",42
-"PMU",42
-"Poisson",42
-"Powerpoint",42
-"Précédente  SuivanteImage",42
-"Premier Ministre",42
-"Prendre",42
-"Présidence",42
-"PRG",42
-"Provence",42
-"Prud'",42
-"PS Patrick Bloche",42
-"Questions",42
-"Rambouillet",42
-"Raphaël Suire",42
-"Rédigé",42
-"Riposte Graduée",42
-"Rubicon",42
-"Samuel Autheuil",42
-"San Francisco",42
-"Sandvine",42
-"Sarko",42
-"Satellifax",42
-"Scorpions",42
-"SeedFuck",42
-"Sitôt",42
-"Socialiste",42
-"Solférino",42
-"SPEDIDAM",42
-"Steam",42
-"Support",42
-"Syndicat National",42
-"Tardieu",42
-"Tera Consultants",42
-"Thunderbird",42
-"Time Warner",42
-"Tour",42
-"Tribune de l'Art",42
-"UDF François Bayrou",42
-"UFPI",42
-"UNAF",42
-"Vert",42
-"Verts Alima Boumediene-Thiery",42
-"Virgin Megastore",42
-"Vision",42
-"Vivendi-Universal",42
-"Vote",42
-"Walt Disney",42
-"Wanadoo",42
-"Warner Music Group",42
-"Wikimedia",42
-"World",42
-"Yochai Benkler",42
-"Yves Bur",42
-"Yves Le Mouël",42
-"Aix-en-Provence",40
-"Ancien",40
-"ANFR",40
-"Développer",40
-"MyClubbingStore",40
-"Nations Unies",40
-"Open Data",40
-"Paul Da Silva",40
-"Philippe Monfils",40
-"Portugal",40
-"PUR de l'Hadopi",40
-"Régulièrement",40
-"Sans Hadopi",40
-"Stop Online Piracy Act",40
-"Techniques",40
-"VideoBB",40
-"ACS",35
-"Alexandre Archambault",35
-"Annoncée",35
-"API",35
-"Autrefois",35
-"BeeMotion",35
-"Ben Ali",35
-"Bing",35
-"Cap",35
-"Christian Phéline",35
-"Conseil de l'Union",35
-"Daniel Guichard",35
-"Département de la Justice",35
-"Economie Numérique",35
-"Eircom",35
-"Électron Libre",35
-"Financial Times",35
-"Flash Player",35
-"Frédéric Goldsmith",35
-"Frédéric Martel",35
-"Garantir",35
-"Imineo",35
-"Inspirée",35
-"Jean-Michel Baylet",35
-"Jean-Yves Monfort",35
-"Jeunes UMP",35
-"Laurent Béteille",35
-"Malaisie",35
-"Marc Thonon",35
-"Mesures",35
-"MySurround",35
-"Nicolas Hulot",35
-"Observatoire de la Musique",35
-"Patrick Roy",35
-"Professeur",35
-"Raison",35
-"Rapporteur",35
-"Reconnaissant",35
-"Sébastien Huyghe",35
-"Silvio Berlusconi",35
-"Souhaitant",35
-"Soulignons",35
-"Supprimer",35
-"Sylvie Forbin",35
-"Techdirt",35
-"Traité",35
-"Université",35
-"Viacom",35
-"Vietnam",35
-"Voix du Nord",35
-"Wall Street Journal",35
-"AAI",30
-"Alain Bazot",30
-"AlloShare",30
-"AlloShowTV",30
-"AlloStreaming",30
-"Amazon MP",30
-"André Lucas",30
-"Apiadopi",30
-"Avec Internet",30
-"Avouons-le",30
-"BBA",30
-"Bertelsmann",30
-"Bibliothèque du Congrès",30
-"Biélorussie",30
-"Bitcoins",30
-"Boonty",30
-"Bouches-du-Rhône",30
-"Bruno Patino",30
-"Bruno Spiquel",30
-"Bull",30
-"Business Software Alliance",30
-"Call",30
-"Catherine Morin-Desailly",30
-"CCIA",30
-"CD-Rom",30
-"Century Fox",30
-"Cerrone",30
-"Christine de Mazières",30
-"Citant",30
-"Commission Nationale Informatique",30
-"Composé",30
-"Compositeurs",30
-"Concurrence",30
-"Confrontée",30
-"Cour de Justice des Communautés Européennes",30
-"Créateurs",30
-"Credoc",30
-"Daniel Colling",30
-"David Znaty",30
-"DCRI",30
-"Décidément",30
-"Demander",30
-"Détail",30
-"Dexter",30
-"Directeur",30
-"Disons",30
-"DSLAM",30
-"Ed Vaizey",30
-"Edouard Barreiro",30
-"Energie",30
-"Envoyé Spécial",30
-"Favoriser",30
-"FDI",30
-"Festival d'Avignon",30
-"Fevad",30
-"FileServe",30
-"Film",30
-"Forte",30
-"Francis Muguet",30
-"Fringe",30
-"Google Trends",30
-"Hadopi Mireille Imbert-Quaretta",30
-"Hotfile",30
-"Hotmail",30
-"HTTPS",30
-"Idate",30
-"IFCIC",30
-"Illustration",30
-"Intitulée",30
-"Inversement",30
-"Ipoque",30
-"Jean-Claude Larue",30
-"Jeunes Populaires",30
-"Kouchner",30
-"Labs de l'Hadopi",30
-"Landes",30
-"Les Echos",30
-"Loire",30
-"Love",30
-"Marc Simoncini",30
-"Marie-François Marais",30
-"Mediafire",30
-"Mettre",30
-"Michel Hazanavicius",30
-"Mireille Mathieu",30
-"Mouv",30
-"Newzbin",30
-"Nicolas Perrier",30
-"Nîmes",30
-"Nine Inch Nails",30
-"Nintendo DS",30
-"Nom",30
-"Nonobstant",30
-"OffresLegales",30
-"Olivier Besancenot",30
-"Open Rights Group",30
-"Oracle",30
-"Outre-Manche",30
-"Ouvert",30
-"Parti Pirate International",30
-"Partis Pirates",30
-"Patrick Waelbroeck",30
-"Permettre",30
-"Philippe Astor",30
-"Playstation",30
-"Pôle Emploi",30
-"Politiques",30
-"Pouvoir",30
-"Présentant",30
-"Prise",30
-"Protect IP Act",30
-"Rapidement",30
-"Rares",30
-"Réagissant",30
-"Renforcement",30
-"République Nicolas Sarkozy",30
-"Restera",30
-"Revenons",30
-"Rochelle",30
-"Rois de la Suède",30
-"Rudy Salles",30
-"Saisi",30
-"Skyrock",30
-"SMAD",30
-"Soucieuse",30
-"Soucieux",30
-"Soutien",30
-"Telegraph",30
-"Tiscali",30
-"Toomaï",30
-"TPB",30
-"Tunes Match",30
-"Valérie Pécresse",30
-"Vincent Feltesse",30
-"Virgin Mega",30
-"Vkontakte",30
-"VoIP",30
-"Wikimédia France",30
-"Woerth",30
-"Zataz",30
+"Hadopi",4648
+"Internet",3536
+"Conseil",1099
+"Haute Autorité",1027
+"FAI",983
+"Culture",940
+"DADVSI",818
+"Nicolas Sarkozy",704
+"Commission",686
+"Création",681
+"Assemblée",666
+"UMP",632
+"Etat",619
+"Christine Albanel",563
+"Parlement",556
+"DRM",482
+"Sénat",478
+"CSA",459
+"Google",438
+"Europe",414
+"Frédéric Mitterrand",389
+"Haute",376
+"CNIL",366
+"Assemblée Nationale",365
+"République",357
+"Numerama",354
+"Etats-Unis",328
+"François Hollande",321
+"Paris",316
+"Aurélie Filippetti",311
+"Free",302
+"Sacem",301
+"Quadrature du Net",300
+"Français",288
+"Libération",288
+"Net",287
+"Orange",274
+"DVD",273
+"Twitter",272
+"Apple",263
+"Facebook",256
+"Elysée",243
+"HADOPI",243
+"YouTube",240
+"Deezer",238
+"Tunes",234
+"Sarkozy",232
+"VOD",231
+"Pierre Lescure",226
+"TMG",218
+"Cour",216
+"Conseil d'Etat",210
+"BitTorrent",205
+"Patrick Bloche",204
+"Web",196
+"Parti",188
+"Renaud Donnedieu de Vabres",185
+"PC Inpact",184
+"Loppsi",183
+"CPD",182
+"Bruxelles",174
+"mission Lescure",173
+"Christian Paul",169
+"MegaUpload",169
+"Canal",168
+"Ecrans",168
+"AFP",165
+"Union",165
+"Autorité",164
+"Monde",161
+"Franck Riester",160
+"Dailymotion",157
+"SNEP",156
+"Dadvsi",155
+"Vivendi",153
+"Microsoft",152
+"SFR",150
+"Parti Socialiste",149
+"Lors",148
+"Conseil Constitutionnel",148
+"TVA",142
+"PUR",142
+"Communication",138
+"Eric Walter",138
+"Président",138
+"Mireille Imbert-Quaretta",136
+"Justice",132
+"rapport Lescure",132
+"Loi",131
+"Parlement Européen",129
+"Gouvernement",128
+"Société",127
+"Spotify",126
+"ZDNet",126
+"Grande-Bretagne",125
+"État",124
+"SACD",124
+"SCPP",124
+"Allemagne",123
+"Frédéric Lefebvre",122
+"Marie-Françoise Marais",122
+"Albanel",122
+"The Pirate Bay",120
+"Lionel Tardy",119
+"Etats",113
+"Hollande",113
+"Syndicat",113
+"Mule",112
+"Arcep",111
+"Association",111
+"ACTA",110
+"Valois",108
+"Royaume-Uni",107
+"Universal",107
+"Figaro",106
+"Suède",106
+"Président de la République",105
+"États-Unis",104
+"Verts",104
+"Martine Aubry",103
+"Erwan Cario",101
+"Parti Pirate",101
+"Constitution",99
+"Denis Olivennes",99
+"ADSL",98
+"Pascal Nègre",97
+"Article",97
+"Amazon",96
+"Echos",93
+"Point",93
+"Universal Music",93
+"Frank Riester",93
+"Concrètement",92
+"Tribune",92
+"Droit",91
+"Internet Bullshit",91
+"Journal Officiel",90
+"LibéLabo",90
+"Cnil",89
+"Centre",88
+"Fleur Pellerin",88
+"Mitterrand",87
+"Linux",87
+"CNC",86
+"RIAA",85
+"WiFi",85
+"Chine",84
+"LCEN",84
+"Trident Media Guard",83
+"Phone",81
+"Fnac",80
+"Electron Libre",80
+"Anonymous",79
+"Creative Commons",78
+"Espagne",77
+"Jack Lang",77
+"SPPF",77
+"Camille Gévaudan",77
+"Chronophage",77
+"France Télévisions",76
+"François Bayrou",76
+"Olivennes",76
+"Code",76
+"SACEM",76
+"Sages",75
+"FDN",75
+"Michèle Alliot-Marie",75
+"Jean-Marc Ayrault",74
+"Paquet Télécom",74
+"Eric Besson",73
+"Jean-François Copé",73
+"Toile",73
+"Megaupload",72
+"Sony",72
+"Pod",72
+"Michel Thiollière",71
+"Alexandre Hervaud",71
+"Pistes",70
+"Windows",70
+"PME",68
+"ALPA",67
+"Paru",67
+"Bouygues",66
+"Didier Mathus",66
+"Autrement",66
+"Bono",66
+"Jérémie Zimmermann",65
+"Yahoo",65
+"MPAA",65
+"EMI",64
+"Nouvel Observateur",64
+"UFC-Que Choisir",64
+"États",63
+"Christian Vanneste",63
+"Jean-Pierre Brard",63
+"Trailer",63
+"Piratage",61
+"UDF",61
+"Ratiatum",61
+"Jacques Toubon",60
+"Nolife",60
+"Torrentfreak",60
+"ARCEP",59
+"CMP",59
+"Fédération",59
+"Ségolène Royal",59
+"VPN",59
+"Commission Européenne",59
+"Muriel Marland-Militello",59
+"France Télécom",58
+"Noël",58
+"Alain Suguenot",58
+"EUCD",58
+"Canada",57
+"Napster",57
+"Union Européenne",57
+"DPI",56
+"Snep",56
+"Bercy",55
+"Economie",55
+"IFPI",55
+"Industrie",55
+"Journal",55
+"Médias",55
+"Peer-to-Peer",55
+"Wikipédia",55
+"Martine Billard",55
+"RapidShare",55
+"Xavier Niel",55
+"Australie",54
+"François Fillon",53
+"ARMT",53
+"Carte Musique Jeune",53
+"Express",52
+"Christine Boutin",52
+"Diffusion des Oeuvres",52
+"Japon",51
+"DMCA",51
+"Jean Dionis du Séjour",51
+"Vidéo",51
+"CNN",50
+"Filippetti",50
+"Hollywood",50
+"Lescure",50
+"USA",50
+"Quadrature",50
+"Matignon",49
+"Musique",49
+"Nantes",49
+"Riposte",49
+"Homme",49
+"Mac",49
+"RSS",49
+"Wi-Fi",49
+"Hexagone",48
+"Patrick Zelnik",48
+"Warner",48
+"April",47
+"Benjamin Bayart",47
+"rapport Zelnik",47
+"Numericable",46
+"Blu-Ray",46
+"Commission de Protection des Droits",46
+"Conseil Supérieur de l'Audiovisuel",46
+"Guy Bono",46
+"Labs",46
+"Acte II",45
+"Atlantique",45
+"Cannes",45
+"FBI",45
+"Italie",45
+"Olivier Schrameck",45
+"Virgin",45
+"Laure de la Raudière",44
+"URL",44
+"Adami",44
+"Jérôme Bourreau-Guggenheim",44
+"Arnaud Montebourg",43
+"Pad",43
+"Pascal Rogard",43
+"PCInpact",43
+"UPFI",43
+"CSPLA",43
+"French Data Network",43
+"Nathalie Kosciusko-Morizet",43
+"Promotion des Usages Responsables",43
+"DDOS",42
+"Élysée",42
+"Luxembourg",42
+"TNT",42
+"Wikileaks",42
+"FNAC",41
+"Pays-Bas",41
+"Protection",41
+"Belgique",41
+"Nicolas Dupont-Aignan",41
+"Philippe Aigrain",41
+"RDDV",41
+"France Inter",40
+"Mission Lescure",40
+"PDG",40
+"Affaires",39
+"ARP",39
+"Midem",39
+"mission Zelnik",39
+"Netflix",39
+"Suisse",39
+"Françoise de Panafieu",39
+"Libertés",39
+"Spedidam",39
+"USB",39
+"Américains",38
+"Irlande",38
+"PC INpact",38
+"Youtube",38
+"Commission Mixte Paritaire",38
+"Liens",38
+"SOPA",38
+"Autorité de Régulation des Mesures Techniques",38
+"Aux Etats-Unis",37
+"Rennes",37
+"Téléchargement",37
+"Freebox",37
+"Dominique de Villepin",36
+"Donkey",36
+"Nouveau Centre",36
+"OMPI",36
+"Rediffusions",36
+"Wifi",36
+"Congrès",35
+"Corée du Sud",35
+"David El Sayegh",35
+"Iliad",35
+"Alice",35
+"Conseil National du Numérique",35
+"NKM",35
+"Rapidshare",35
+"Russie",35
+"Angleterre",34
+"Intérieur",34
+"Nouvelle-Zélande",34
+"Observatoire",34
+"Alpa",34
+"Déclaration",34
+"MegaVideo",34
+"Universal Music France",34
+"Allostreaming",33
+"Avignon",33
+"Bernard Miyet",33
+"Côté",33
+"Education",33
+"Finlande",33
+"Jiwa",33
+"Android",32
+"Blu-ray",32
+"Droits",32
+"Manuel Valls",32
+"mission Olivennes",32
+"Conseil d'État",32
+"Eva Joly",32
+"Institut",32
+"Jamendo",32
+"Michel Riguidel",32
+"Nouvel Obs",32
+"Obama",32
+"WPA",32
+"Acta",31
+"Kazaa",31
+"ONG",31
+"Alex Türk",31
+"Bluetouff",31
+"MTP",31
+"Texel",31
+"Wikipedia",31
+"CNM",30
+"Rue",30
+"Hadopi Eric Walter",30
+"Libé",30
+"Minute",30
+"Skype",30
+"Ayrault",29
+"INA",29
+"RMC",29
+"Société des Auteurs",29
+"Bouygues Telecom",29
+"Écrans",29
+"FFT",29
+"Firefox",29
+"Jacques Attali",29
+"Riester",29
+"TorrentFreak",29
+"Budget",28
+"Cinéma",28
+"LCI",28
+"Marine Le Pen",28
+"Association de Lutte",28
+"Invité",28
+"Jacques Chirac",28
+"Piraterie Audiovisuelle",28
+"SDRM",28
+"SPRD",28
+"Syndicat National de l'Edition Phonographique",28
+"WEP",28
+"America",27
+"Bernard Accoyer",27
+"Brésil",27
+"Charte",27
+"ARJEL",27
+"BBox",27
+"Carte",27
+"CJUE",27
+"DNS",27
+"Freebox TV",27
+"LOPPSI",27
+"Luc Besson",27
+"Manche",27
+"Bay",26
+"BPI",26
+"Collège",26
+"Londres",26
+"Ministère de la Culture",26
+"Parquet",26
+"RTL",26
+"SMS",26
+"Alicebox TV",26
+"Bonne",26
+"Brice Hortefeux",26
+"Diffusion",26
+"Liberté",26
+"OMG",26
+"Orange TV",26
+"Richard Stallman",26
+"RSF",26
+"Reporters Sans Frontières",26
+"Fillon",25
+"Marseille",25
+"Médiamétrie",25
+"Neelie Kroes",25
+"Olivier Henrard",25
+"Poste",25
+"SEVN",25
+"Tandis",25
+"Troie",25
+"Convention",25
+"Mediapart",25
+"Protection des Droits",25
+"DDL",25
+"Eureka Presse",25
+"David Assouline",24
+"Dernière",24
+"Forum d'Avignon",24
+"Inde",24
+"Marais",24
+"NDLR",24
+"Rue de Valois",24
+"AOL",24
+"Compositeurs Dramatiques",24
+"Danemark",24
+"Donnedieu de Vabres",24
+"Maxime Rouquet",24
+"Mega",24
+"Minutes",24
+"Neufbox TV",24
+"Nièvre",24
+"ONU",24
+"PayPal",24
+"Yvelines",24
+"Agence",23
+"Assises",23
+"Gaumont",23
+"Nicolas Seydoux",23
+"PIB",23
+"Rihanna",23
+"Britanniques",23
+"Carte Musique",23
+"Catherine Trautmann",23
+"Daniel Cohn-Bendit",23
+"Maître Eolas",23
+"Nord",23
+"Projet",23
+"Sophian Fanen",23
+"Virgule WTF",23
+"OVH",23
+"Riguidel",23
+"Festival de Cannes",22
+"Front",22
+"Informatique",22
+"Lang",22
+"Naïve",22
+"Radio France",22
+"BBC",22
+"Bouygues Télécom",22
+"Digital Millennium Copyright Act",22
+"Emma Leprince",22
+"France Info",22
+"Front National",22
+"Jaimelesartistes",22
+"Marc Guez",22
+"Marland-Militello",22
+"Nadine Morano",22
+"Owni",22
+"Qobuz",22
+"Sony Music",22
+"Beezik",21
+"Compte",21
+"CPI",21
+"Demain",21
+"François Mitterrand",21
+"Lagardère",21
+"Nouveau",21
+"Seine-Saint-Denis",21
+"Télé",21
+"WikiLeaks",21
+"BNF",21
+"Lancé",21
+"Libre",21
+"Loi Hadopi",21
+"Palais Bourbon",21
+"Philippe Gosselin",21
+"Socialistes",21
+"VLC",21
+"Ndlr",21
+"Arjel",20
+"Barack Obama",20
+"Catherine Tasca",20
+"Copé",20
+"Digital Economy Act",20
+"Hasard",20
+"Johnny Hallyday",20
+"Lille",20
+"Objectif",20
+"PDG de Canal",20
+"Warner Music",20
+"Andréa Fradin",20
+"Aubry",20
+"Chronophages",20
+"Fédération Française des Télécoms",20
+"Filtrage",20
+"Fouquet",20
+"Hadopi Le",20
+"Libélabo",20
+"MoDem",20
+"Paul",20
+"PCF",20
+"PlayStation",20
+"Recherche",20
+"Reuters",20
+"Streaming",20
+"Suguenot",20
+"VirginMega",20
+"Warner Bros",20
+"Washington",20
+"Alliance Public-Artistes",20
+"Collège de l'Hadopi",20
+"FTP",20
+"Odebi",20
+"Arte",19
+"Commissaire",19
+"Jean Musitelli",19
+"Licence",19
+"LimeWire",19
+"PIPA",19
+"Quid",19
+"Versailles",19
+"Wired",19
+"Anne Hidalgo",19
+"Asie",19
+"Avez-vous",19
+"Christophe Tardieu",19
+"commission Zelnik",19
+"Copie",19
+"DREV",19
+"Framasoft",19
+"François Rebsamen",19
+"Google France",19
+"Grenelle",19
+"Imaginez",19
+"Intel",19
+"IPRED",19
+"Jean-Michel Planche",19
+"Kim Dotcom",19
+"Ministre",19
+"Norvège",19
+"Parisien",19
+"rapport Olivennes",19
+"Roger Karoutchi",19
+"Sceaux",19
+"Société Civile des Producteurs Phonographiques",19
+"Bayrou",18
+"Electronic Frontier Foundation",18
+"Globalement",18
+"Jérôme Roger",18
+"Jeux",18
+"Lyon",18
+"Nokia",18
+"Organisation",18
+"Politique",18
+"Amérique du Nord",18
+"Benjamin Lancar",18
+"Bloche",18
+"British Phonographic Industry",18
+"Camille Gévaudan --",18
+"Conclusion",18
+"Corinne Erhel",18
+"DAVDSI",18
+"David Guetta",18
+"Deep Packet Inspection",18
+"Dernier",18
+"Éric Walter",18
+"Fotolia",18
+"Hulu",18
+"Iran",18
+"Laurent Petitgirard",18
+"Lost",18
+"Ministre de la Culture",18
+"Pandore",18
+"Présenté",18
+"Quitte",18
+"Sachant",18
+"Seules",18
+"Stéphane Richard",18
+"Thierry Lhermitte",18
+"Viviane Reding",18
+"Secrétaire",18
+"Créée",17
+"Lionel Jospin",17
+"Michel Barnier",17
+"New York",17
+"Ofcom",17
+"Sécurité",17
+"Allez",17
+"Ambiance",17
+"Artistique",17
+"Bataille Hadopi",17
+"Bibliothèque",17
+"Canal Plus",17
+"Carla Bruni",17
+"Dit",17
+"Edition Multimédi",17
+"Eric Woerth",17
+"Forum",17
+"Ile-de-France",17
+"Jean-Louis Debré",17
+"Jean-Marc Manach",17
+"Martin Bouygues",17
+"Michu",17
+"Minitel",17
+"Mireille Imbert Quaretta",17
+"Motion Picture Association",17
+"Neutralité",17
+"Offre",17
+"Rachida Dati",17
+"rapport Gallo",17
+"Rendez-vous",17
+"Shareaza",17
+"Steve Jobs",17
+"TGI",17
+"Torrent",17
+"Vanneste",17
+"Cupertino",17
+"Projet Dadvsi",17
+"Afghanistan",16
+"Beatles",16
+"Big Brother",16
+"Corrèze",16
+"Défense",16
+"Dijon",16
+"Finances",16
+"Jospin",16
+"Luc Chatel",16
+"Mexique",16
+"Nombre",16
+"Presque",16
+"Sopa",16
+"Tunes Store",16
+"VoD",16
+"Art",16
+"COSIP",16
+"Direction",16
+"ElectronLibre",16
+"Etrange",16
+"Flash",16
+"Guardian",16
+"Guillaume Champeau",16
+"Jacques Bille",16
+"Labs Hadopi",16
+"Ligue Odebi",16
+"Lionel Thoumyre",16
+"Livre",16
+"Marché",16
+"MGMT",16
+"Mountain View",16
+"Numérama",16
+"Numérique",16
+"Pensez-vous",16
+"Réponse",16
+"Reporters",16
+"Seulement",16
+"Sony BMG",16
+"StopDRM",16
+"Tunes Music Store",16
+"Tunisie",16
+"UFC",16
+"Verts Martine Billard",16
+"VideoLAN",16
+"XXIe",16
+"Zelnik",16
+"Commission Nationale de l'Informatique",16
+"Droits de l'Homme",16
+"SpiralFrog",16
+"Arts",15
+"Aurélie Filipetti",15
+"BFM TV",15
+"Commerce",15
+"Expansion",15
+"Laurent Fabius",15
+"LIRE AUSSI",15
+"Michel Boyon",15
+"Modem",15
+"Politiquement",15
+"Tokyo",15
+"Tumblr",15
+"Allemands",15
+"APRIL",15
+"Bbox",15
+"Bernard Kouchner",15
+"Christine Lagarde",15
+"Conseil Supérieur de la Propriété Littéraire",15
+"Considérant",15
+"Disney",15
+"Effectivement",15
+"Egalement",15
+"Ensemble",15
+"Fidèle",15
+"Flickr",15
+"Fort",15
+"Frédéric Couchet",15
+"Hauts-de-Seine",15
+"HTTP",15
+"IRC",15
+"Jean-Frédéric Poisson",15
+"Kindle",15
+"Klaire",15
+"Lefebvre",15
+"Madame",15
+"Maison Blanche",15
+"Marc Le Fur",15
+"Michel Sardou",15
+"Rappelant",15
+"ReadWriteWeb",15
+"Réseaux",15
+"Silicon Valley",15
+"SNE",15
+"SOS Hadopi",15
+"Travail",15
+"UFC Que Choisir",15
+"VHS",15
+"Vivendi Universal",15
+"Majors",15
+"Accord",14
+"Belfort",14
+"Bientôt",14
+"Chambre",14
+"Deauville",14
+"Hervé Rony",14
+"ISF",14
+"Jean-Noël Tronc",14
+"Manière",14
+"Mars",14
+"Mis",14
+"New York Times",14
+"OCDE",14
+"Rencontres",14
+"RSA",14
+"Sabam",14
+"Top",14
+"APC",14
+"British Telecom",14
+"Californie",14
+"Chirac",14
+"CPE",14
+"EELV",14
+"Essonne",14
+"Exit",14
+"Imbert-Quaretta",14
+"InLibroVeritas",14
+"Korben",14
+"Libre Accès",14
+"Ligue",14
+"Loi Création",14
+"Maginot",14
+"Marie-Christine Blandin",14
+"Niel",14
+"Nouvelle Zélande",14
+"OpenOffice",14
+"Podcast",14
+"PS Christian Paul",14
+"Royal",14
+"Slate",14
+"SVM",14
+"Télécharger",14
+"UFC-Que",14
+"Vuze",14
+"ADAMI",14
+"ASIC",14
+"Édition Multimédi",14
+"Techland",14
+"Trombinoscope",14
+"Amérique",13
+"Axel Dauchez",13
+"Bourse",13
+"Christophe Lameignère",13
+"Denis Ladegaillerie",13
+"Européens",13
+"Françoise Castex",13
+"Gilles Babinet",13
+"HTML",13
+"Ironie",13
+"JDD",13
+"Jean-Bernard Lévy",13
+"Laure de La Raudière",13
+"Moselle",13
+"NSA",13
+"PDG de la Fnac",13
+"Pierre Arditi",13
+"Pipa",13
+"Suédois",13
+"Verizon",13
+"Visa",13
+"Azureus",13
+"Beaune",13
+"Bernard Carayon",13
+"Besson",13
+"Buzz Média Orange-Le Figaro",13
+"Calimaq",13
+"Canard Enchaîné",13
+"Cloud",13
+"Clubic",13
+"Comité",13
+"Consommation",13
+"Digital Rights Management",13
+"Dionis du Séjour",13
+"Économie",13
+"GNU",13
+"Grokster",13
+"Imaginons",13
+"Isabelle Falque-Pierrotin",13
+"Justement",13
+"Lab",13
+"Laurent Wauquiez",13
+"Mark Zuckerberg",13
+"Mathus",13
+"Michael Jackson",13
+"Music",13
+"MusicMe",13
+"Organisation Mondiale de la Propriété Intellectuelle",13
+"Patrice Martin-Lalande",13
+"PCINpact",13
+"Prenons",13
+"Renaud Veeckman",13
+"Révolution",13
+"Richard Cazenave",13
+"The",13
+"TTC",13
+"Villa Médicis",13
+"WTF",13
+"Xbox",13
+"AFA",13
+"BSA",13
+"EFF",13
+"Images",13
+"MAC",13
+"Mulholland Drive",13
+"Notez",13
+"Offre Légale",13
+"Afrique",12
+"Benoît Hamon",12
+"Benoît Tabaka",12
+"Centre National de la Musique",12
+"Comcast",12
+"Coup",12
+"Festival",12
+"Hadopi Marie-Françoise Marais",12
+"Jean-Pierre Bel",12
+"Mouvement",12
+"Nielsen",12
+"NRJ",12
+"PriceMinister",12
+"Rapport Lescure",12
+"Véritable",12
+"Ars Technica",12
+"Berlin",12
+"Bloquer",12
+"CanalPlay",12
+"Chrome",12
+"CLCV",12
+"DailyMotion",12
+"Dernièrement",12
+"Dommage",12
+"Faites",12
+"FNDF",12
+"Force",12
+"Francis Lalanne",12
+"Gfk",12
+"Gmail",12
+"Harvard",12
+"Internet Explorer",12
+"Interview",12
+"IsoHunt",12
+"Jacques Legendre",12
+"Juridiquement",12
+"Kast",12
+"Lettres",12
+"Libye",12
+"Ligne",12
+"Mac OS",12
+"NPA",12
+"Numéricable",12
+"Office",12
+"Pierre Kosciusko-Morizet",12
+"Post",12
+"Public",12
+"Public Sénat",12
+"Recording Industry Association",12
+"Reflets",12
+"Réunion",12
+"SCAM",12
+"Source",12
+"Starzik",12
+"Techniquement",12
+"Thaïlande",12
+"The Register",12
+"Veille",12
+"Victor Hugo",12
+"Vite",12
+"Edvige",12
+"Alexa",12
+"App Store",12
+"Before",12
+"MIQ",12
+"Mouvement Démocrate",12
+"Node",12
+"rapport MIQ",12
+"SELL",12
+"Société Civile des Producteurs de Phonogrammes",12
+"CanalSat",11
+"CGTI",11
+"Chargé",11
+"CNRS",11
+"Conséquence",11
+"Csa",11
+"Devenu",11
+"Eglise",11
+"Estimant",11
+"Fonds",11
+"IBM",11
+"INPI",11
+"Journal du Dimanche",11
+"Midem à Cannes",11
+"Motif",11
+"OMC",11
+"Pirate",11
+"Plan",11
+"Pologne",11
+"Pourriez-vous",11
+"Propriété",11
+"Services",11
+"Simple",11
+"Strasbourg",11
+"TPE",11
+"AAC",11
+"Abonnement",11
+"Abracadabra",11
+"Adobe",11
+"Agriculture",11
+"Alpes-Maritimes",11
+"Autriche",11
+"Belle",11
+"BFM",11
+"Bourreau",11
+"Calogero",11
+"Certainement",11
+"Cité",11
+"Claude Guéant",11
+"Coïncidence",11
+"Commission des Affaires Culturelles",11
+"Conscient",11
+"Coué",11
+"Création Public Internet",11
+"Darty",11
+"Décision",11
+"Département Recherche",11
+"Digital Economy Bill",11
+"Eolas",11
+"Éric Besson",11
+"Faut",11
+"France Culture",11
+"Google Play",11
+"Grand",11
+"Hadopi II",11
+"Havas",11
+"Hémicycle",11
+"Inutile",11
+"Iron Man",11
+"Jean Berbinau",11
+"Jean Sarkozy",11
+"Jean-Luc Godard",11
+"Jérôme Bourreau",11
+"Juste",11
+"Lady Gaga",11
+"Laurent Chemla",11
+"Manifestement",11
+"Marianne",11
+"MediaFire",11
+"Montpellier",11
+"Nation",11
+"Olivier Laurelli",11
+"Parfois",11
+"Paypal",11
+"Pirate Bay",11
+"Président de la République Nicolas Sarkozy",11
+"Prince",11
+"Quartier",11
+"Question",11
+"Radiohead",11
+"Réseau",11
+"Rhin",11
+"SAMUP",11
+"Serge Lagauche",11
+"Service",11
+"Simavelec",11
+"Sommet",11
+"Source AFP",11
+"TalkTalk",11
+"TGI de Paris",11
+"Traduction",11
+"Turquie",11
+"Ubuntu",11
+"Vincent Peillon",11
+"Virgin Media",11
+"Voire",11
+"Albis",11
+"Arrêt",11
+"Bibliothèque Nationale de France",11
+"Centre National de la Cinématographie",11
+"Chancellerie",11
+"Citons",11
+"Constatant",11
+"Créer",11
+"Emmanuel Torregano",11
+"Favorable",11
+"Fédération Internationale de l'Industrie Phonographique",11
+"Gnutella",11
+"Pierre Sirinelli",11
+"Piste",11
+"Renaud Donnedieu de Vabre",11
+"SMTP",11
+"SOS-Hadopi",11
+"SVOD",11
+"UFC-Que-Choisir",11
+"Usenet",11
+"Adopté",10
+"Audiovisuel",10
+"Aux États-Unis",10
+"Biennales",10
+"Bordeaux",10
+"Cahuzac",10
+"Center",10
+"Chantal Jannet",10
+"Chargée",10
+"Cosip",10
+"Décembre",10
+"Emploi",10
+"Eure-et-Loir",10
+"Free Mobile",10
+"Guillaume Cerutti",10
+"Jean-Luc Mélenchon",10
+"Jean-Ludovic Silicani",10
+"Mali",10
+"Marc Tessier",10
+"Marielle Gallo",10
+"Michel Rocard",10
+"Ministère",10
+"Paquet",10
+"Peer",10
+"Rome",10
+"SNCF",10
+"Syrie",10
+"Télévision",10
+"The Artist",10
+"Tim Berners-Lee",10
+"Valls",10
+"Votée",10
+"Alain Lipietz",10
+"Allez-vous",10
+"Alliance",10
+"Attali",10
+"Ben",10
+"Big Brother Awards",10
+"Bittorrent",10
+"Christophe Espern",10
+"Cliquez",10
+"Communications",10
+"Développement",10
+"Dieu",10
+"DivX",10
+"Ecologie",10
+"Emmanuel Hoog",10
+"Envoyer",10
+"Eric Schmidt",10
+"Extrait",10
+"Fournisseurs",10
+"France Telecom",10
+"François",10
+"Free Software Foundation",10
+"Game",10
+"Giuseppe de Martino",10
+"GPL",10
+"Harry Potter",10
+"Immédiatement",10
+"Inrocks",10
+"Interrogés",10
+"Isère",10
+"Jean Berbineau",10
+"Jean-François Lamour",10
+"Jean-Luc Warsmann",10
+"Jérôme",10
+"Juan Branco",10
+"Lawrence Lessig",10
+"Logistep",10
+"Los Angeles",10
+"Madonna",10
+"Marin Karmitz",10
+"Mission",10
+"Nanterre",10
+"Objet",10
+"Panafieu",10
+"Paramount",10
+"Pirater",10
+"Pirouette",10
+"Potager",10
+"Prenez",10
+"RealNetworks",10
+"Relations",10
+"Samup",10
+"Saône-et-Loire",10
+"Sinde",10
+"Tardy",10
+"TCP",10
+"UPP",10
+"Vimeo",10
+"Windows Media",10
+"Xavier Bertrand",10
+"Xavier Darcos",10
+"LE FIGARO",10
+"BitCoin",10
+"Bruno Retailleau",10
+"CDP",10
+"Chinois",10
+"Collège de la Hadopi",10
+"Communistes",10
+"Contactés",10
+"Cour Suprême",10
+"Emmanuel Berretta",10
+"Etudes",10
+"Haute Cour",10
+"HD DVD",10
+"IFOP",10
+"OCLCTIC",10
+"Page",10
+"rapport Lambrinidis",10
+"Richard Yung",10
+"Robert Thollot",10
+"Thiollière",10
