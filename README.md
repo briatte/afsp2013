@@ -31,12 +31,14 @@ The entry point is `make.r`:
 
 ## Weighting scheme
 
-* for each entity in each article of the corpus, the propensity of occurrence is its frequency divided by its overall frequency in the corpus
-* for each dyad of entities in each article, the propensity of co-occurrence is the product of their propensity of occurrence
-* for each dyad, the overall weighted propensity of co-occurrence is the sum of its weights over all articles in the corpus
+* For each entity in each article of the corpus, the propensity of occurrence is its frequency divided by its overall frequency in the corpus
+* For each dyad of entities in each article, the propensity of co-occurrence is the product of their propensity of occurrence
+* For each dyad, the overall weighted propensity of co-occurrence is the sum of its weights over all articles in the corpus
 
 The tie weight used to compute the degree of each node in the co-occurrence network is therefore
 
-![WPC_{ij} = \sum_1^c \frac{ p_i }{ \sum_1^c p_i } \cdot \frac{ p_j }{ \sum_1^c p_j }](weights.png)
+![WPC_{ij} = \sum_1^c \frac{ p_i }{ \sum_1^c p_i } \cdot \frac{ p_j }{ \sum_1^c p_j }](http://i.imgur.com/yJwXITO.png)
 
-where _c_ is a corpus of 1, 2, ..., _c_ articles, and _p_ the frequency of each entity. The weighted degree formula is from [Tore Opsahl](http://toreopsahl.com/tnet/weighted-networks/node-centrality/).
+where _c_ is a corpus of 1, 2, ..., _c_ articles, and _p_ the frequency of each entity.
+
+The weighted degree formula is by [Tore Opsahl](http://toreopsahl.com/tnet/weighted-networks/node-centrality/) and uses an alpha parameter of 1.
