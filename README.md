@@ -1,6 +1,4 @@
-Code related to a [working paper][paper] and earlier [conference paper][draft] presented at the [AFSP](http://www.afsp.msh-paris.fr/) Annual Meeting in Paris, 2013.
-
-See the [HOWTO](HOWTO.md) for a technical summary of the data presented in Section 1 of the [paper][paper] and in the [appendix][appendix].
+Code related to a [working paper][paper] that was [first presented][draft] at the [AFSP](http://www.afsp.msh-paris.fr/) Annual Meeting in Paris, 2013. See the [HOWTO](HOWTO.md) for a technical summary of the data presented in Section 1 of the [paper][paper] and in the [appendix][appendix].
 
 > * June 2014 – Updated [working paper][paper]
 	* Added [new appendix][appendix]

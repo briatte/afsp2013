@@ -1,7 +1,5 @@
 .DS_Store
 .gitignore
-.RData
-.Rhistory
 
 draft
 * copy.pdf
@@ -10,7 +8,7 @@ draft
 *.corpus
 *.txt
 
-# done
+.RData
+.Rhistory
 .Rproj.user
 *.Rproj
-
