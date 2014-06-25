@@ -17,6 +17,6 @@ The entry point is `make.r`:
 * for each dyad of entities in each article, the propensity of co-occurrence is the product of their propensity of occurrence
 * for each dyad, the overall weighted propensity of co-occurrence is the sum of its weights over all articles in the corpus
 
-![WPC_{ij} = \sum_1^c \frac{ p_i }{ \sum_1^c p_i } \cdot \frac{ p_j }{ \sum_1^c p_j }](http://www.sciweavers.org/tex2img.php?eq=WPC_%7Bij%7D%20%3D%20%5Csum_1%5Ec%20%5Cfrac%7B%20p_i%20%7D%7B%20%5Csum_1%5Ec%20p_i%20%7D%20%5Ccdot%20%5Cfrac%7B%20p_j%20%7D%7B%20%5Csum_1%5Ec%20p_j%20%7D&bc=White&fc=Black&im=png&fs=12&ff=arev&edit=0)
+![WPC_{ij} = \sum_1^c \frac{ p_i }{ \sum_1^c p_i } \cdot \frac{ p_j }{ \sum_1^c p_j }](eq.png)
 
 where _c_ is a corpus of 1, 2, ..., _c_ articles, and _p_ the frequency of each entity.
