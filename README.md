@@ -14,6 +14,17 @@ Code related to a [working paper][paper] that was [first presented][draft] at th
 [paper]: http://goo.gl/C8kW1s
 [appendix]: http://goo.gl/gaKlFD
 
+# DATA
+
+The scraper currently collects slightly over 5,000 articles from 
+
+* ecrans.fr, including articles from liberation.fr
+* lesechos.fr
+* numerama.com, including articles from ratiatium.com (defunct)
+* zdnet.fr
+
+![](plots/counts.png)
+
 # HOWTO
 
 The entry point is `make.r`:
