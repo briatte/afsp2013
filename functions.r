@@ -464,7 +464,7 @@ get_freqs <- function(sample = FALSE, update = FALSE) {
       "Parti Socialiste", "Pascal Nègre", "Pascal Rogard", "Patrice Martin-Lalande", 
       "PCF", "Philippe Aigrain", "Philippe Gosselin", "Pierre Arditi", 
       "Pierre Sirinelli", "Pipa", "PIPA", "Prince", "PUR|Promotion Usages Responsables", 
-      "Quadrature( du Net)?", "Rachida Dati", "Radiohead", "rapport Gallo", "Marielle Gallo"
+      "Quadrature( du Net)?", "Rachida Dati", "Radiohead", "rapport Gallo", "Marielle Gallo",
       "Recording Industry Association", "Reporters", "RIAA", "Richard Cazenave",
       "Richard Stallman", "Roger Karoutchi", "RSF", "Sabam", "SACD", "Sacem", "SACEM", 
       "SAMUP", "SCAM", "SCPP", "SELL", "Serge Lagauche", "SFR", "Simavelec", 
