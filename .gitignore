@@ -9,7 +9,7 @@ draft
 *.txt
 plots/*.pdf
 
+*Rapp*
+*Rproj*
 .RData
 .Rhistory
-.Rproj.user
-*.Rproj

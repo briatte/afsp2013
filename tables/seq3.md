@@ -1,17 +1,17 @@
 |k                  | degree|   n|
 |:------------------|------:|---:|
-|Mission Lescure    |    173| 341|
-|Riposte graduée    |    167| 335|
-|Aurélie Filippetti |    159| 249|
-|CSA                |    156| 256|
-|Nicolas Sarkozy    |    130|  86|
-|François Hollande  |    125| 114|
-|Twitter            |    123|  57|
-|UMP                |    116|  53|
-|Facebook           |    111|  61|
-|Quadrature du Net  |    106|  60|
-|DRM                |    104|  72|
-|Orange             |    104|  59|
-|Deezer             |    103|  68|
-|Apple              |     95|  53|
-|Fleur Pellerin     |     94|  52|
+|Mission Lescure    |    178| 394|
+|Riposte graduée    |    169| 376|
+|Aurélie Filippetti |    159| 282|
+|CSA                |    156| 278|
+|Nicolas Sarkozy    |    138| 105|
+|Twitter            |    137|  70|
+|François Hollande  |    135| 139|
+|UMP                |    125|  63|
+|Facebook           |    119|  73|
+|Orange             |    109|  63|
+|Quadrature du Net  |    109|  65|
+|Deezer             |    106|  77|
+|DRM                |    105|  73|
+|Apple              |    100|  66|
+|Dailymotion        |    100|  65|

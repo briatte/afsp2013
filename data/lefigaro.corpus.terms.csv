@@ -1,20 +1,20 @@
 "term","freq"
-"Hadopi",345
-"Internet",150
-"Conseil",87
-"Assemblée",83
+"Hadopi",347
+"Internet",149
+"Conseil",88
+"Assemblée",84
 "Haute",67
 "Culture",63
 "Parlement",46
 "UMP",43
+"Sénat",40
 "Nicolas Sarkozy",39
-"Sénat",39
 "Frédéric Mitterrand",36
 "Création",31
 "Christine Albanel",29
-"Haute Autorité",23
+"Haute Autorité",24
 "François Hollande",22
-"Piratage",22
+"Piratage",21
 "République",21
 "Etat",19
 "Albanel",18
@@ -22,7 +22,6 @@
 "Free",15
 "Sarkozy",15
 "Aurélie Filippetti",14
-"LIRE AUSSI",14
 "Megaupload",14
 "Mitterrand",13
 "Commission",12
@@ -31,14 +30,15 @@
 "Martine Aubry",11
 "Web",11
 "Buzz Média Orange-Le Figaro",10
+"CSA",10
 "Europe",10
 "LE FIGARO",10
 "Syndicat",10
 "Communication",9
-"CSA",9
 "FAI",9
 "Franck Riester",9
 "Lors",9
+"Marie-Françoise Marais",9
 "Paris",9
 "rapport Lescure",9
 "Snep",9
@@ -49,19 +49,20 @@
 "Figaro",8
 "Filippetti",8
 "Hollande",8
-"Marie-Françoise Marais",8
 "Société",8
 "Cannes",7
+"Conseil d'État",7
+"E AUSSI",7
 "États-Unis",7
 "Jean-François Copé",7
+"LIRE AUSSI",7
 "Tribune",7
 "Anonymous",6
 "Ayrault",6
-"Conseil d'État",6
+"Cour",6
 "HADOPI",6
 "Hadopi II",6
 "Loi Hadopi",6
-"mission Lescure",6
 "Net",6
 "Parti",6
 "Patrick Bloche",6
@@ -73,12 +74,13 @@
 "Désolé",5
 "Droit",5
 "État",5
-"Experiences",5
 "FDN",5
 "Frédéric Lefebvre",5
 "Jean-Marc Ayrault",5
 "Libération",5
+"mission Lescure",5
 "NDLR",5
+"Pierre Arditi",5
 "Pierre Lescure",5
 "Relations",5
 "SACD",5
@@ -88,7 +90,7 @@
 "Alpa",4
 "Bruxelles",4
 "Christian Vanneste",4
-"Cour",4
+"Copé",4
 "DADVSI",4
 "Denis Olivennes",4
 "DVD",4
@@ -99,11 +101,11 @@
 "Invité du Buzz Média Orange-Le Figaro",4
 "Juliette Gréco",4
 "Lionel Tardy",4
+"Michel Piccoli",4
 "Midem",4
 "Monde",4
 "Musique",4
 "Nicolas Seydoux",4
-"Pierre Arditi",4
 "Proudhon",4
 "PUR",4
 "Roger Karoutchi",4
@@ -122,13 +124,10 @@
 "CNIL",3
 "Communication Frédéric Mitterrand",3
 "Congrès",3
-"Copé",3
 "Dadvsi",3
 "Deezer",3
-"Denis Olivennes - Nous",3
 "Dernière",3
 "Diffusion des Oeuvres",3
-"DOSSIER SPÉCIAL - Loi",3
 "Droits",3
 "Élysée",3
 "EN BREF",3
@@ -152,7 +151,6 @@
 "Marché",3
 "Martine Billard",3
 "Maxime Le Forestier",3
-"Michel Piccoli",3
 "Michel Thiollière",3
 "Mireille Imbert-Quaretta",3
 "Nantes",3
@@ -196,7 +194,9 @@
 "Dailymotion",2
 "David El Sayegh",2
 "de Panafieu",2
+"Denis Olivennes - Nous",2
 "Dlgamer",2
+"DOSSIER SPÉCIAL - Loi",2
 "Echos",2
 "Ecompil",2
 "Élu",2
@@ -208,7 +208,6 @@
 "FNDF",2
 "Forum d'Avignon",2
 "Fotolia",2
-"FR - Martin Rogard",2
 "France Télévisions",2
 "Francofolies de La Rochelle",2
 "French Data Network",2
@@ -254,9 +253,11 @@
 "Pascal Nègre",2
 "Pascal Rogard",2
 "Pascal Thomas",2
+"Paul-Henri du Limbert",2
 "PcInpact",2
 "PCInpact",2
 "Peer-to-peer",2
+"Piqués",2
 "Plan",2
 "PRÉSERVER LA CULTURE",2
 "Protection",2
@@ -264,6 +265,7 @@
 "PS de Moselle",2
 "Qobuz",2
 "QUESTIONS A",2
+"R - Martin Rogard",2
 "RDSE",2
 "Relancé",2
 "Revue",2
@@ -323,7 +325,6 @@
 "Anti-Counterfeiting Trade Agreement",1
 "Apple",1
 "Approche",1
-"Approuvez-vous",1
 "Après Hadopi",1
 "Après-Hadopi",1
 "ARCEP",1
@@ -397,6 +398,7 @@
 "CNM",1
 "CNN",1
 "Code",1
+"Collège",1
 "Comité",1
 "Commentant",1
 "commission Copé",1
@@ -409,7 +411,6 @@
 "Conçu",1
 "Conséquence",1
 "Constitution",1
-"Consultez",1
 "Convention",1
 "Cop",1
 "Corée du Sud",1
@@ -451,7 +452,6 @@
 "Dionis du Séjour",1
 "Dominique de Villepin",1
 "Dominique Paillé",1
-"DOSSIER HADOPI",1
 "DOSSIER SELECT - Téléchargement",1
 "DOSSIER SPÉCIAL - La",1
 "DOSSIER SPECIAL - Loi",1
@@ -498,6 +498,7 @@
 "Figaro - Flash",1
 "Fillon IV",1
 "Fini",1
+"Flash",1
 "Florilège",1
 "FNC",1
 "FOCUS - L",1
@@ -506,7 +507,6 @@
 "Fortement",1
 "Forum",1
 "Fournisseurs",1
-"FR - Pas",1
 "France de Megaupload",1
 "François Bayrou",1
 "Françoise Castex - Nous",1
@@ -534,9 +534,9 @@
 "Hachette",1
 "Had",1
 "Hadopi I",1
+"Hadopi Jérôme Bourreau-Guggenheim",1
 "Hadopi NDLR",1
 "Hadopi-UE",1
-"HadopiJérôme Bourreau-Guggenheim",1
 "Hamon",1
 "Harvey Weinstein",1
 "Haute Assemblée",1
@@ -554,7 +554,7 @@
 "INA",1
 "Industrie",1
 "INFO FIGARO",1
-"INFO FIGARO - Selon",1
+"INFO FIGARO - Selon",1
 "INFO LE FIGARO - Quelques",1
 "Informatique",1
 "Informée",1
@@ -620,7 +620,7 @@
 "Landes",1
 "Lassay",1
 "Laurent Heynemann",1
-"LCP-ANTÉLÉVISION",1
+"LCP-AN TÉLÉVISION",1
 "LE CINÉMA PRÉF",1
 "LE DÉBAT",1
 "LE FIGARO - Dans",1
@@ -637,7 +637,6 @@
 "Liane Foly",1
 "Libertés",1
 "Licence",1
-"Limbert",1
 "Loi d'Orientation",1
 "Loire",1
 "Long",1
@@ -668,7 +667,6 @@
 "Mines ParisTech",1
 "mission Culture-Acte",1
 "mission France Inter-Le Monde-iTélé",1
-"Mitterand",1
 "Mme Pellerin",1
 "MoDem",1
 "Montpensier",1
@@ -700,6 +698,7 @@
 "Obama",1
 "Observatoire",1
 "Olivennes",1
+"Olivennes - Nous",1
 "Olivier Laurelli",1
 "Olivier Schrameck",1
 "OMC",1
@@ -721,8 +720,6 @@
 "Patrick Bruel",1
 "Patrick Zelnick",1
 "Paul",1
-"Paul-Henri",1
-"Paul-Henri du Limbert",1
 "Pdg d'Universal Music France",1
 "PDG de Canal",1
 "PDG Xavier Niel",1
@@ -732,7 +729,6 @@
 "Philippe Goulliaud",1
 "Philippe Séguin",1
 "Pierre Jolivet",1
-"Piqués",1
 "Piratage Internet",1
 "PME",1
 "Politiquement",1
@@ -765,6 +761,9 @@
 "Quand Megaupload",1
 "Que-Choisir",1
 "QUESTIONS",1
+"R - Pas",1
+"R HADOPI",1
+"R SPÉCIAL - Loi",1
 "Rachida Dati",1
 "Radu Mihaileanu",1
 "Raillée",1
@@ -778,8 +777,6 @@
 "Recherche",1
 "Récolter",1
 "Reding",1
-"Refus de Free",1
-"Regrettez-vous",1
 "Rejet",1
 "Remettre",1
 "Renaud Donnedieu de Vabres",1

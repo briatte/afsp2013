@@ -3,7 +3,6 @@
 # --------
 
 # scraper
-
 library(dplyr)
 library(lubridate)
 library(RCurl)
@@ -11,20 +10,17 @@ library(stringr)
 library(XML)
 
 # networks
-
 library(intergraph)
 library(network)
 library(sna)
 library(tnet)
 
 # plots
-
 library(GGally)
 library(grid)
 library(ggplot2)
 
 # tables
-
 library(knitr)
 
 # --------
@@ -33,21 +29,23 @@ library(knitr)
 
 source("functions.r")
 
-# page counters last updated on June 22, 2014
+# scraper and page counters last updated on June 26, 2014
 
-get_articles("echos",    "dadvsi", pages = 1 )  # 3    articles
+get_articles("echos",    "dadvsi", pages = 1 )  # 4    articles
 get_articles("ecrans",   "dadvsi", pages = 13)  # 123  articles
-get_articles("lefigaro",    "dadvsi", pages = 2)  # 39  articles
+get_articles("lefigaro", "dadvsi", pages = 2)   # 39   articles
+get_articles("lemonde",  "dadvsi", pages = 9)   # 86   articles
 get_articles("numerama", "dadvsi", pages = 36)  # 717  articles
 get_articles("zdnet",    "dadvsi", pages = 23)  # 227  articles
 
 get_articles("echos",    "hadopi", pages = 22 ) # 192  articles
 get_articles("ecrans",   "hadopi", pages = 100) # 997  articles
-get_articles("lefigaro",    "hadopi", pages = 23) # 441 articles
+get_articles("lefigaro", "hadopi", pages = 23)  # 441  articles
+get_articles("lemonde",  "hadopi", pages = 70)  # 690  articles
 get_articles("zdnet",    "hadopi", pages = 48 ) # 464  articles
 get_articles("numerama", "hadopi", pages = 137) # 2729 articles
 
-get_corpus(sample = FALSE, update = FALSE)
+get_corpus(sample = FALSE, update = TRUE)
 
 # --------
 # networks

@@ -3,7 +3,8 @@ get_articles <- function(source, keyword, pages, step = 10, sw = sw) {
   # -----
   # files
   # -----
-  
+
+  dir.create("data", showWarnings = FALSE)
   file = paste0("data/", source, ".", keyword, ".index.txt")
   folder = paste0(source, ".corpus")
   
@@ -39,7 +40,8 @@ get_articles <- function(source, keyword, pages, step = 10, sw = sw) {
       
     } else if(source == "echos") {
       
-      html = htmlParse(paste0("http://recherche.lesechos.fr/?exec=1&texte=", keyword, "&dans=touttexte&date1=&date2=&page=", x))
+      html = htmlParse(paste0("http://recherche.lesechos.fr/?exec=1&texte=", 
+                              keyword, "&dans=touttexte&date1=&date2=&page=", x))
       html = xpathSApply(html, "//div[@class='bloc-resultat-recherche']//a/@href")
       html = str_replace(html, ".php(.*)", ".php")
       html = str_replace(html, "(.*)(.php|.htm)(.*)", "\\1\\2")
@@ -47,10 +49,26 @@ get_articles <- function(source, keyword, pages, step = 10, sw = sw) {
       
     } else if(source == "lefigaro") {
     
-      html = htmlParse(paste0("http://recherche.lefigaro.fr/recherche/recherche.php?ecrivez=", keyword, "&page=articles&next=", 1 + 20 * (x - 1)))
+      html = htmlParse(paste0("http://recherche.lefigaro.fr/recherche/recherche.php?ecrivez=", 
+                              keyword, "&page=articles&next=", 1 + 20 * (x - 1)))
       html = xpathSApply(html, "//h3[@class='entry-title']/a/@href")
       html = str_replace(html, "^/", "http://recherche.lefigaro.fr/")
-    
+      
+    } else if(source == "lemonde") { # dadvsi = 9, hadopi = 70
+      
+      html = htmlParse(paste0("http://www.lemonde.fr/recherche/?keywords=", keyword,
+                              "&qt=recherche_globale&page_num=", x))
+
+      # timestamp not always present on archive page, save it in front of link
+      time = xpathSApply(html, "//article[contains(@class, 'mgt8')]//span[contains(@class, 'signature')]", xmlValue)
+      time = str_extract(time, "[0-9]{1,2} [a-zéû]+ [0-9]{4}")
+      time = as.character(parse_date_time(time, "%d %m %Y", locale = "fr_FR"))
+      
+      html = xpathSApply(html, "//article[contains(@class, 'mgt8')]//h3/a/@href")
+      html = str_replace(html, "^/", "http://www.lemonde.fr/")
+      html = paste0(time, ":", html)
+      html = html[ str_detect(html, "lemonde.fr") ]
+      
     }
     
     html = unique(html)
@@ -66,7 +84,7 @@ get_articles <- function(source, keyword, pages, step = 10, sw = sw) {
     write(unlist(d), file)
     
   }
-    
+      
   # --------
   # articles
   # --------
@@ -104,15 +122,27 @@ get_articles <- function(source, keyword, pages, step = 10, sw = sw) {
       
     } else if(source == "echos") {
       
-      f = gsub("/", "-", gsub("(.*)(\\d{2})/(\\d{2})/(\\d{4})/(.*)(.htm|.php)", "\\2-\\3-\\4-\\5", d[i]))
+      f = gsub("(.*)(\\d{2})/(\\d{2})/(\\d{4})/(.*)(.htm|.php)", "\\2-\\3-\\4-\\5", d[i])
       
     } else if(source == "lefigaro") {
+      
+      f = d[i]
     
-      f = gsub("/", "-", gsub("http://", "", d[i]))
-    
+    } else if(source == "lemonde") {
+
+      if(grepl("acheter.cgi", d[i]))
+        f = gsub("(.*)objet_id=(\\d+)(.*)", "archives_\\2", d[i])
+      else
+        f = substring(gsub("\\?xtmc=(.*)", "", d[i]), 12)
+
+      # append date
+      f = paste0(substr(d[i], 1, 10), "-", f)
+
     }
     
+    f = gsub("/", "-", gsub("http://(www.)?|.htm(l)?$|.php$", "", f))
     f = paste0("data/", folder, "/", f, ".txt")
+
     if(!file.exists(f)) {
       
       if(!i %% step)
@@ -121,7 +151,7 @@ get_articles <- function(source, keyword, pages, step = 10, sw = sw) {
       if(source == "numerama") {
         
         e = htmlParse(d[i])
-        title = xpathApply(e, "//h1", xmlValue)[[1]]
+        title = xpathApply(e, "//h1", xmlValue)
         date = xpathApply(e, "//span[@class='datepublish']", xmlValue)
         txt = xpathApply(e, "//span[@id='intelliTXT']", xmlValue)
         txt = c(xpathApply(e, "//h2[@class='intro']", xmlValue), txt)
@@ -136,13 +166,14 @@ get_articles <- function(source, keyword, pages, step = 10, sw = sw) {
       } else if(source == "ecrans") {
         
         date = str_extract(d[i], "\\d{4}/\\d{2}/\\d{2}")
+        date = gsub("/", "-", date)
         e = try(htmlParse(d[i]))
         
         if("try-error" %in% class(e)) {
           
           warning("Fix:\n", d[i])
-          title = str_trim(gsub("-|_|\\d", " ", gsub("(.*)(\\d{4})/(\\d{2})/(\\d{2})/(.*)", "\\5", d[i])))
-          txt = NA
+          title = gsub("-|_|\\d", " ", gsub("(.*)(\\d{4})/(\\d{2})/(\\d{2})/(.*)", "\\5", d[i]))
+          txt = ""
           
         } else {
           
@@ -161,15 +192,17 @@ get_articles <- function(source, keyword, pages, step = 10, sw = sw) {
         if("try-error" %in% class(e)) {
           
           warning("Fix:\n", d[i])
-          title = str_trim(gsub("http://|www|\\.|/|lesechos.fr|-|_|\\d|.htm", " ", d[i]))
+          title = gsub("http://|www|\\.|/|lesechos.fr|-|_|\\d|.htm", " ", d[i])
           date = str_extract(d[i], "\\d{4}/\\d{2}/\\d{2}")
-          txt = NA          
+          txt = ""
           
         } else {
           
           title = xpathApply(e, "//title", xmlValue)
+          title = gsub("Les Echos - | - Archives", "", title) # archives only
           date = xpathApply(e, "//meta[@itemprop='dateCreated']/@content")
           txt = xpathApply(e, "//div[@class='contenu_article']//p[@itemprop='articleBody']", xmlValue)
+          txt = c(xpathApply(e, "//div[@class='contenu_article']//h2[@itemprop='articleBody']", xmlValue), txt)
           txt = c(xpathApply(e, "//meta[@name='news_keywords']/@value"), txt)
           
         }
@@ -198,11 +231,48 @@ get_articles <- function(source, keyword, pages, step = 10, sw = sw) {
 
         }
         
+      } else if(source == "lemonde") {
+        
+        date = substr(d[i], 1, 10)
+        e = try(htmlParse(substring(d[i], 12), encoding = "UTF-8"))
+        
+        if("try-error" %in% class(e)) {
+          
+          warning("Fix:\n", d[i])
+          title = ""
+          txt = ""
+          
+        } else {
+          
+          if(grepl("acheter.cgi", d[i])) {
+            
+            # archive pages
+            title = xpathApply(e, "//div[@class='pad']/h2", xmlValue)
+            txt = xpathApply(e, "//div[@class='pad']/p[not(@class)]", xmlValue)[[1]]
+            
+          } else {
+            
+            title = xpathApply(e, "//title", xmlValue)
+            txt = xpathApply(e, "//div[@id='articleBody']/p", xmlValue)
+            txt = c(xpathApply(e, "//div[@id='articleBody']/h2", xmlValue), txt)
+            
+          }
+          
+        }
+        
       }
-      
-      e = c(title, date, txt)
-      e = gsub("[\r|\n|\t]", "", e)
+
+      if(!length(date))
+        date = ""
+      if(grepl("Lundi|Mardi|Mercredi|Jeudi|Vendredi|Samedi|Dimanche", date))
+        date = as.character(parse_date_time(date, "%d %m %Y", locale = "fr_FR"))
+            
+      e = c(title, date, txt[ sapply(as.character(txt), nchar) > 1 ])
+      e = gsub("[\r|\n|\t]", " ", e)
+      e = gsub("(;|:|\\.|!|\\?|…)(\\w)+", "\\1 \\2", e)
+      e = gsub("\\s+", " ", e)
       e = gsub("\"", "'", e)
+      e = str_trim(e)
       
       write(e, f)
       
@@ -214,8 +284,7 @@ get_articles <- function(source, keyword, pages, step = 10, sw = sw) {
 
 get_corpus <- function(threshold = 10, sample = FALSE, update = FALSE) {
 
-  counts = sapply(c("echos", "ecrans", "numerama", "zdnet", "lefigaro"), function(x)
-    length(dir(paste0("data/", x, ".corpus"))))
+  counts = sapply(dir("data", ".corpus$", full.names = TRUE), function(x) length(dir(x)))
   
   cat("Corpus contains", sum(counts), "articles:\n")
   print(counts)
@@ -234,8 +303,8 @@ get_corpus <- function(threshold = 10, sample = FALSE, update = FALSE) {
   qplot(data = files, fill = source, y = n, x = ym, alpha = I(2/3),
         stat = "identity", geom = "bar") +
     geom_text(data = subset(summarise(group_by(files, ym), n = sum(n) * 1.05),
-                            ym %in% c("2006-03", "2009-07", "2010-10", "2011-06", "2012-01")),
-              aes(fill = NULL, x = ym, y = n, label = ym), color = "grey50") +
+                            ym %in% c("2006-03", "2009-06", "2010-10", "2011-05", "2012-01")),
+              aes(fill = NULL, x = ym, y = n, label = ym), color = "grey25") +
     scale_fill_brewer("", palette = "Set1") +
     scale_x_discrete(breaks = paste0(2005:2014, "-01"), labels = 2005:2014) +
     labs(y = NULL, x = NULL) +
@@ -260,15 +329,16 @@ get_terms <- function(threshold = 10, update = FALSE) {
     # keywords
     # --------
     
-    for(i in dir("data", ".corpus$")) {
+    for(i in dir("data", ".corpus$", full.names = TRUE)) {
       
-      files = paste0("data/", i, "/", dir(paste0("data/", i), ".txt"))
+      files = dir(i, ".txt", full.names = TRUE)
       
       kw = sapply(files, function(x) {
         
-        t = readLines(x)[ -2 ]
-        t = gsub("\\s{2,}", " ", t, perl = TRUE) # trim double spaces
-        r = "((rapport|commission|mission)*\\s*[A-ZÉ]+[a-zâäàêëéèîïôöûüç-]*\\s*(-|à |de |de la |d'|de l'|du |des )*)+"
+#         message(x)
+        t = readLines(x, encoding = "UTF-8")[ -2 ]
+        t = gsub("\\s+", " ", t) # trim double spaces
+        r = "(([R|r]apport|[C|c]ommission|[M|m]ission)*\\s*[A-ZÉ]+[a-zâäàêëéèîïôöûüç-]*\\s*(-|à |de |de la |d'|de l'|du |des )*)+"
         unique(str_trim(unlist(str_extract_all(t, r))))
         
       })
@@ -282,7 +352,7 @@ get_terms <- function(threshold = 10, update = FALSE) {
       
       # adverbs and such
       kwds = kwds[ -which(grepl("mment$|vant$|hier$|nné[e]*$|^d'$", kwds)) ]
-      kwds = kwds[ -which(grepl("-être$|-on$|-nous$|-il[s]*$|-elle[s]*$", kwds)) ]
+      kwds = kwds[ -which(grepl("-être$|-on$|-nous$|-vous$|-il[s]?$|-elle[s]?$", kwds)) ]
       
       # final manual fixes
       s = which(tolower(kwds) %in% tolower(c(sw, "Puis", "Pourtant", "Contrairement", "Visiblement", "Malheureusement", "Aujourd'", "Est-ce", "Alors", "Interrogé", "Interrogée", "Toutefois", "Ca", "de la","France", "Reste", "Or", "Mise", "Enfin", "Déjà", "Face", "Lorsqu", "Ensuite", "Finalement", "Contacté", "Contactée", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche", "Mieux", "Parce", "Autant", "Grâce", "Preuve", "Fin", "Hier", "Souvent", "Toujours", "Jamais", "Seul", "Seuls", "Seule", "Suite", "Actuellement", "Début", "MAJ", "MàJ", "Officiellement", "Difficile", "Au-delà", "Histoire", "Puisqu", "Généralement", "Heureusement", "Notons", "Rappelons", "Problème", "Signe", "ElementsByTagName", "ElementById", "Element", "PDF", "Probablement", "Mise", "Vient", "Ici", "Vraiment", "Bref", "Impossible", "Oui", "Maintenant", "Retrouvez", "Faire", "Voir", "Loin", "Résultat", "Bon", "Pire", "Abonnements", "Attention", "Faute", "Lire", "Sujet", "Suivez", "Parallèlement", "Retour", "Idem", "Petit", "Nouvelle", "Espérons", "Monsieur")))
@@ -296,7 +366,7 @@ get_terms <- function(threshold = 10, update = FALSE) {
       rownames(freq) = NULL
       
       # save
-      write.csv(freq, paste0("data/", i, ".terms.csv"), row.names = FALSE)
+      write.csv(freq, paste0(i, ".terms.csv"), row.names = FALSE)
       
     }
     
@@ -394,7 +464,7 @@ get_freqs <- function(sample = FALSE, update = FALSE) {
       "Parti Socialiste", "Pascal Nègre", "Pascal Rogard", "Patrice Martin-Lalande", 
       "PCF", "Philippe Aigrain", "Philippe Gosselin", "Pierre Arditi", 
       "Pierre Sirinelli", "Pipa", "PIPA", "Prince", "PUR|Promotion Usages Responsables", 
-      "Quadrature( du Net)?", "Rachida Dati", "Radiohead", "rapport Gallo", 
+      "Quadrature( du Net)?", "Rachida Dati", "Radiohead", "rapport Gallo", "Marielle Gallo"
       "Recording Industry Association", "Reporters", "RIAA", "Richard Cazenave",
       "Richard Stallman", "Roger Karoutchi", "RSF", "Sabam", "SACD", "Sacem", "SACEM", 
       "SAMUP", "SCAM", "SCPP", "SELL", "Serge Lagauche", "SFR", "Simavelec", 
@@ -432,10 +502,8 @@ get_freqs <- function(sample = FALSE, update = FALSE) {
       
       if(is.null(date) | nchar(date) < 10)
         date = NA
-      else if(grepl("/|-", date))
-        date = parse_date_time(date, "%Y %m %d", locale = "fr_FR")
       else
-        date = parse_date_time(date, "%d %m %Y", locale = "fr_FR")
+        date = parse_date_time(date, "%Y %m %d", locale = "fr_FR")
       
       if(sum(t)) {
         
@@ -443,12 +511,12 @@ get_freqs <- function(sample = FALSE, update = FALSE) {
         
         # rapport/mission/person
         k[ grepl("Lescure", k) ] = "Mission Lescure"
-        k[ grepl("NKM$|Kosciusko", k) ] = "Nathalie Kosciusko-Morizet"
-        k[ grepl("MIQ$|Quaretta", k) ] = "Mireille Imbert-Quaretta"
         k[ grepl("Olivennes", k) ] = "Mission Olivennes"
         k[ grepl("Zelnik", k) ] = "Patrick Zelnik"
+        k[ grepl("MIQ$|Quaretta", k) ] = "Mireille Imbert-Quaretta" # incl. a few mentions as "rapport MIQ"
         # name fixes
         k[ grepl("Filip(.*)etti", k) ] = "Aurélie Filippetti" # spelling
+        k[ grepl("NKM$|Kosciusko", k) ] = "Nathalie Kosciusko-Morizet"
         k[ grepl("RDDV$|Donnedieu", k) ] = "Renaud Donnedieu de Vabres"
         k[ grepl("Eric Walter", k) ] = "Éric Walter" # accent        
         k[ grepl("Raudière", k) ] = "Laure de La Raudière" # de la / de La
@@ -460,6 +528,7 @@ get_freqs <- function(sample = FALSE, update = FALSE) {
         k[ grepl("^Sony", k) ] = "Sony" # Sony, Sony BMG, Sony Music
         k[ grepl("^UFC", k) ] = "UFC-QC"
         k[ grepl("^Virgin", k) ] = "Virgin" # Virgin, VirginMega, Virgin Media
+        k[ grepl("^Vivendi", k) ] = "V/U"
         k[ k %in% c("ARMT", "Autorité de Régulation des Mesures Techniques") ] = "ARMT"
         k[ k %in% c("ACTA", "Acta") ] = "ALPA"
         k[ k %in% c("ADAMI", "Adami") ] = "ADAMI"

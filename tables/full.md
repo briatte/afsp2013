@@ -1,17 +1,17 @@
-|k                              | degree|    n|
-|:------------------------------|------:|----:|
-|Riposte graduée                |    285| 1550|
-|Nicolas Sarkozy                |    275|  782|
-|UMP                            |    270|  842|
-|DRM                            |    238|  473|
-|Christine Albanel              |    237|  548|
-|Vivendi Universal Music France |    231|  353|
-|Frédéric Mitterrand            |    229|  408|
-|Free                           |    229|  359|
-|Quadrature du Net              |    228|  252|
-|CNIL                           |    225|  349|
-|Twitter                        |    223|  273|
-|SACEM                          |    217|  312|
-|Facebook                       |    209|  253|
-|François Hollande              |    207|  337|
-|Orange                         |    206|  309|
+|k                   | degree|    n|
+|:-------------------|------:|----:|
+|Riposte graduée     |    287| 1684|
+|Nicolas Sarkozy     |    276|  934|
+|UMP                 |    272|  956|
+|DRM                 |    240|  488|
+|Christine Albanel   |    238|  584|
+|Frédéric Mitterrand |    234|  451|
+|V/U                 |    234|  381|
+|Free                |    232|  399|
+|Quadrature du Net   |    229|  277|
+|CNIL                |    225|  379|
+|SACEM               |    225|  359|
+|Twitter             |    225|  311|
+|Facebook            |    215|  293|
+|Orange              |    213|  342|
+|François Hollande   |    211|  430|
