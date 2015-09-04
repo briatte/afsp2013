@@ -726,7 +726,7 @@ get_network <- function(threshold = 0, start = NULL, end = NULL, verbose = TRUE)
 #   net$w = net$w / t[ net$i ]
   
   n = network(net[, 1:2 ], directed = FALSE)
-  n %e% "w" = net[, 3]
+  set.edge.attribute(n, "w", net[, 3])
   
   tnet = symmetrise_w(as.sociomatrix(n, attrname = "w"), method = "AMEAN")
   tnet = as.tnet(tnet, "weighted one-mode tnet")
